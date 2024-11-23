@@ -1,0 +1,14 @@
+# Copyright 2017, 2023 Sony Corporation
+# All rights, including trade secret rights, reserved.
+
+# create Key Provision Daemon directory
+on post-fs-data
+    chmod 770 /vendor/bin/spu_install_keybox
+    chmod 770 /vendor/bin/spu_status_check
+
+# Start Key Provision daemon
+service keyprov_daemon /vendor/bin/keyprovd
+    user system
+    group system
+    oneshot
+    class late_start

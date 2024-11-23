@@ -1,0 +1,242 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+
+<!-- Copyright (C) 2020 Google Inc.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<!--
+    Copyright 2023, 2024 Sony Corporation
+    NOTE: This file has been modified by Sony Corporation
+    Modifications are licensed under the License.
+-->
+
+<displayConfiguration>
+    <screenBrightnessMap>
+        <point>
+            <value>0.0013</value>
+            <nits>2.0</nits>
+        </point>
+        <point>
+            <value>1.0</value>
+            <nits>1500.0</nits>
+        </point>
+    </screenBrightnessMap>
+    <screenBrightnessDefault>0.3</screenBrightnessDefault>
+    <highBrightnessMode enabled="true">
+        <transitionPoint>0.5333</transitionPoint>
+        <minimumLux>5000.0</minimumLux>
+        <timing>
+                <timeWindowSecs>60</timeWindowSecs>
+                <timeMaxSecs>60</timeMaxSecs>
+                <timeMinSecs>0</timeMinSecs>
+        </timing>
+        <allowInLowPowerMode>false</allowInLowPowerMode>
+        <minimumHdrPercentOfScreen>0.15</minimumHdrPercentOfScreen>
+        <!--sdrHdrRatioMap, backed by spline, must have at least two entries -->
+        <sdrHdrRatioMap>
+            <point>
+                <sdrNits>2.0</sdrNits>
+                <hdrRatio>5.000</hdrRatio>
+            </point>
+            <point>
+                <sdrNits>1500.0</sdrNits>
+                <hdrRatio>5.000</hdrRatio>
+            </point>
+        </sdrHdrRatioMap>
+    </highBrightnessMode>
+    <screenBrightnessRampFastDecrease>0.8</screenBrightnessRampFastDecrease>
+    <screenBrightnessRampFastIncrease>4</screenBrightnessRampFastIncrease>
+    <screenBrightnessRampSlowDecrease>0.0167</screenBrightnessRampSlowDecrease>
+    <screenBrightnessRampSlowIncrease>0.1</screenBrightnessRampSlowIncrease>
+    <!-- ambient brightness change thresholds -->
+    <ambientBrightnessChangeThresholds>
+        <brighteningThresholds>
+              <brightnessThresholdPoints>
+                  <brightnessThresholdPoint>
+                      <threshold>0</threshold><percentage>414.5</percentage>
+                  </brightnessThresholdPoint>
+                  <brightnessThresholdPoint>
+                      <threshold>2</threshold><percentage>329.2</percentage>
+                  </brightnessThresholdPoint>
+                  <brightnessThresholdPoint>
+                      <threshold>3</threshold><percentage>262.5</percentage>
+                  </brightnessThresholdPoint>
+                  <brightnessThresholdPoint>
+                      <threshold>4</threshold><percentage>195.8</percentage>
+                  </brightnessThresholdPoint>
+                  <brightnessThresholdPoint>
+                      <threshold>5</threshold><percentage>180.2</percentage>
+                  </brightnessThresholdPoint>
+                  <brightnessThresholdPoint>
+                      <threshold>6</threshold><percentage>164.5</percentage>
+                  </brightnessThresholdPoint>
+                  <brightnessThresholdPoint>
+                      <threshold>7</threshold><percentage>148.8</percentage>
+                  </brightnessThresholdPoint>
+                  <brightnessThresholdPoint>
+                      <threshold>8</threshold><percentage>133.1</percentage>
+                  </brightnessThresholdPoint>
+                  <brightnessThresholdPoint>
+                      <threshold>9</threshold><percentage>117.5</percentage>
+                  </brightnessThresholdPoint>
+                  <brightnessThresholdPoint>
+                      <threshold>10</threshold><percentage>79.9</percentage>
+                  </brightnessThresholdPoint>
+                  <brightnessThresholdPoint>
+                      <threshold>20</threshold><percentage>52.7</percentage>
+                  </brightnessThresholdPoint>
+                  <brightnessThresholdPoint>
+                      <threshold>30</threshold><percentage>49.9</percentage>
+                  </brightnessThresholdPoint>
+                  <brightnessThresholdPoint>
+                      <threshold>40</threshold><percentage>47.0</percentage>
+                  </brightnessThresholdPoint>
+                  <brightnessThresholdPoint>
+                      <threshold>50</threshold><percentage>51.7</percentage>
+                  </brightnessThresholdPoint>
+                  <brightnessThresholdPoint>
+                      <threshold>60</threshold><percentage>56.5</percentage>
+                  </brightnessThresholdPoint>
+                  <brightnessThresholdPoint>
+                      <threshold>70</threshold><percentage>61.2</percentage>
+                  </brightnessThresholdPoint>
+                  <brightnessThresholdPoint>
+                      <threshold>80</threshold><percentage>66.0</percentage>
+                  </brightnessThresholdPoint>
+                  <brightnessThresholdPoint>
+                      <threshold>90</threshold><percentage>70.8</percentage>
+                  </brightnessThresholdPoint>
+                  <brightnessThresholdPoint>
+                      <threshold>100</threshold><percentage>74.2</percentage>
+                  </brightnessThresholdPoint>
+                  <brightnessThresholdPoint>
+                      <threshold>200</threshold><percentage>63.6</percentage>
+                  </brightnessThresholdPoint>
+                  <brightnessThresholdPoint>
+                      <threshold>300</threshold><percentage>58.2</percentage>
+                  </brightnessThresholdPoint>
+                  <brightnessThresholdPoint>
+                      <threshold>400</threshold><percentage>54.9</percentage>
+                  </brightnessThresholdPoint>
+                  <brightnessThresholdPoint>
+                      <threshold>500</threshold><percentage>36.9</percentage>
+                  </brightnessThresholdPoint>
+                  <brightnessThresholdPoint>
+                      <threshold>1000</threshold><percentage>29.4</percentage>
+                  </brightnessThresholdPoint>
+                  <brightnessThresholdPoint>
+                      <threshold>2000</threshold><percentage>26.9</percentage>
+                  </brightnessThresholdPoint>
+                  <brightnessThresholdPoint>
+                      <threshold>3000</threshold><percentage>22.0</percentage>
+                  </brightnessThresholdPoint>
+                  <brightnessThresholdPoint>
+                      <threshold>4000</threshold><percentage>22.0</percentage>
+                  </brightnessThresholdPoint>
+              </brightnessThresholdPoints>
+        </brighteningThresholds>
+        <darkeningThresholds>
+            <brightnessThresholdPoints>
+                <brightnessThresholdPoint>
+                    <threshold>0</threshold><percentage>52.5</percentage>
+                </brightnessThresholdPoint>
+                <brightnessThresholdPoint>
+                    <threshold>2</threshold><percentage>68.3</percentage>
+                </brightnessThresholdPoint>
+                <brightnessThresholdPoint>
+                    <threshold>3</threshold><percentage>66.6</percentage>
+                </brightnessThresholdPoint>
+                <brightnessThresholdPoint>
+                    <threshold>4</threshold><percentage>65</percentage>
+                </brightnessThresholdPoint>
+                <brightnessThresholdPoint>
+                    <threshold>5</threshold><percentage>64</percentage>
+                </brightnessThresholdPoint>
+                <brightnessThresholdPoint>
+                    <threshold>6</threshold><percentage>63</percentage>
+                </brightnessThresholdPoint>
+                <brightnessThresholdPoint>
+                    <threshold>7</threshold><percentage>62</percentage>
+                </brightnessThresholdPoint>
+                <brightnessThresholdPoint>
+                    <threshold>8</threshold><percentage>61</percentage>
+                </brightnessThresholdPoint>
+                <brightnessThresholdPoint>
+                    <threshold>9</threshold><percentage>60</percentage>
+                </brightnessThresholdPoint>
+                <brightnessThresholdPoint>
+                    <threshold>10</threshold><percentage>50</percentage>
+                </brightnessThresholdPoint>
+                <brightnessThresholdPoint>
+                    <threshold>20</threshold><percentage>50</percentage>
+                </brightnessThresholdPoint>
+                <brightnessThresholdPoint>
+                    <threshold>30</threshold><percentage>44</percentage>
+                </brightnessThresholdPoint>
+                <brightnessThresholdPoint>
+                    <threshold>40</threshold><percentage>38.5</percentage>
+                </brightnessThresholdPoint>
+                <brightnessThresholdPoint>
+                    <threshold>50</threshold><percentage>38.2</percentage>
+                </brightnessThresholdPoint>
+                <brightnessThresholdPoint>
+                    <threshold>60</threshold><percentage>37.9</percentage>
+                </brightnessThresholdPoint>
+                <brightnessThresholdPoint>
+                    <threshold>70</threshold><percentage>37.6</percentage>
+                </brightnessThresholdPoint>
+                <brightnessThresholdPoint>
+                    <threshold>80</threshold><percentage>37.3</percentage>
+                </brightnessThresholdPoint>
+                <brightnessThresholdPoint>
+                    <threshold>90</threshold><percentage>37.1</percentage>
+                </brightnessThresholdPoint>
+                <brightnessThresholdPoint>
+                    <threshold>100</threshold><percentage>36.7</percentage>
+                </brightnessThresholdPoint>
+                <brightnessThresholdPoint>
+                    <threshold>200</threshold><percentage>38.7</percentage>
+                </brightnessThresholdPoint>
+                <brightnessThresholdPoint>
+                    <threshold>300</threshold><percentage>39.7</percentage>
+                </brightnessThresholdPoint>
+                <brightnessThresholdPoint>
+                    <threshold>400</threshold><percentage>40.3</percentage>
+                </brightnessThresholdPoint>
+                <brightnessThresholdPoint>
+                    <threshold>500</threshold><percentage>38</percentage>
+                </brightnessThresholdPoint>
+                <brightnessThresholdPoint>
+                    <threshold>1000</threshold><percentage>34.5</percentage>
+                </brightnessThresholdPoint>
+                <brightnessThresholdPoint>
+                    <threshold>2000</threshold><percentage>33.3</percentage>
+                </brightnessThresholdPoint>
+                <brightnessThresholdPoint>
+                    <threshold>3000</threshold><percentage>28.3</percentage>
+                </brightnessThresholdPoint>
+                <brightnessThresholdPoint>
+                    <threshold>4000</threshold><percentage>28.3</percentage>
+                </brightnessThresholdPoint>
+            </brightnessThresholdPoints>            
+        </darkeningThresholds>
+    </ambientBrightnessChangeThresholds>
+    <densityMapping>
+          <density>
+            <height>2340</height>
+            <width>1080</width>
+            <density>400</density>
+          </density>
+    </densityMapping>
+</displayConfiguration>

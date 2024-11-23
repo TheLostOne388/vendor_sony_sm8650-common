@@ -1,0 +1,41 @@
+{
+  "config":{
+    "persist.vendor.sensors.sony.sensorcal.enable": ["1"]
+  },
+  "sns_busrw":{
+    "owner": "sns_busrw",
+    ".config":{
+      "owner": "sns_busrw",
+      "ets":{ "type": "int", "ver": "0",
+        "data": "1"
+      }
+    }
+  },
+  "lsm6dso_0_platform":{
+    "owner": "lsm6dso",
+    ".config":{
+      "owner": "lsm6dso",
+      "bus_type":{ "type": "int", "ver": "9",
+        "data": "3"
+      },
+      "bus_instance":{ "type": "int", "ver": "9",
+        "data": "2"
+      },
+      "min_bus_speed_khz":{ "type": "int", "ver": "9",
+        "data": "400"
+      },
+      "max_bus_speed_khz":{ "type": "int", "ver": "9",
+        "data": "400"
+      }
+    }
+  },
+  "stk3acx_0_platform":{
+    "owner": "sns_stk3acx",
+    ".config":{
+      "owner": "sns_stk3acx",
+      "slave_config":{ "type": "int", "ver": "9",
+        "data": "0"
+      }
+    }
+  }
+}
