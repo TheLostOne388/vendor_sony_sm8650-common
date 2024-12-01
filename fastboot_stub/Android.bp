@@ -1,0 +1,27 @@
+cc_library_static {
+    name: "libfastboot_static",
+    vendor_available: true,
+    product_available: true,
+    srcs: [
+        "fastboot.stub.c",
+    ],
+    shared_libs: [
+        "libc",
+        "libbase",
+        "liblog",
+    ],
+}
+
+cc_library_shared {
+    name: "libfastboot",
+    vendor_available: true,
+    product_available: true,
+    srcs: [
+        "fastboot.stub.c",
+    ],
+    shared_libs: [
+        "libc",
+        "libbase",
+        "liblog",
+    ],
+}
