@@ -3,6 +3,216 @@
 // This Android.bp file contains only the modules that were manually moved
 // to fix build errors. This is separate from auto-generated definitions.
 
+android_app_import {
+    name: "EuiccGoogle",
+    owner: "sony",
+    apk: "proprietary/vendor/priv-app/EuiccGoogle/EuiccGoogle.apk",
+    privileged: true,
+    certificate: "platform",
+    vendor: true,
+}
+
+android_app_import {
+    name: "EuiccMemoryReset",
+    owner: "sony",
+    apk: "proprietary/vendor/priv-app/EuiccMemoryReset/EuiccMemoryReset.apk",
+    privileged: true,
+    certificate: "platform",
+    vendor: true,
+}
+
+android_app_import {
+    name: "HotwordEnrollmentOKGoogleHEXAGON_WIDEBAND",
+    owner: "sony",
+    apk: "proprietary/vendor/priv-app/HotwordEnrollmentOKGoogleHEXAGON_WIDEBAND/HotwordEnrollmentOKGoogleHEXAGON_WIDEBAND.apk",
+    privileged: true,
+    certificate: "platform",
+    vendor: true,
+}
+
+android_app_import {
+    name: "HotwordEnrollmentXGoogleHEXAGON_WIDEBAND",
+    owner: "sony",
+    apk: "proprietary/vendor/priv-app/HotwordEnrollmentXGoogleHEXAGON_WIDEBAND/HotwordEnrollmentXGoogleHEXAGON_WIDEBAND.apk",
+    privileged: true,
+    certificate: "platform",
+    vendor: true,
+}
+
+cc_prebuilt_binary {
+    name: "audioadsprpcd",
+    owner: "sony",
+    srcs: ["proprietary/vendor/bin/audioadsprpcd"],
+    installable: true,
+    vendor: true,
+    soc_specific: true,
+    stem: "audioadsprpcd",
+}
+
+prebuilt_init_rc {
+    name: "ipacm_rc",
+    owner: "sony",
+    src: "proprietary/vendor/etc/init/ipacm.rc",
+    installable: true,
+    vendor: true,
+}
+
+java_library {
+    name: "uimservicelibrary_dup",
+    owner: "sony",
+    srcs: ["proprietary/framework/uimservicelibrary.jar"],
+    installable: true,
+    vendor: true,
+    sdk_version: "current",
+}
+
+java_library {
+    name: "uimgbamanagerlibrary",
+    owner: "sony",
+    srcs: ["proprietary/framework/uimgbamanagerlibrary.jar"],
+    installable: true,
+    vendor: true,
+    sdk_version: "current",
+}
+
+android_app_import {
+    name: "uimgbaservice",
+    owner: "sony",
+    apk: "proprietary/vendor/app/uimgbaservice/uimgbaservice.apk",
+    privileged: true,
+    certificate: "platform",
+    vendor: true,
+}
+
+java_library {
+    name: "uimservicelibrary",
+    owner: "sony",
+    srcs: ["proprietary/framework/uimservicelibrary.jar"],
+    installable: true,
+    vendor: true,
+    sdk_version: "current",
+}
+
+cc_prebuilt_binary {
+    name: "wfdservice64",
+    owner: "sony",
+    srcs: ["proprietary/vendor/bin/wfdservice64"],
+    installable: true,
+    vendor: true,
+    soc_specific: true,
+    stem: "wfdservice64",
+}
+
+android_app_import {
+    name: "CneApp",
+    owner: "sony",
+    apk: "proprietary/vendor/app/CneApp/CneApp.apk",
+    certificate: "platform",
+    privileged: false,
+    dex_preopt: {
+        enabled: false,
+    },
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "IPACM_Filter_cfg",
+    owner: "sony",
+    src: "proprietary/vendor/etc/IPACM_Filter_cfg.xml",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "IPACM_cfg",
+    owner: "sony",
+    src: "proprietary/vendor/etc/IPACM_cfg.xml",
+    vendor: true,
+}
+
+android_app_import {
+    name: "IWlanService",
+    owner: "sony",
+    apk: "proprietary/vendor/app/IWlanService/IWlanService.apk",
+    certificate: "platform",
+    privileged: false,
+    dex_preopt: {
+        enabled: false,
+    },
+    vendor: true,
+}
+
+android_app_import {
+    name: "ImsRcsService",
+    owner: "sony",
+    apk: "proprietary/vendor/app/ImsRcsService/ImsRcsService.apk",
+    certificate: "platform",
+    privileged: false,
+    dex_preopt: {
+        enabled: false,
+    },
+    vendor: true,
+}
+
+android_app_import {
+    name: "QCC",
+    owner: "sony",
+    apk: "proprietary/vendor/app/QCC/QCC.apk",
+    certificate: "platform",
+    privileged: false,
+    dex_preopt: {
+        enabled: false,
+    },
+    vendor: true,
+}
+
+android_app_import {
+    name: "QtiTelephony",
+    owner: "sony",
+    apk: "proprietary/vendor/app/QtiTelephony/QtiTelephony.apk",
+    certificate: "platform",
+    privileged: false,
+    dex_preopt: {
+        enabled: false,
+    },
+    vendor: true,
+}
+
+android_app_import {
+    name: "QtiTelephonyService",
+    owner: "sony",
+    apk: "proprietary/vendor/app/QtiTelephonyService/QtiTelephonyService.apk",
+    certificate: "platform",
+    privileged: false,
+    dex_preopt: {
+        enabled: false,
+    },
+    vendor: true,
+}
+
+android_app_import {
+    name: "TimeService",
+    owner: "sony",
+    apk: "proprietary/vendor/app/TimeService/TimeService.apk",
+    certificate: "platform",
+    privileged: false,
+    dex_preopt: {
+        enabled: false,
+    },
+    vendor: true,
+}
+
+android_app_import {
+    name: "WfdService",
+    owner: "sony",
+    apk: "proprietary/vendor/priv-app/WfdService/WfdService.apk",
+    certificate: "platform",
+    privileged: true,
+    dex_preopt: {
+        enabled: false,
+    },
+    vendor: true,
+}
+
 cc_prebuilt_library_shared {
     name: "android.hardware.bluetooth.audio-impl-qti",
     owner: "sony",
@@ -54,6 +264,153 @@ cc_prebuilt_library_shared {
     target: {
         android_arm64: {
             srcs: ["proprietary/vendor/lib64/hw/android.hardware.gnss-aidl-impl-qti.so"],
+        },
+    },
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "android.hardware.gnss-aidl-service-qti",
+    owner: "sony",
+    src: "proprietary/vendor/etc/vintf/manifest/android.hardware.gnss-aidl-service-qti.xml",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "android.hardware.graphics.mapper@4.0-impl-qti-display",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/hw/android.hardware.graphics.mapper@4.0-impl-qti-display.so"],
+        },
+    },
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "android.hardware.radio.config",
+    owner: "sony",
+    src: "proprietary/vendor/etc/vintf/manifest/android.hardware.radio.config.xml",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "android.hardware.radio.data",
+    owner: "sony",
+    src: "proprietary/vendor/etc/vintf/manifest/android.hardware.radio.data.xml",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "android.hardware.radio.messaging",
+    owner: "sony",
+    src: "proprietary/vendor/etc/vintf/manifest/android.hardware.radio.messaging.xml",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "android.hardware.radio.modem",
+    owner: "sony",
+    src: "proprietary/vendor/etc/vintf/manifest/android.hardware.radio.modem.xml",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "android.hardware.radio.network",
+    owner: "sony",
+    src: "proprietary/vendor/etc/vintf/manifest/android.hardware.radio.network.xml",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "android.hardware.radio.sim",
+    owner: "sony",
+    src: "proprietary/vendor/etc/vintf/manifest/android.hardware.radio.sim.xml",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "android.hardware.radio.voice",
+    owner: "sony",
+    src: "proprietary/vendor/etc/vintf/manifest/android.hardware.radio.voice.xml",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "android.hardware.secure_element",
+    owner: "sony",
+    src: "proprietary/vendor/etc/vintf/manifest/android.hardware.secure_element.xml",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "android.hardware.security.keymint-service-qti",
+    owner: "sony",
+    src: "proprietary/vendor/etc/vintf/manifest/android.hardware.security.keymint-service-qti.xml",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "bix.fingerprint.default",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/hw/bix.fingerprint.default.so"],
+        },
+    },
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "bttpi-saidl",
+    owner: "sony",
+    src: "proprietary/vendor/etc/vintf/manifest/bttpi-saidl.xml",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "c2_manifest_vendor",
+    owner: "sony",
+    src: "proprietary/vendor/etc/vintf/manifest/c2_manifest_vendor.xml",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "c2_manifest_vendor_audio",
+    owner: "sony",
+    src: "proprietary/vendor/etc/vintf/manifest/c2_manifest_vendor_audio.xml",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "com.android.hotwordenrollment.common.util",
+    owner: "sony",
+    src: "proprietary/vendor/etc/permissions/com.android.hotwordenrollment.common.util.xml",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "com.qti.dpmframework",
+    owner: "sony",
+    src: "proprietary/vendor/etc/permissions/com.qti.dpmframework.xml",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qualcomm.qti.ant@1.0",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/com.qualcomm.qti.ant@1.0.so"],
         },
     },
     vendor: true,
@@ -185,6 +542,13 @@ cc_prebuilt_library_shared {
     vendor: true,
 }
 
+prebuilt_etc {
+    name: "dataconnection-saidl",
+    owner: "sony",
+    src: "proprietary/vendor/etc/vintf/manifest/dataconnection-saidl.xml",
+    vendor: true,
+}
+
 cc_prebuilt_library_shared {
     name: "deviceInfoServiceModuleNr",
     owner: "sony",
@@ -200,10 +564,35 @@ cc_prebuilt_library_shared {
 }
 
 prebuilt_etc {
-    name: "vendor.dpmd",
+    name: "deviceinfo-saidl",
     owner: "sony",
-    src: "proprietary/vendor/etc/init/vendor.dpmd.rc",
-    sub_dir: "init",
+    src: "proprietary/vendor/etc/vintf/manifest/deviceinfo-saidl.xml",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "dpm-saidl",
+    owner: "sony",
+    src: "proprietary/vendor/etc/vintf/manifest/dpm-saidl.xml",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "dpmapi",
+    owner: "sony",
+    src: "proprietary/vendor/etc/permissions/dpmapi.xml",
+    vendor: true,
+}
+
+android_app_import {
+    name: "dpmserviceapp",
+    owner: "sony",
+    apk: "proprietary/vendor/priv-app/dpmserviceapp/dpmserviceapp.apk",
+    certificate: "platform",
+    privileged: true,
+    dex_preopt: {
+        enabled: false,
+    },
     vendor: true,
 }
 
@@ -218,6 +607,34 @@ cc_prebuilt_library_shared {
             srcs: ["proprietary/vendor/lib64/egl/eglSubDriverAndroid.so"],
         },
     },
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "fingerprint-rbs",
+    owner: "sony",
+    src: "proprietary/vendor/etc/vintf/manifest/fingerprint-rbs.xml",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "fm_helium",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/fm_helium.so"],
+        },
+    },
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "jp.co.sony.mc.misctasdklibrary",
+    owner: "sony",
+    src: "proprietary/vendor/etc/permissions/jp.co.sony.mc.misctasdklibrary.xml",
     vendor: true,
 }
 
@@ -292,6 +709,20 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "lib-imsvideocodec",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/lib-imsvideocodec.so"],
+        },
+    },
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
     name: "lib-imsvtcore",
     owner: "sony",
     strip: {
@@ -314,6 +745,34 @@ cc_prebuilt_library_shared {
     target: {
         android_arm64: {
             srcs: ["proprietary/vendor/lib64/lib-imsvtcore.so"],
+        },
+    },
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "lib-imsvtextutils",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/lib-imsvtextutils.so"],
+        },
+    },
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "lib-imsvtutils",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/lib-imsvtutils.so"],
         },
     },
     vendor: true,
@@ -622,6 +1081,20 @@ cc_prebuilt_library_shared {
     target: {
         android_arm64: {
             srcs: ["proprietary/vendor/lib64/libGPreqcancel_svc.so"],
+        },
+    },
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libMiscTaWrapper",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libMiscTaWrapper.so"],
         },
     },
     vendor: true,
@@ -1678,6 +2151,20 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libdiag_system",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libdiag_system.so"],
+        },
+    },
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libdigital-dimming",
     owner: "sony",
     strip: {
@@ -1700,6 +2187,62 @@ cc_prebuilt_library_shared {
     target: {
         android_arm64: {
             srcs: ["proprietary/vendor/lib64/libdisp-aba.so"],
+        },
+    },
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libdisplayconfig.qti",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libdisplayconfig.qti.so"],
+        },
+    },
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libdisplayconfig.system.qti",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libdisplayconfig.system.qti.so"],
+        },
+    },
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libdisplayqos",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libdisplayqos.so"],
+        },
+    },
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libdisplayskuutils",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libdisplayskuutils.so"],
         },
     },
     vendor: true,
@@ -2056,6 +2599,20 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libfm-hci",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libfm-hci.so"],
+        },
+    },
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libfmpal",
     owner: "sony",
     strip: {
@@ -2316,6 +2873,34 @@ cc_prebuilt_library_shared {
     target: {
         android_arm64: {
             srcs: ["proprietary/vendor/lib64/libifaa.so"],
+        },
+    },
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libimscamera_jni",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libimscamera_jni.so"],
+        },
+    },
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libimsmedia_jni",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libimsmedia_jni.so"],
         },
     },
     vendor: true,
@@ -3142,6 +3727,20 @@ cc_prebuilt_library_shared {
     target: {
         android_arm64: {
             srcs: ["proprietary/vendor/lib64/libmmosal_vendor.so"],
+        },
+    },
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmmparser_lite",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libmmparser_lite.so"],
         },
     },
     vendor: true,
@@ -4002,6 +4601,20 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libqcc_file_agent_sys",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libqcc_file_agent_sys.so"],
+        },
+    },
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libqcc_sdk",
     owner: "sony",
     strip: {
@@ -4010,6 +4623,34 @@ cc_prebuilt_library_shared {
     target: {
         android_arm64: {
             srcs: ["proprietary/vendor/lib64/libqcc_sdk.so"],
+        },
+    },
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libqccdme",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libqccdme.so"],
+        },
+    },
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libqccfileservice",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libqccfileservice.so"],
         },
     },
     vendor: true,
@@ -5668,6 +6309,76 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libsomc_alfortlpserv_skel",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib/rfsa/adsp/libsomc_alfortlpserv_skel.so"],
+        },
+    },
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsomc_cornfrosty_skel",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib/rfsa/adsp/libsomc_cornfrosty_skel.so"],
+        },
+    },
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsomc_donutscmnserv_skel",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib/rfsa/adsp/libsomc_donutscmnserv_skel.so"],
+        },
+    },
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsomc_pdnserv_skel",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib/rfsa/adsp/libsomc_pdnserv_skel.so"],
+        },
+    },
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsonydseehxwrapper",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libsonydseehxwrapper.so"],
+        },
+    },
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libspcom",
     owner: "sony",
     strip: {
@@ -6270,6 +6981,34 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libwfdavenhancements",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libwfdavenhancements.so"],
+        },
+    },
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libwfdclient",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libwfdclient.so"],
+        },
+    },
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libwfdcodecv4l2_proprietary",
     owner: "sony",
     strip: {
@@ -6340,6 +7079,34 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libwfddisplayconfig_vendor",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libwfddisplayconfig_vendor.so"],
+        },
+    },
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libwfddisplayconfig_vendor",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libwfddisplayconfig_vendor.so"],
+        },
+    },
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libwfdhdcpcp",
     owner: "sony",
     strip: {
@@ -6396,6 +7163,20 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libwfdmmsink",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libwfdmmsink.so"],
+        },
+    },
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libwfdmmsrc_proprietary",
     owner: "sony",
     strip: {
@@ -6404,6 +7185,20 @@ cc_prebuilt_library_shared {
     target: {
         android_arm64: {
             srcs: ["proprietary/vendor/lib64/libwfdmmsrc_proprietary.so"],
+        },
+    },
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libwfdmmsrc_system",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libwfdmmsrc_system.so"],
         },
     },
     vendor: true,
@@ -6424,6 +7219,20 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libwfdnative",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libwfdnative.so"],
+        },
+    },
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libwfdrtsp_vendor",
     owner: "sony",
     strip: {
@@ -6446,6 +7255,20 @@ cc_prebuilt_library_shared {
     target: {
         android_arm64: {
             srcs: ["proprietary/vendor/lib64/libwfdrtsp_vendor.so"],
+        },
+    },
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libwfdservice",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libwfdservice.so"],
         },
     },
     vendor: true,
@@ -6460,6 +7283,20 @@ cc_prebuilt_library_shared {
     target: {
         android_arm64: {
             srcs: ["proprietary/vendor/lib64/libwfdsessionmodule.so"],
+        },
+    },
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libwfdsinksm",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libwfdsinksm.so"],
         },
     },
     vendor: true,
@@ -6732,6 +7569,20 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "nfc_nci.nqx.default.hw",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/nfc_nci.nqx.default.hw.so"],
+        },
+    },
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
     name: "qcrilInterfaces",
     owner: "sony",
     strip: {
@@ -6927,6 +7778,39 @@ cc_prebuilt_library_shared {
     vendor: true,
 }
 
+prebuilt_etc {
+    name: "qcrilhook-saidl",
+    owner: "sony",
+    src: "proprietary/vendor/etc/vintf/manifest/qcrilhook-saidl.xml",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "qcrilhook-saidl",
+    owner: "sony",
+    src: "proprietary/vendor/etc/vintf/manifest/qcrilhook-saidl.xml",
+    vendor: true,
+}
+
+android_app_import {
+    name: "qcrilmsgtunnel",
+    owner: "sony",
+    apk: "proprietary/vendor/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk",
+    certificate: "platform",
+    privileged: true,
+    dex_preopt: {
+        enabled: false,
+    },
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "qms-saidl",
+    owner: "sony",
+    src: "proprietary/vendor/etc/vintf/manifest/qms-saidl.xml",
+    vendor: true,
+}
+
 cc_prebuilt_library_shared {
     name: "qti.video.utils.videobufferlayout",
     owner: "sony",
@@ -6952,6 +7836,13 @@ cc_prebuilt_library_shared {
             srcs: ["proprietary/vendor/lib64/qtiPeripheralMgr.so"],
         },
     },
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "qtiradio-saidl",
+    owner: "sony",
+    src: "proprietary/vendor/etc/vintf/manifest/qtiradio-saidl.xml",
     vendor: true,
 }
 
@@ -7006,6 +7897,118 @@ cc_prebuilt_library_shared {
     target: {
         android_arm64: {
             srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.radio.atcmdfwd@1.0.so"],
+        },
+    },
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.display.color@1.0",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/vendor.display.color@1.0.so"],
+        },
+    },
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.display.color@1.1",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/vendor.display.color@1.1.so"],
+        },
+    },
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.display.color@1.2",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/vendor.display.color@1.2.so"],
+        },
+    },
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.display.color@1.3",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/vendor.display.color@1.3.so"],
+        },
+    },
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.display.color@1.4",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/vendor.display.color@1.4.so"],
+        },
+    },
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.display.color@1.5",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/vendor.display.color@1.5.so"],
+        },
+    },
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.display.postproc@1.0",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/vendor.display.postproc@1.0.so"],
+        },
+    },
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.hardware.biometrics.fingerprintRbs-V1-ndk",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/vendor.hardware.biometrics.fingerprintRbs-V1-ndk.so"],
         },
     },
     vendor: true,
@@ -7176,6 +8179,13 @@ cc_prebuilt_library_shared {
             srcs: ["proprietary/vendor/lib64/vendor.qti.gnss-service.so"],
         },
     },
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "vendor.qti.gnss-service",
+    owner: "sony",
+    src: "proprietary/vendor/etc/vintf/manifest/vendor.qti.gnss-service.xml",
     vendor: true,
 }
 
@@ -7656,6 +8666,20 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.display.config-V5-ndk",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.display.config-V5-ndk.so"],
+        },
+    },
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.dpmaidlservice-V1-ndk",
     owner: "sony",
     strip: {
@@ -7711,6 +8735,13 @@ cc_prebuilt_library_shared {
     vendor: true,
 }
 
+prebuilt_etc {
+    name: "vendor.qti.hardware.embmssl",
+    owner: "sony",
+    src: "proprietary/vendor/etc/vintf/manifest/vendor.qti.hardware.embmssl.xml",
+    vendor: true,
+}
+
 cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.embmssl@1.0",
     owner: "sony",
@@ -7750,6 +8781,13 @@ cc_prebuilt_library_shared {
             srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.embmsslaidl-V1-ndk.so"],
         },
     },
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "vendor.qti.hardware.factory.ifactory",
+    owner: "sony",
+    src: "proprietary/vendor/etc/vintf/manifest/vendor.qti.hardware.factory.ifactory.xml",
     vendor: true,
 }
 
@@ -7837,6 +8875,13 @@ cc_prebuilt_library_shared {
     vendor: true,
 }
 
+prebuilt_etc {
+    name: "vendor.qti.hardware.limits-service",
+    owner: "sony",
+    src: "proprietary/vendor/etc/vintf/manifest/vendor.qti.hardware.limits-service.xml",
+    vendor: true,
+}
+
 cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.limits@1.0",
     owner: "sony",
@@ -7921,6 +8966,13 @@ cc_prebuilt_library_shared {
     vendor: true,
 }
 
+prebuilt_etc {
+    name: "vendor.qti.hardware.perf2",
+    owner: "sony",
+    src: "proprietary/vendor/etc/vintf/manifest/vendor.qti.hardware.perf2.xml",
+    vendor: true,
+}
+
 cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.power.powermodule-V1-ndk",
     owner: "sony",
@@ -7932,6 +8984,13 @@ cc_prebuilt_library_shared {
             srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.power.powermodule-V1-ndk.so"],
         },
     },
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "vendor.qti.hardware.power.powermodule",
+    owner: "sony",
+    src: "proprietary/vendor/etc/vintf/manifest/vendor.qti.hardware.power.powermodule.xml",
     vendor: true,
 }
 
@@ -7978,6 +9037,34 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.qccsyshal@1.2-halimpl",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.qccsyshal@1.2-halimpl.so"],
+        },
+    },
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.qccvndhal@1.0",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.qccvndhal@1.0.so"],
+        },
+    },
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.qconfig-V1-ndk",
     owner: "sony",
     strip: {
@@ -7988,6 +9075,13 @@ cc_prebuilt_library_shared {
             srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.qconfig-V1-ndk.so"],
         },
     },
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "vendor.qti.hardware.qconfig-service",
+    owner: "sony",
+    src: "proprietary/vendor/etc/vintf/manifest/vendor.qti.hardware.qconfig-service.xml",
     vendor: true,
 }
 
@@ -8047,6 +9141,13 @@ cc_prebuilt_library_shared {
     vendor: true,
 }
 
+prebuilt_etc {
+    name: "vendor.qti.hardware.qseecom@1.0-service",
+    owner: "sony",
+    src: "proprietary/vendor/etc/vintf/manifest/vendor.qti.hardware.qseecom@1.0-service.xml",
+    vendor: true,
+}
+
 cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.qteeconnector@1.0",
     owner: "sony",
@@ -8072,6 +9173,13 @@ cc_prebuilt_library_shared {
             srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.radio.am-V1-ndk.so"],
         },
     },
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "vendor.qti.hardware.radio.am",
+    owner: "sony",
+    src: "proprietary/vendor/etc/vintf/manifest/vendor.qti.hardware.radio.am.xml",
     vendor: true,
 }
 
@@ -8128,6 +9236,13 @@ cc_prebuilt_library_shared {
             srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.radio.ims-V12-ndk.so"],
         },
     },
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "vendor.qti.hardware.radio.ims",
+    owner: "sony",
+    src: "proprietary/vendor/etc/vintf/manifest/vendor.qti.hardware.radio.ims.xml",
     vendor: true,
 }
 
@@ -8481,6 +9596,13 @@ cc_prebuilt_library_shared {
     vendor: true,
 }
 
+prebuilt_etc {
+    name: "vendor.qti.hardware.radio.qtiradioconfig",
+    owner: "sony",
+    src: "proprietary/vendor/etc/vintf/manifest/vendor.qti.hardware.radio.qtiradioconfig.xml",
+    vendor: true,
+}
+
 cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.radio.uim@1.0",
     owner: "sony",
@@ -8593,6 +9715,13 @@ cc_prebuilt_library_shared {
     vendor: true,
 }
 
+prebuilt_etc {
+    name: "vendor.qti.hardware.sensorscalibrate",
+    owner: "sony",
+    src: "proprietary/vendor/etc/vintf/manifest/vendor.qti.hardware.sensorscalibrate.xml",
+    vendor: true,
+}
+
 cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.servicetrackeraidl-impl",
     owner: "sony",
@@ -8604,6 +9733,13 @@ cc_prebuilt_library_shared {
             srcs: ["proprietary/vendor/lib64/hw/vendor.qti.hardware.servicetrackeraidl-impl.so"],
         },
     },
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "vendor.qti.hardware.servicetrackeraidl-service",
+    owner: "sony",
+    src: "proprietary/vendor/etc/vintf/manifest/vendor.qti.hardware.servicetrackeraidl-service.xml",
     vendor: true,
 }
 
@@ -8663,6 +9799,13 @@ cc_prebuilt_library_shared {
     vendor: true,
 }
 
+prebuilt_etc {
+    name: "vendor.qti.hardware.trustedui-aidl-service",
+    owner: "sony",
+    src: "proprietary/vendor/etc/vintf/manifest/vendor.qti.hardware.trustedui-aidl-service.xml",
+    vendor: true,
+}
+
 cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.trustedui@1.0",
     owner: "sony",
@@ -8688,6 +9831,13 @@ cc_prebuilt_library_shared {
             srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.vpp-V1-ndk.so"],
         },
     },
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "vendor.qti.hardware.vpp-service",
+    owner: "sony",
+    src: "proprietary/vendor/etc/vintf/manifest/vendor.qti.hardware.vpp-service.xml",
     vendor: true,
 }
 
@@ -8728,6 +9878,41 @@ cc_prebuilt_library_shared {
     target: {
         android_arm64: {
             srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.vpp@1.3.so"],
+        },
+    },
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "vendor.qti.hardware.wifidisplaysession-service",
+    owner: "sony",
+    src: "proprietary/vendor/etc/vintf/manifest/vendor.qti.hardware.wifidisplaysession-service.xml",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.wifidisplaysession@1.0",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.wifidisplaysession@1.0.so"],
+        },
+    },
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.wifidisplaysessionl@1.0-halimpl",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.wifidisplaysessionl@1.0-halimpl.so"],
         },
     },
     vendor: true,
@@ -9168,6 +10353,20 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "vendor.semc.hardware.aidldisplay-V1-ndk_platform",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/vendor.semc.hardware.aidldisplay-V1-ndk_platform.so"],
+        },
+    },
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
     name: "vendor.semc.hardware.aidlthermal-V2-ndk_platform",
     owner: "sony",
     strip: {
@@ -9178,6 +10377,13 @@ cc_prebuilt_library_shared {
             srcs: ["proprietary/vendor/lib64/vendor.semc.hardware.aidlthermal-V2-ndk_platform.so"],
         },
     },
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "vendor.semc.hardware.extlight-somc",
+    owner: "sony",
+    src: "proprietary/vendor/etc/vintf/manifest/vendor.semc.hardware.extlight-somc.xml",
     vendor: true,
 }
 
@@ -9218,6 +10424,20 @@ cc_prebuilt_library_shared {
     target: {
         android_arm64: {
             srcs: ["proprietary/vendor/lib64/vendor.somc.hardware.aidlmiscta-V1-ndk_platform.so"],
+        },
+    },
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.somc.hardware.aidlnfc-V1-ndk_platform",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/vendor.somc.hardware.aidlnfc-V1-ndk_platform.so"],
         },
     },
     vendor: true,
@@ -9276,6 +10496,13 @@ cc_prebuilt_library_shared {
             srcs: ["proprietary/vendor/lib64/vendor.somc.hardware.videoeffect-V1-ndk_platform.so"],
         },
     },
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "vendor.somc.hardware.videoeffect",
+    owner: "sony",
+    src: "proprietary/vendor/etc/vintf/manifest/vendor.somc.hardware.videoeffect.xml",
     vendor: true,
 }
 
