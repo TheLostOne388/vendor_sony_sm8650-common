@@ -1,0 +1,18 @@
+# Copyright 2017, 2023, 2024 Sony Corporation.
+# All rights, including trade secret rights, reserved.
+
+on late-init
+    setprop vendor.keyprovd.suntory.prov "false"
+    setprop vendor.sdm.wakeup "false"
+    setprop vendor.secd.wakeup "false"
+    setprop vendor.sony.securitysystem.provisioning.status.checking "false"
+
+on property:vendor.sony.securitysystem.provisioning.status.checking=true
+    exec  - system system -- /vendor/bin/spu_status_check true
+
+# start secd service
+service vendor.semc.hardware.aidlsecd /vendor/bin/hw/vendor.semc.hardware.aidlsecd-service
+    interface aidl vendor.semc.hardware.aidlsecd.IDeviceSecurity/default
+    class hal
+    user system
+    group system

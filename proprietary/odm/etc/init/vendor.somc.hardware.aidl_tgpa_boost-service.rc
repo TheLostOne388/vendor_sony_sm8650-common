@@ -1,0 +1,7 @@
+service aidl_tgpa_boost_hal_service /vendor/bin/hw/vendor.somc.hardware.aidl_tgpa_boost-service
+    interface aidl vendor.somc.hardware.aidl_tgpa_boost.ITgpaBoost/default
+    class hal
+    user system
+    group system
+    oneshot
+    capabilities SYS_NICE

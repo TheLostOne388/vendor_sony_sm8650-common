@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+   Copyright 2023 Sony Corporation
+-->
+<permissions>
+    <privapp-permissions package="jp.co.sony.mc.ethernettetheringux">
+        <permission name="android.permission.TETHER_PRIVILEGED"/>
+    </privapp-permissions>
+</permissions>

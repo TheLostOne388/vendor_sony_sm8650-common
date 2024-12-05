@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright 2023 Sony Corporation
+-->
+<permissions>
+    <privapp-permissions package="com.sonymobile.displaybooster">
+        <permission name="android.permission.CONTROL_DISPLAY_COLOR_TRANSFORMS"/>
+        <permission name="android.permission.INTERACT_ACROSS_USERS"/>
+    </privapp-permissions>
+</permissions>

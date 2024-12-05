@@ -1,0 +1,49 @@
+<?xml version="1.0" ?>
+<permissions>
+    <privapp-permissions package="com.google.android.euicc">
+        <permission name="android.permission.ACCESS_NETWORK_STATE"/>
+        <permission name="android.permission.CHANGE_COMPONENT_ENABLED_STATE"/>
+        <permission name="android.permission.CONNECTIVITY_USE_RESTRICTED_NETWORKS"/>
+        <permission name="android.permission.FOREGROUND_SERVICE"/>
+        <permission name="android.permission.MODIFY_PHONE_STATE"/>
+        <permission name="android.permission.INTERNET"/>
+        <permission name="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
+        <permission name="android.permission.REBOOT"/>
+        <permission name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+        <permission name="android.permission.START_FOREGROUND_SERVICES_FROM_BACKGROUND"/>
+        <permission name="android.permission.VIBRATE"/>
+        <permission name="android.permission.WRITE_EMBEDDED_SUBSCRIPTIONS"/>
+        <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
+        <permission name="com.android.permission.INSTALL_EXISTING_PACKAGES"/>
+        <permission name="com.android.permission.WRITE_EMBEDDED_SUBSCRIPTIONS"/>
+        <permission name="android.permission.START_ACTIVITIES_FROM_BACKGROUND"/>
+        <permission name="com.google.android.setupwizard.SETUP_COMPAT_SERVICE"/>
+    </privapp-permissions>
+    <privapp-permissions package="com.google.android.apps.carrier.carrierwifi">
+        <permission name="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
+        <permission name="android.permission.NETWORK_CARRIER_PROVISIONING"/>
+    </privapp-permissions>
+    <privapp-permissions package="com.google.android.wfcactivation">
+        <permission name="android.permission.CONNECTIVITY_USE_RESTRICTED_NETWORKS"/>
+        <permission name="android.permission.MODIFY_PHONE_STATE"/>
+        <permission name="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
+        <deny-permission name="android.permission.READ_LOGS"/>
+        <permission name="android.permission.WRITE_APN_SETTINGS"/>
+        <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
+    </privapp-permissions>
+    <privapp-permissions package="com.google.android.tetheringentitlement">
+        <!-- Required to bypass private DNS settings and use carrier's DNS instead. -->
+        <permission name="android.permission.CONNECTIVITY_USE_RESTRICTED_NETWORKS"/>
+        <!-- Required to change tether state, for Android 10 or earlier.-->
+        <permission name="android.permission.CONNECTIVITY_INTERNAL"/>
+        <!-- Required to get phone number, IMSI and ICCID. -->
+        <permission name="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
+        <!-- Required to change tether state, for Android 11 or later. -->
+        <permission name="android.permission.TETHER_PRIVILEGED"/>
+        <!-- Required to read the APN settings. -->
+        <permission name="android.permission.WRITE_APN_SETTINGS"/>
+    </privapp-permissions>
+    <privapp-permissions package="com.google.android.apps.healthdata">
+        <permission name="android.permission.PACKAGE_USAGE_STATS"/>
+    </privapp-permissions>
+</permissions>

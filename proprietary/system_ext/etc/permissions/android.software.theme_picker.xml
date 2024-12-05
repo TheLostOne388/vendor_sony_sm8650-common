@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright 2023 Sony Corporation
+
+     NOTE: This file has been modified by Sony Corporation
+     Modifications are licensed under the License.
+-->
+<permissions>
+    <privapp-permissions package="com.android.wallpaper">
+        <permission name="android.permission.BIND_WALLPAPER"/>
+        <permission name="android.permission.CHANGE_OVERLAY_PACKAGES"/>
+        <permission name="android.permission.CUSTOMIZE_SYSTEM_UI" />
+        <permission name="android.permission.MODIFY_DAY_NIGHT_MODE"/>
+        <permission name="android.permission.READ_WALLPAPER_INTERNAL"/>
+        <permission name="android.permission.SET_WALLPAPER_COMPONENT"/>
+        <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
+    </privapp-permissions>
+</permissions>

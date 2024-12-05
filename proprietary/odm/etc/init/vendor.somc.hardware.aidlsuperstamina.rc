@@ -1,0 +1,5 @@
+service vendor.aidlsuperstamina-somc /vendor/bin/hw/vendor.somc.hardware.aidlsuperstamina-service
+    class hal
+    user root
+    group root
+

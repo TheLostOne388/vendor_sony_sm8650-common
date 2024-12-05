@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright 2023 Sony Corporation
+-->
+<permissions>
+    <privapp-permissions package="com.sonyericsson.lockscreen.uxpnxt">
+        <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
+    </privapp-permissions>
+</permissions>

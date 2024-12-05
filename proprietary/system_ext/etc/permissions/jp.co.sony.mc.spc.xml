@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright 2023 Sony Corporation
+    All rights, including trade secret rights, reserved
+-->
+<permissions>
+    <library name="jp.co.sony.mc.spc"
+             file="/system/system_ext/framework/jp.co.sony.mc.spc_impl.jar"/>
+</permissions>

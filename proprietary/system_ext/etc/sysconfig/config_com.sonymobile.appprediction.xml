@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright 2023 Sony Corporation
+-->
+
+<config>
+    <!-- These are the standard packages that are white-listed to always have internet
+          access while in power save mode, even if they aren't in the foreground.
+
+         An example of white-listed is following:
+
+         <allow-in-power-save package="com.example.a" />
+          - The packages that are white-listed to be able to run in the
+            background while in power save mode.
+          - The packages that are white-listed to be exempted from Background service
+            restriction after Android O.
+
+         <allow-in-power-save-except-idle package="com.example.b" />
+          - The packages that are white-listed to be able to run in the
+            background while in power save mode.
+            (but not whitelisted from device idle modes)
+    -->
+    <allow-in-power-save package="com.sonymobile.appprediction" />
+</config>

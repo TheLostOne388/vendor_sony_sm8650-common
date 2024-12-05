@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<permissions>
+    <library name="com.sonymobile.superstamina.api"
+        file="/system_ext/framework/com.sonymobile.superstamina_impl.jar"/>
+    <library name="com.sonymobile.superstamina.api_2"
+        file="/system_ext/framework/com.sonymobile.superstamina_impl.jar"/>
+    <library name="com.sonymobile.superstamina.api_3"
+        file="/system_ext/framework/com.sonymobile.superstamina_impl.jar"/>
+
+    <privapp-permissions package="com.sonymobile.superstamina">
+        <permission name="android.permission.BATTERY_STATS"/>
+        <permission name="android.permission.CONNECTIVITY_INTERNAL"/>
+        <permission name="android.permission.DELETE_PACKAGES"/>
+        <permission name="android.permission.MANAGE_USERS"/>
+        <permission name="android.permission.MODIFY_DAY_NIGHT_MODE"/>
+        <permission name="android.permission.POWER_SAVER"/>
+        <permission name="android.permission.READ_PRECISE_PHONE_STATE"/>
+        <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
+    </privapp-permissions>
+</permissions>
