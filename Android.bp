@@ -18,6 +18,217 @@ filegroup {
 }
 
 cc_prebuilt_library_shared {
+    name: "libqmi_encdec",
+    srcs: ["proprietary/vendor/lib64/libqmi_encdec.so"],
+    compile_multilib: "64",
+    soc_specific: true, // Specific to the SoC
+    installable: true,
+    relative_install_path: "lib64",
+    shared_libs: [
+        "libc",
+        "libm",
+        "libdl",
+        "liblog",
+        "libc++",
+        "libcutils",
+        "libutils",
+    ],
+}
+
+cc_prebuilt_library_shared {
+    name: "libqmi_cci",
+    srcs: ["proprietary/vendor/lib64/libqmi_cci.so"],
+    compile_multilib: "64",
+    soc_specific: true, 
+    installable: true,
+    relative_install_path: "lib64",
+    shared_libs: [
+        "libc",
+        "libm",
+        "libdl",
+        "liblog",
+        "libc++",
+        "libcutils",
+        "libutils",
+        "libqmi_encdec",
+    ],
+}
+
+cc_prebuilt_library_shared {
+    name: "libcv_common",
+    srcs: ["proprietary/vendor/lib64/libcv_common.so"],
+    compile_multilib: "64",
+    soc_specific: true, // Indicates the library is SoC-specific
+    installable: true,
+    relative_install_path: "lib64",
+    shared_libs: [
+        "libc",
+        "libm",
+        "libdl",
+        "liblog",
+        "libc++",
+        "libutils",
+        // Add additional dependencies here if needed
+    ],
+}
+
+cc_prebuilt_library_shared {
+    name: "libqmi_common_so",
+    srcs: ["proprietary/vendor/lib64/libqmi_common_so.so"],
+    compile_multilib: "64",
+    soc_specific: true,
+    installable: true,
+    relative_install_path: "lib64",
+    shared_libs: [
+        "libc++",
+        "libc",
+        "libcutils",
+        "libdl",
+        "libm",
+        "libutils",
+    ],
+}
+
+cc_prebuilt_library_shared {
+    name: "libsnsapi",
+    srcs: ["proprietary/vendor/lib64/libsnsapi.so"],
+    shared_libs: [
+        "libc++",
+        "libcutils",
+        "liblog",
+        "libutils",
+        "libprotobuf-cpp-lite-21.7",
+        "libqmi_cci",
+        "libqmi_encdec",
+	"libqmi_common_so",
+    ],
+    compile_multilib: "64",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.semc.system.idd@1.0",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/vendor.semc.system.idd@1.0.so"],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+
+    // Add the missing shared libraries here:
+    shared_libs: [
+        "libc++",
+        "libcutils",
+        "libhidlbase",
+        "liblog",
+        "libutils",
+    ],
+}
+
+cc_prebuilt_library_shared {
+    name: "libvmmem",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libvmmem.so"],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+
+    // Add the missing shared libraries as suggested by the error message
+    shared_libs: [
+        "libbase",
+        "libc++",
+        "liblog",
+    ],
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.dsp@1.0",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.dsp@1.0.so"],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+
+    // Add the required shared libraries
+    shared_libs: [
+        "libc++",
+        "libcutils",
+        "libhidlbase",
+        "liblog",
+        "libutils",
+    ],
+}
+
+cc_prebuilt_library_shared {
+    name: "libgralloc.qti",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libgralloc.qti.so"],
+        },
+    },
+    shared_libs: [
+        "liblog",
+        "libcutils",
+        "libutils",
+        "libgralloctypes",
+        "libhidlbase",
+        "libhardware",
+        "android.hardware.graphics.mapper@4.0",
+    ],
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libidd",
+    srcs: ["proprietary/vendor/lib64/libidd.so"],
+    shared_libs: [
+        "vendor.semc.system.idd@1.0",  // removed .vendor suffix
+        "android.hidl.allocator@1.0",   // removed .vendor suffix
+        "libc",
+        "libc++",
+        "libcutils",
+        "libdl",
+        "libhidlbase",
+        "libhidlmemory",
+        "liblog",
+        "libm",
+        "libprotobuf-cpp-lite",
+        "libutils",
+    ],
+    compile_multilib: "64",
+    vendor: true,
+    installable: true,
+    relative_install_path: "lib64",
+}
+
+cc_prebuilt_library_shared {
     name: "audio.primary.pineapple",
     srcs: ["proprietary/vendor/lib64/hw/audio.primary.pineapple.so"],
     vendor: true,
@@ -35,23 +246,6 @@ cc_prebuilt_library_shared {
     strip: {
         none: true,
     },
-}
-
-cc_prebuilt_library_shared {
-    name: "libcdsprpc",
-    target: {
-        android_arm64: {
-            srcs: ["proprietary/vendor/lib64/libcdsprpc.so"],
-        },
-    },
-    shared_libs: [
-        "libc++",
-        "libc",
-        "libm",
-        "libdl",
-    ],
-    compile_multilib: "64",
-    soc_specific: true,
 }
 
 cc_prebuilt_library_shared {
@@ -89,13 +283,28 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libidd",
-    srcs: ["proprietary/vendor/lib64/libidd.so"],
-    shared_libs: ["libprotobuf-cpp-lite", "libc", "libm", "libdl"],
+    name: "libcdsprpc",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libcdsprpc.so"],
+        },
+    },
+    shared_libs: [
+        "vendor.qti.hardware.dsp@1.0",
+        "libvmmem",
+        "libc",
+        "libc++",
+        "libcutils",
+        "libdl",
+        "libdmabufheap",
+        "libhardware",
+        "libhidlbase",
+        "liblog",
+        "libm",
+        "libutils",
+    ],
     compile_multilib: "64",
-    vendor_available: true,
-    installable: true,
-    relative_install_path: "lib64",
+    soc_specific: true,
 }
 
 cc_prebuilt_library_shared {
@@ -122,13 +331,30 @@ cc_prebuilt_library_shared {
 cc_prebuilt_library_shared {
     name: "libsns_direct_channel_stub",
     srcs: ["proprietary/vendor/lib64/libsns_direct_channel_stub.so"],
-    shared_libs: [],
+    shared_libs: [
+        "liblog",
+        "libutils",
+        "libcutils",
+        "libcdsprpc",
+    ],
     vendor: true,
 }
 
 cc_prebuilt_library_shared {
     name: "libeva",
     srcs: ["proprietary/vendor/lib64/libeva.so"],
+    shared_libs: [
+        "liblog",
+        "libbase",
+        "libdmabufheap",
+        "libutils",
+        "libcv_common",
+        "libvmmem",
+        "libsynx",
+        "libcdsprpc",
+        "libjsoncpp",
+        "libc++",
+    ],
     vendor: true,
     compile_multilib: "64",
 }
