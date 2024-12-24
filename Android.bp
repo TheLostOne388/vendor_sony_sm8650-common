@@ -310,27 +310,50 @@ cc_prebuilt_library_shared {
 cc_prebuilt_library_shared {
     name: "libsensorslog",
     srcs: ["proprietary/vendor/lib64/libsensorslog.so"],
-    shared_libs: [],
+    shared_libs: [
+        "libc++",
+        "liblog",
+    ],
     vendor: true,
 }
 
 cc_prebuilt_library_shared {
     name: "libsnsutils",
     srcs: ["proprietary/vendor/lib64/libsnsutils.so"],
-    shared_libs: [],
+    shared_libs: [
+        "libc++",
+        "libcutils",
+        "liblog",
+        "libsensorslog",
+        "libutils",
+    ],
     vendor: true,
 }
 
 cc_prebuilt_library_shared {
     name: "libqsh",
     srcs: ["proprietary/vendor/lib64/libqsh.so"],
-    shared_libs: [],
+    compile_multilib: "64",    // Add this line to explicitly set 64-bit only
+    shared_libs: [
+        "libc++",
+        "libcutils",
+        "liblog",
+        "libprotobuf-cpp-lite-21.7",
+        "libqmi_cci",
+        "libqmi_common_so",
+        "libqmi_encdec",
+        "libsensorslog",
+        "libsnsapi",
+        "libsnsutils",
+        "libutils",
+    ],
     vendor: true,
 }
 
 cc_prebuilt_library_shared {
     name: "libsns_direct_channel_stub",
     srcs: ["proprietary/vendor/lib64/libsns_direct_channel_stub.so"],
+    compile_multilib: "64",
     shared_libs: [
         "liblog",
         "libutils",
