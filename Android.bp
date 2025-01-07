@@ -397,20 +397,37 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-	name: "btaudio_offload_if",
-	owner: "sony",
-	strip: {
-		none: true,
-	},
-	target: {
-		android: {
-			srcs: ["proprietary/vendor/lib64/btaudio_offload_if.so"],
-			shared_libs: ["libbase", "libcutils", "libfmq", "libhidlbase", "liblog", "libutils", "libbinder_ndk", "android.hardware.bluetooth.audio-V4-ndk", "libbluetooth_audio_session_aidl", "libbluetooth_audio_session_aidl", "libbluetooth_audio_session_aidl", "vendor.qti.hardware.bluetooth.audio-V1-ndk", "android.hardware.bluetooth.audio-impl", "libc++", "libc", "libm", "libdl", ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	soc_specific: true,
+    name: "btaudio_offload_if",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android: {
+            srcs: ["proprietary/vendor/lib64/btaudio_offload_if.so"],
+            shared_libs: [
+                "libbase",
+                "libcutils",
+                "libfmq",
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libbinder_ndk",
+                // Changed from V4 to V5 to match libbluetooth_audio_session_aidl
+                "android.hardware.bluetooth.audio-V5-ndk",
+                "libbluetooth_audio_session_aidl",
+                "vendor.qti.hardware.bluetooth.audio-V1-ndk",
+                "android.hardware.bluetooth.audio-impl",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
 }
 
 prebuilt_rfsa {
