@@ -1,0 +1,6 @@
+service somc_wifidriver_hal_service /vendor/bin/hw/vendor.somc.hardware.aidlwifidriver-service
+    interface aidl vendor.somc.hardware.aidlwifidriver.ISomcWifiDriver/default
+    class hal
+    user wifi
+    group wifi net_raw net_admin
+    capabilities NET_RAW NET_ADMIN
