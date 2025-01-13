@@ -6,18 +6,65 @@ soong_namespace {
     imports: []
 }
 
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.systemhelper@1.0",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.systemhelper@1.0.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
+//cc_prebuilt_library_shared {
+//    name: "vendor.qti.hardware.display.mapper@3.0",
+//    owner: "sony",
+//    strip: {
+//        none: true,
+//    },
+//    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.display.mapper@3.0.so"],
+//    compile_multilib: "64",
+//    prefer: true,
+//    soc_specific: true,
+//}
+
+//cc_prebuilt_library_shared {
+//    name: "vendor.qti.hardware.display.mapperextensions@1.3",
+//    owner: "sony",
+//    strip: {
+//        none: true,
+//    },
+//    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.display.mapperextensions@1.3.so"],
+//    compile_multilib: "64",
+//    prefer: true,
+//    soc_specific: true,
+//}
+
+//cc_prebuilt_library_shared {
+//    name: "vendor.qti.hardware.display.allocator@1.0",
+//    owner: "sony",
+//    strip: {
+//        none: true,
+//    },
+//    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.display.allocator@1.0.so"],
+//    compile_multilib: "64",
+//    prefer: true,
+//    soc_specific: true,
+//}
+
+//cc_prebuilt_library_shared {
+//    name: "vendor.qti.hardware.display.mapper@1.1",
+//    owner: "sony",
+//    strip: {
+//        none: true,
+//    },
+//    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.display.mapper@1.1.so"],
+//    compile_multilib: "64",
+//    prefer: true,
+//    soc_specific: true,
+//}
+
+//cc_prebuilt_library_shared {
+//    name: "vendor.qti.hardware.display.mapper@4.0",
+//    owner: "sony",
+//    strip: {
+//        none: true,
+//    },
+//    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.display.mapper@4.0.so"],
+//    compile_multilib: "64",
+//    prefer: true,
+//    soc_specific: true,
+//}
 
 cc_prebuilt_library_shared {
     name: "android.hardware.radio-V2-ndk",
@@ -33,16 +80,26 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.data.iwlan@1.1",
+    name: "android.hardware.radio@1.0-impl",
     owner: "sony",
     strip: {
-        none: true
+        none: true,
     },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.data.iwlan@1.1.so"],
-    shared_libs: [],
+    srcs: ["proprietary/vendor/system/lib64/android.hardware.radio@1.0.so"],
+    shared_libs: [
+        "libhidlbase",
+        "libhidltransport",
+        "libhwbinder",
+        "liblog",
+        "libutils",
+        "libcutils",
+        "android.hardware.radio@1.0",
+    ],
     compile_multilib: "64",
     prefer: true,
-    soc_specific: true
+    vendor: true,
+    soc_specific: true,
+    relative_install_path: "hw",
 }
 
 cc_prebuilt_library_shared {
@@ -254,19 +311,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.bluetooth_audio@2.0",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.bluetooth_audio@2.0.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
-
-cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.dpmservice@1.1",
     owner: "sony",
     strip: {
@@ -423,19 +467,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.display.mapperextensions@1.3",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.display.mapperextensions@1.3.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
-
-cc_prebuilt_library_shared {
     name: "vendor.qti.ims.rcssip@1.2",
     owner: "sony",
     strip: {
@@ -526,18 +557,18 @@ cc_prebuilt_library_shared {
     soc_specific: true
 }
 
-cc_prebuilt_library_shared {
-    name: "android.hardware.radio@1.6",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/android.hardware.radio@1.6.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
+//cc_prebuilt_library_shared {
+//    name: "android.hardware.radio@1.6",
+//    owner: "sony",
+//    strip: {
+//        none: true
+//    },
+//    srcs: ["proprietary/vendor/lib64/android.hardware.radio@1.6.so"],
+//    shared_libs: [],
+//    compile_multilib: "64",
+//    prefer: true,
+//    soc_specific: true
+//}
 
 cc_prebuilt_library_shared {
     name: "libGPreqcancel_svc",
@@ -578,18 +609,18 @@ cc_prebuilt_library_shared {
     soc_specific: true
 }
 
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.display.composer@3.1",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.display.composer@3.1.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
+//cc_prebuilt_library_shared {
+//    name: "vendor.qti.hardware.display.composer@3.1",
+//    owner: "sony",
+//    strip: {
+//        none: true
+//    },
+//    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.display.composer@3.1.so"],
+//    shared_libs: [],
+//    compile_multilib: "64",
+//    prefer: true,
+//    soc_specific: true
+//}
 
 cc_prebuilt_library_shared {
     name: "libqti-at",
@@ -826,19 +857,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "android.hardware.radio@1.4",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/android.hardware.radio@1.4.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
-
-cc_prebuilt_library_shared {
     name: "libadreno_utils",
     owner: "sony",
     strip: {
@@ -922,7 +940,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/libfastcvadsp.so"],
+    srcs: ["proprietary/vendor/lib64/rfs/dsp/libfastcvadsp.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -935,7 +953,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/libevadsp.so"],
+    srcs: ["proprietary/vendor/lib64/rfs/dsp/libevadsp.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -1762,19 +1780,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.perf@2.3",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.perf@2.3.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
-
-cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.data.cne.internal.server@1.0",
     owner: "sony",
     strip: {
@@ -1905,19 +1910,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.btconfigstore@1.0",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.btconfigstore@1.0.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
-
-cc_prebuilt_library_shared {
     name: "vendor.qti.qesdhal@1.1",
     owner: "sony",
     strip: {
@@ -1950,19 +1942,6 @@ cc_prebuilt_library_shared {
         none: true
     },
     srcs: ["proprietary/vendor/lib64/com.quicinc.cne.api@1.1.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.perf@2.1",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.perf@2.1.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -2170,7 +2149,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/android.hardware.bluetooth.audio-V3-ndk.so"],
+    srcs: ["proprietary/vendor/system/lib64/android.hardware.bluetooth.audio-V3-ndk.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -2184,19 +2163,6 @@ cc_prebuilt_library_shared {
         none: true
     },
     srcs: ["proprietary/vendor/lib64/vendor.qti.qvirt-V1-ndk.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.display.mapper@1.1",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.display.mapper@1.1.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -2243,19 +2209,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "android.hardware.radio@1.0",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/android.hardware.radio@1.0.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
-
-cc_prebuilt_library_shared {
     name: "libqcmaputils",
     owner: "sony",
     strip: {
@@ -2295,19 +2248,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.display.mapper@2.0",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.display.mapper@2.0.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
-
-cc_prebuilt_library_shared {
     name: "libq3dtools_adreno",
     owner: "sony",
     strip: {
@@ -2320,18 +2260,18 @@ cc_prebuilt_library_shared {
     soc_specific: true
 }
 
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.display.allocator@4.0",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.display.allocator@4.0.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
+//cc_prebuilt_library_shared {
+//    name: "vendor.qti.hardware.display.allocator@4.0",
+//    owner: "sony",
+//    strip: {
+//        none: true
+//    },
+//    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.display.allocator@4.0.so"],
+//    shared_libs: [],
+//    compile_multilib: "64",
+//    prefer: true,
+//    soc_specific: true
+//}
 
 cc_prebuilt_library_shared {
     name: "libril-db",
@@ -2425,38 +2365,12 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "android.system.wifi.keystore@1.0",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/android.system.wifi.keystore@1.0.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
-
-cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.radio.ims@1.1",
     owner: "sony",
     strip: {
         none: true
     },
     srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.radio.ims@1.1.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.bluetooth_audio@2.1",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.bluetooth_audio@2.1.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -2490,19 +2404,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.display.mapperextensions@1.2",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.display.mapperextensions@1.2.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
-
-cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.iop@2.0",
     owner: "sony",
     strip: {
@@ -2529,19 +2430,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "android.hardware.bluetooth@1.0",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/android.hardware.bluetooth@1.0.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
-
-cc_prebuilt_library_shared {
     name: "libqtikeymaster4",
     owner: "sony",
     strip: {
@@ -2560,7 +2448,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/libGLESv1_CM_adreno.so"],
+    srcs: ["proprietary/vendor/lib64/egl/libGLESv1_CM_adreno.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -2742,7 +2630,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/libqcomvoiceprocessing.so"],
+    srcs: ["proprietary/vendor/lib64/soundfx/libqcomvoiceprocessing.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -2755,7 +2643,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/libqcomvisualizer.so"],
+    srcs: ["proprietary/vendor/lib64/soundfx/libqcomvisualizer.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -2768,7 +2656,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/libqcompostprocbundle.so"],
+    srcs: ["proprietary/vendor/lib64/soundfx/libqcompostprocbundle.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -3171,7 +3059,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/libdrmclearkeyplugin.so"],
+    srcs: ["proprietary/vendor/lib64/mediadrm/libdrmclearkeyplugin.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -3230,18 +3118,18 @@ cc_prebuilt_library_shared {
     soc_specific: true
 }
 
-cc_prebuilt_library_shared {
-    name: "android.hardware.media.c2@1.2",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/android.hardware.media.c2@1.2.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
+//cc_prebuilt_library_shared {
+//    name: "android.hardware.media.c2@1.2",
+//    owner: "sony",
+//    strip: {
+//        none: true
+//    },
+//    srcs: ["proprietary/vendor/lib64/android.hardware.media.c2@1.2.so"],
+//    shared_libs: [],
+//    compile_multilib: "64",
+//    prefer: true,
+//    soc_specific: true
+//}
 
 cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.qteeconnector@1.0",
@@ -3321,31 +3209,18 @@ cc_prebuilt_library_shared {
     soc_specific: true
 }
 
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.btconfigstore@2.0",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.btconfigstore@2.0.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.display.composer@3.0",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.display.composer@3.0.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
+//cc_prebuilt_library_shared {
+//    name: "vendor.qti.hardware.display.composer@3.0",
+//    owner: "sony",
+//    strip: {
+//        none: true
+//    },
+//    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.display.composer@3.0.so"],
+//    shared_libs: [],
+//    compile_multilib: "64",
+//    prefer: true,
+//   soc_specific: true
+//}
 
 cc_prebuilt_library_shared {
     name: "android.hardware.drm-V1-ndk",
@@ -3353,7 +3228,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/android.hardware.drm-V1-ndk.so"],
+    srcs: ["proprietary/vendor/system/lib64/android.hardware.drm-V1-ndk.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -3374,38 +3249,12 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "android.hardware.radio@1.2",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/android.hardware.radio@1.2.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
-
-cc_prebuilt_library_shared {
     name: "libqc2audio_utils",
     owner: "sony",
     strip: {
         none: true
     },
     srcs: ["proprietary/vendor/lib64/libqc2audio_utils.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.display.allocator@1.0",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.display.allocator@1.0.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -3543,19 +3392,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libdrm",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/libdrm.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
-
-cc_prebuilt_library_shared {
     name: "vendor.qti.data.mwqem@1.0",
     owner: "sony",
     strip: {
@@ -3588,19 +3424,6 @@ cc_prebuilt_library_shared {
         none: true
     },
     srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.AGMIPC@1.0-impl.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
-
-cc_prebuilt_library_shared {
-    name: "libqti_vndfwk_detect",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/libqti_vndfwk_detect.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -3646,18 +3469,18 @@ cc_prebuilt_library_shared {
     soc_specific: true
 }
 
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.display.allocator@3.0",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.display.allocator@3.0.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
+//cc_prebuilt_library_shared {
+//    name: "vendor.qti.hardware.display.allocator@3.0",
+//    owner: "sony",
+//    strip: {
+//        none: true
+//    },
+//    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.display.allocator@3.0.so"],
+//    shared_libs: [],
+//    compile_multilib: "64",
+//    prefer: true,
+//    soc_specific: true
+//}
 
 cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.servicetrackeraidl-V1-ndk",
@@ -3685,18 +3508,18 @@ cc_prebuilt_library_shared {
     soc_specific: true
 }
 
-cc_prebuilt_library_shared {
-    name: "android.hardware.media.c2@1.1",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/android.hardware.media.c2@1.1.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
+//cc_prebuilt_library_shared {
+//    name: "android.hardware.media.c2@1.1",
+//    owner: "sony",
+//    strip: {
+//        none: true
+//    },
+//    srcs: ["proprietary/vendor/lib64/android.hardware.media.c2@1.1.so"],
+//    shared_libs: [],
+//    compile_multilib: "64",
+//    prefer: true,
+//    soc_specific: true
+//}
 
 cc_prebuilt_library_shared {
     name: "libwifi-hal",
@@ -3946,19 +3769,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.display.mapper@4.0",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.display.mapper@4.0.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
-
-cc_prebuilt_library_shared {
     name: "android.hardware.radio.messaging-V2-ndk",
     owner: "sony",
     strip: {
@@ -4089,19 +3899,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.camera.postproc@1.0",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.camera.postproc@1.0.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
-
-cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.qccsyshal@1.0",
     owner: "sony",
     strip: {
@@ -4206,19 +4003,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libmediautils_vendor",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/libmediautils_vendor.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
-
-cc_prebuilt_library_shared {
     name: "libEGL_adreno",
     owner: "sony",
     strip: {
@@ -4283,18 +4067,18 @@ cc_prebuilt_library_shared {
     soc_specific: true
 }
 
-cc_prebuilt_library_shared {
-    name: "android.hardware.radio@1.5",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/android.hardware.radio@1.5.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
+//cc_prebuilt_library_shared {
+//    name: "android.hardware.radio@1.5",
+//    owner: "sony",
+//    strip: {
+//        none: true
+//    },
+//    srcs: ["proprietary/vendor/lib64/android.hardware.radio@1.5.so"],
+//    shared_libs: [],
+//    compile_multilib: "64",
+//    prefer: true,
+//    soc_specific: true
+//}
 
 cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.wifidisplaysession_aidl-V1-ndk",
@@ -4329,19 +4113,6 @@ cc_prebuilt_library_shared {
         none: true
     },
     srcs: ["proprietary/vendor/lib64/qti-audio-types-aidl-V1-ndk.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.servicetracker@1.0",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.servicetracker@1.0.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -4433,19 +4204,6 @@ cc_prebuilt_library_shared {
         none: true
     },
     srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.vpp@1.2.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
-
-cc_prebuilt_library_shared {
-    name: "android.hardware.bluetooth.audio@2.0",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/android.hardware.bluetooth.audio@2.0.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -4550,32 +4308,6 @@ cc_prebuilt_library_shared {
         none: true
     },
     srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.radio.lpa-V1-ndk.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.perf@2.0",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.perf@2.0.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
-
-cc_prebuilt_library_shared {
-    name: "android.hardware.bluetooth@1.1",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/android.hardware.bluetooth@1.1.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -5753,19 +5485,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.display.composer@1.0",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.display.composer@1.0.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
-
-cc_prebuilt_library_shared {
     name: "libthermalclient.qti",
     owner: "sony",
     strip: {
@@ -5778,18 +5497,16 @@ cc_prebuilt_library_shared {
     soc_specific: true
 }
 
-cc_prebuilt_library_shared {
-    name: "android.hardware.media.c2@1.0",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/android.hardware.media.c2@1.0.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
+//cc_prebuilt_library_shared {
+//    name: "android.hardware.media.c2@1.0",
+//    owner: "sony",
+//    strip: {
+//        none: true,
+//    },
+//    srcs: ["proprietary/system/lib64/android.hardware.media.c2@1.0.so"],
+//    compile_multilib: "64",
+//    prefer: true,
+//}
 
 cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.secureprocessor.device-V1-ndk",
@@ -5844,32 +5561,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "android.hardware.radio@1.3",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/android.hardware.radio@1.3.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.display.mapperextensions@1.0",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.display.mapperextensions@1.0.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
-
-cc_prebuilt_library_shared {
     name: "com.quicinc.cne.constants@2.0",
     owner: "sony",
     strip: {
@@ -5902,19 +5593,6 @@ cc_prebuilt_library_shared {
         none: true
     },
     srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.radio.lpa@1.1.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.display.mapper@3.0",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.display.mapper@3.0.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -5986,18 +5664,17 @@ cc_prebuilt_library_shared {
     soc_specific: true
 }
 
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.display.composer@2.0",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.display.composer@2.0.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
+//cc_prebuilt_library_shared {
+//    name: "vendor.qti.hardware.display.composer@2.0",
+//    owner: "sony",
+//    strip: {
+//        none: true,
+//    },
+//    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.display.composer@2.0.so"],
+//    compile_multilib: "64",
+//    prefer: true,
+//    soc_specific: true,
+//}
 
 cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.data.flowaidlservice-V1-ndk",
@@ -6071,19 +5748,6 @@ cc_prebuilt_library_shared {
         none: true
     },
     srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.secureprocessor.common@1.0-helper.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.servicetracker@1.1",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.servicetracker@1.1.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -6182,19 +5846,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.display.mapper@1.0",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.display.mapper@1.0.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
-
-cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.radio.ims@1.4",
     owner: "sony",
     strip: {
@@ -6273,19 +5924,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.perf@2.2",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.perf@2.2.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
-
-cc_prebuilt_library_shared {
     name: "com.qualcomm.qti.ant@1.0",
     owner: "sony",
     strip: {
@@ -6317,7 +5955,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/vulkan.adreno.so"],
+    srcs: ["proprietary/vendor/lib64/hw/vulkan.adreno.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -6330,7 +5968,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/camera.qcom.so"],
+    srcs: ["proprietary/vendor/lib64/hw/camera.qcom.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -6343,7 +5981,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.qseecom@1.0-impl.so"],
+    srcs: ["proprietary/vendor/lib64/hw/vendor.qti.hardware.qseecom@1.0-impl.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -6356,7 +5994,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.bttpi-impl.so"],
+    srcs: ["proprietary/vendor/lib64/hw/vendor.qti.hardware.bttpi-impl.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -6369,7 +6007,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/libqtigatekeeper.so"],
+    srcs: ["proprietary/vendor/lib64/hw/libqtigatekeeper.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -6382,7 +6020,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.bluetooth_audio@2.0-impl.so"],
+    srcs: ["proprietary/vendor/lib64/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -6395,7 +6033,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/libspuqtigatekeeper.so"],
+    srcs: ["proprietary/vendor/lib64/hw/libspuqtigatekeeper.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -6408,7 +6046,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/android.hardware.bluetooth.audio@2.0-impl.so"],
+    srcs: ["proprietary/vendor/lib64/hw/android.hardware.bluetooth.audio@2.0-impl.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -6421,7 +6059,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/android.hardware.bluetooth@1.1-impl-qti.so"],
+    srcs: ["proprietary/vendor/lib64/hw/android.hardware.bluetooth@1.1-impl-qti.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -6434,7 +6072,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.chi.offline.so"],
+    srcs: ["proprietary/vendor/lib64/hw/com.qti.chi.offline.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -6447,7 +6085,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/audio.bluetooth_qti.default.so"],
+    srcs: ["proprietary/vendor/lib64/hw/audio.bluetooth_qti.default.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -6460,7 +6098,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so"],
+    srcs: ["proprietary/vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -6473,7 +6111,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/audio.bluetooth.default.so"],
+    srcs: ["proprietary/vendor/lib64/hw/audio.bluetooth.default.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -6486,7 +6124,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.fm@1.0-impl.so"],
+    srcs: ["proprietary/vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -6499,7 +6137,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.bluetooth_audio@2.1-impl.so"],
+    srcs: ["proprietary/vendor/lib64/hw/vendor.qti.hardware.bluetooth_audio@2.1-impl.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -6512,7 +6150,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.wifidisplaysession@1.0-impl.so"],
+    srcs: ["proprietary/vendor/lib64/hw/vendor.qti.hardware.wifidisplaysession@1.0-impl.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -6525,7 +6163,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/camera.qcom.sm8650.so"],
+    srcs: ["proprietary/vendor/lib64/hw/camera.qcom.sm8650.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -6538,7 +6176,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1-impl.so"],
+    srcs: ["proprietary/vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -6551,7 +6189,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.btconfigstore@2.0-impl.so"],
+    srcs: ["proprietary/vendor/lib64/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -6564,7 +6202,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/android.hardware.gnss-aidl-impl-qti.so"],
+    srcs: ["proprietary/vendor/lib64/hw/android.hardware.gnss-aidl-impl-qti.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -6577,7 +6215,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.chi.override.so"],
+    srcs: ["proprietary/vendor/lib64/hw/com.qti.chi.override.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -6590,7 +6228,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/android.hardware.graphics.mapper@4.0-impl-qti-display.so"],
+    srcs: ["proprietary/vendor/lib64/hw/com.qti.chi.override.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -6603,7 +6241,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/android.hardware.bluetooth@1.0-impl-qti.so"],
+    srcs: ["proprietary/vendor/lib64/hw/com.qti.chi.override.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -6616,7 +6254,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.servicetrackeraidl-impl.so"],
+    srcs: ["proprietary/vendor/lib64/hw/vendor.qti.hardware.servicetrackeraidl-impl.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -6629,7 +6267,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.soter-impl.so"],
+    srcs: ["proprietary/vendor/lib64/hw/vendor.qti.hardware.soter-impl.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -6642,7 +6280,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/android.hardware.bluetooth.audio-impl-qti.so"],
+    srcs: ["proprietary/vendor/lib64/hw/android.hardware.bluetooth.audio-impl-qti.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -6655,7 +6293,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.sigma_miracast@1.0-impl.so"],
+    srcs: ["proprietary/vendor/lib64/hw/vendor.qti.hardware.sigma_miracast@1.0-impl.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -6668,7 +6306,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.btconfigstore@1.0-impl.so"],
+    srcs: ["proprietary/vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -6695,19 +6333,6 @@ cc_prebuilt_library_shared {
         none: true
     },
     srcs: ["proprietary/vendor/lib64/libqcrilDataModule.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.capabilityconfigstore@1.0",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.capabilityconfigstore@1.0.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -6929,19 +6554,6 @@ cc_prebuilt_library_shared {
         none: true
     },
     srcs: ["proprietary/vendor/lib64/qcrilNr_aidl_IRadioMessaging.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.display.mapperextensions@1.1",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.display.mapperextensions@1.1.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -7266,7 +6878,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/android.hardware.gnss-V3-ndk.so"],
+    srcs: ["proprietary/system/lib64/android.hardware.gnss-V3-ndk.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -7280,19 +6892,6 @@ cc_prebuilt_library_shared {
         none: true
     },
     srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.radio.lpa@1.0.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
-
-cc_prebuilt_library_shared {
-    name: "android.hardware.radio@1.1",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/android.hardware.radio@1.1.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -7417,19 +7016,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "android.hardware.bluetooth.audio@2.1",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/android.hardware.bluetooth.audio@2.1.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
-
-cc_prebuilt_library_shared {
     name: "android.hardware.radio.data-V2-ndk",
     owner: "sony",
     strip: {
@@ -7513,7 +7099,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.sensor.s5k2x5sp.so"],
+    srcs: ["proprietary/vendor/lib64/camera/com.qti.sensor.s5k2x5sp.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -7526,7 +7112,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.stats.asd.so"],
+    srcs: ["proprietary/vendor/lib64/camera/components/com.qti.stats.asd.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -7539,7 +7125,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.hwcfg.ife.so"],
+    srcs: ["proprietary/vendor/lib64/camera/components/com.qti.hwcfg.ife.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -7552,7 +7138,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.node.depthprovider.so"],
+    srcs: ["proprietary/vendor/lib64/camera/components/com.qti.node.depthprovider.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -7565,7 +7151,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.stats.statsgenerator.so"],
+    srcs: ["proprietary/vendor/lib64/camera/components/com.qti.stats.statsgenerator.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -7578,7 +7164,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.node.customhwnode.so"],
+    srcs: ["proprietary/vendor/lib64/camera/components/com.qti.node.customhwnode.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -7591,7 +7177,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.node.depth.so"],
+    srcs: ["proprietary/vendor/lib64/camera/components/com.qti.node.depth.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -7604,7 +7190,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.node.swpreprocess.so"],
+    srcs: ["proprietary/vendor/lib64/camera/components/com.qti.node.swpreprocess.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -7617,7 +7203,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.node.dewarp.so"],
+    srcs: ["proprietary/vendor/lib64/camera/components/com.qti.node.dewarp.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -7630,7 +7216,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.stats.af.so"],
+    srcs: ["proprietary/vendor/lib64/camera/components/com.qti.stats.af.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -7643,7 +7229,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.node.dummyrtb.so"],
+    srcs: ["proprietary/vendor/lib64/camera/components/com.qti.node.dummyrtb.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -7656,7 +7242,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.node.swmctf.so"],
+    srcs: ["proprietary/vendor/lib64/camera/components/com.qti.node.swmctf.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -7669,7 +7255,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.node.swlsc.so"],
+    srcs: ["proprietary/vendor/lib64/camera/components/com.qti.node.swlsc.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -7682,7 +7268,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.node.swec.so"],
+    srcs: ["proprietary/vendor/lib64/camera/components/com.qti.node.swec.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -7695,7 +7281,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.stats.awb.so"],
+    srcs: ["proprietary/vendor/lib64/camera/components/com.qti.stats.awb.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -7708,7 +7294,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.stats.tracker.so"],
+    srcs: ["proprietary/vendor/lib64/camera/components/com.qti.stats.tracker.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -7721,7 +7307,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.stats.pdlibwrapper.so"],
+    srcs: ["proprietary/vendor/lib64/camera/components/com.qti.stats.pdlibwrapper.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -7734,7 +7320,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.node.hdr10pgen.so"],
+    srcs: ["proprietary/vendor/lib64/camera/components/com.qti.node.hdr10pgen.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -7747,7 +7333,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.node.remosaic.so"],
+    srcs: ["proprietary/vendor/lib64/camera/components/com.qti.node.remosaic.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -7760,7 +7346,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.node.swpdpc.so"],
+    srcs: ["proprietary/vendor/lib64/camera/components/com.qti.node.swpdpc.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -7773,7 +7359,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.stats.roimixerlib.so"],
+    srcs: ["proprietary/vendor/lib64/camera/components/com.qti.stats.roimixerlib.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -7786,7 +7372,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.stats.aecxcore.so"],
+    srcs: ["proprietary/vendor/lib64/camera/components/com.qti.stats.aecxcore.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -7799,7 +7385,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.hwcfg.ipe.so"],
+    srcs: ["proprietary/vendor/lib64/camera/components/com.qti.hwcfg.ipe.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -7812,7 +7398,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.eisv3.so"],
+    srcs: ["proprietary/vendor/lib64/camera/components/com.qti.eisv3.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -7825,7 +7411,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.node.seg.so"],
+    srcs: ["proprietary/vendor/lib64/camera/components/com.qti.node.seg.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -7838,7 +7424,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.node.gme.so"],
+    srcs: ["proprietary/vendor/lib64/camera/components/com.qti.node.gme.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -7851,7 +7437,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.node.swhme.so"],
+    srcs: ["proprietary/vendor/lib64/camera/components/com.qti.node.swhme.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -7864,7 +7450,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.node.evs.so"],
+    srcs: ["proprietary/vendor/lib64/camera/components/com.qti.node.evs.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -7877,7 +7463,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.hvx.binning.so"],
+    srcs: ["proprietary/vendor/lib64/camera/components/com.qti.hvx.binning.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -7890,7 +7476,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.node.ml.so"],
+    srcs: ["proprietary/vendor/lib64/camera/components/com.qti.node.ml.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -7903,7 +7489,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qtistatic.stats.awb.so"],
+    srcs: ["proprietary/vendor/lib64/camera/components/com.qtistatic.stats.awb.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -7916,7 +7502,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.stats.awbwrapper.so"],
+    srcs: ["proprietary/vendor/lib64/camera/components/com.qti.stats.awbwrapper.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -7929,7 +7515,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.stats.roimixer.so"],
+    srcs: ["proprietary/vendor/lib64/camera/components/com.qti.stats.roimixer.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -7942,7 +7528,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.stats.afd.so"],
+    srcs: ["proprietary/vendor/lib64/camera/components/com.qti.stats.afd.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -7955,7 +7541,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.node.muxer.so"],
+    srcs: ["proprietary/vendor/lib64/camera/components/com.qti.node.muxer.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -7968,7 +7554,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.node.memcpy.so"],
+    srcs: ["proprietary/vendor/lib64/camera/components/com.qti.node.memcpy.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -7981,7 +7567,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.node.evadepth.so"],
+    srcs: ["proprietary/vendor/lib64/camera/components/com.qti.node.evadepth.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -7994,7 +7580,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.hwcfg.bps.so"],
+    srcs: ["proprietary/vendor/lib64/camera/components/com.qti.hwcfg.bps.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -8007,7 +7593,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.node.eisv2.so"],
+    srcs: ["proprietary/vendor/lib64/camera/components/com.qti.node.eisv2.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -8020,7 +7606,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.stats.pdlibsony.so"],
+    srcs: ["proprietary/vendor/lib64/camera/components/com.qti.stats.pdlibsony.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -8033,7 +7619,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.node.dummysat.so"],
+    srcs: ["proprietary/vendor/lib64/camera/components/com.qti.node.dummysat.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -8046,7 +7632,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.node.swvrt.so"],
+    srcs: ["proprietary/vendor/lib64/camera/components/com.qti.node.swvrt.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -8059,7 +7645,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.node.hdr10phist.so"],
+    srcs: ["proprietary/vendor/lib64/camera/components/com.qti.node.hdr10phist.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -8072,7 +7658,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.stats.hafoverride.so"],
+    srcs: ["proprietary/vendor/lib64/camera/components/com.qti.stats.hafoverride.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -8085,7 +7671,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.node.stich.so"],
+    srcs: ["proprietary/vendor/lib64/camera/components/com.qti.node.stich.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -8098,7 +7684,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.eisv2.so"],
+    srcs: ["proprietary/vendor/lib64/camera/components/com.qti.eisv2.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -8111,7 +7697,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.node.mlinference.so"],
+    srcs: ["proprietary/vendor/lib64/camera/components/com.qti.node.mlinference.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -8124,7 +7710,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.node.itofpreprocess.so"],
+    srcs: ["proprietary/vendor/lib64/camera/components/com.qti.node.itofpreprocess.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -8137,7 +7723,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.node.swbestats.so"],
+    srcs: ["proprietary/vendor/lib64/camera/components/com.qti.node.swbestats.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -8150,7 +7736,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.node.gyrornn.so"],
+    srcs: ["proprietary/vendor/lib64/camera/components/com.qti.node.gyrornn.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -8163,7 +7749,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.node.swregistration.so"],
+    srcs: ["proprietary/vendor/lib64/camera/components/com.qti.node.swregistration.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -8176,7 +7762,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.node.aon.so"],
+    srcs: ["proprietary/vendor/lib64/camera/components/com.qti.node.aon.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -8189,7 +7775,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.node.eisv3.so"],
+    srcs: ["proprietary/vendor/lib64/camera/components/com.qti.node.eisv3.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -8202,7 +7788,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.node.fcv.so"],
+    srcs: ["proprietary/vendor/lib64/camera/components/com.qti.node.fcv.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -8215,7 +7801,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.node.swfusion.so"],
+    srcs: ["proprietary/vendor/lib64/camera/components/com.qti.node.swfusion.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -8228,7 +7814,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.node.swaidenoiser.so"],
+    srcs: ["proprietary/vendor/lib64/camera/components/com.qti.node.swaidenoiser.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -8241,7 +7827,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.stats.localhistogram.so"],
+    srcs: ["proprietary/vendor/lib64/camera/components/com.qti.stats.localhistogram.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -8254,7 +7840,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.node.afbfusion.so"],
+    srcs: ["proprietary/vendor/lib64/camera/components/com.qti.node.afbfusion.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -8267,7 +7853,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qtistatic.stats.pdlib.so"],
+    srcs: ["proprietary/vendor/lib64/camera/components/com.qtistatic.stats.pdlib.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -8280,7 +7866,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.stats.aecwrapper.so"],
+    srcs: ["proprietary/vendor/lib64/camera/components/com.qti.stats.aecwrapper.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -8293,7 +7879,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.stats.cnndriver.so"],
+    srcs: ["proprietary/vendor/lib64/camera/components/com.qti.stats.cnndriver.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -8306,7 +7892,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.stats.afc.so"],
+    srcs: ["proprietary/vendor/lib64/camera/components/com.qti.stats.afc.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -8319,7 +7905,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.node.dummydepth.so"],
+    srcs: ["proprietary/vendor/lib64/camera/components/com.qti.node.dummydepth.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -8332,7 +7918,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.hvx.addconstant.so"],
+    srcs: ["proprietary/vendor/lib64/camera/components/com.qti.hvx.addconstant.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -8345,7 +7931,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qtistatic.stats.af.so"],
+    srcs: ["proprietary/vendor/lib64/camera/components/com.qtistatic.stats.af.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -8358,7 +7944,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.stats.pdlib.so"],
+    srcs: ["proprietary/vendor/lib64/camera/components/com.qti.stats.pdlib.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -8371,7 +7957,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.stats.afwrapper.so"],
+    srcs: ["proprietary/vendor/lib64/camera/components/com.qti.stats.afwrapper.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -8384,7 +7970,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.node.swcac.so"],
+    srcs: ["proprietary/vendor/lib64/camera/components/com.qti.node.swcac.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -8397,7 +7983,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.stats.haf.so"],
+    srcs: ["proprietary/vendor/lib64/camera/components/com.qti.stats.haf.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -8410,7 +7996,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.stats.awbr.so"],
+    srcs: ["proprietary/vendor/lib64/camera/components/com.qti.stats.awbr.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -8423,7 +8009,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.stats.aec.so"],
+    srcs: ["proprietary/vendor/lib64/camera/components/com.qti.stats.aec.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -8436,7 +8022,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qtistatic.stats.aec.so"],
+    srcs: ["proprietary/vendor/lib64/camera/components/com.qtistatic.stats.aec.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -8449,7 +8035,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.node.gpu.so"],
+    srcs: ["proprietary/vendor/lib64/camera/components/com.qti.node.gpu.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -8462,7 +8048,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.node.formatconversion.so"],
+    srcs: ["proprietary/vendor/lib64/camera/components/com.qti.node.formatconversion.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -8475,7 +8061,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.sensor.max7366_ov6211.so"],
+    srcs: ["proprietary/vendor/lib64/camera/com.qti.sensor.max7366_ov6211.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -8488,7 +8074,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.sensor.s5khp1s.so"],
+    srcs: ["proprietary/vendor/lib64/camera/com.qti.sensor.s5khp1s.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -8501,7 +8087,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.sensor.imx481.so"],
+    srcs: ["proprietary/vendor/lib64/camera/com.qti.sensor.imx481.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -8514,7 +8100,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.sensor.max7366_eyetrack.so"],
+    srcs: ["proprietary/vendor/lib64/camera/com.qti.sensor.max7366_eyetrack.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -8527,7 +8113,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.sensor.s5k33dxx.so"],
+    srcs: ["proprietary/vendor/lib64/camera/com.qti.sensor.s5k33dxx.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -8540,7 +8126,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.sensor.imx386.so"],
+    srcs: ["proprietary/vendor/lib64/camera/com.qti.sensor.imx386.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -8553,7 +8139,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.sensor.s5k3p9.so"],
+    srcs: ["proprietary/vendor/lib64/camera/com.qti.sensor.s5k3p9.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -8566,7 +8152,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.sensor.imx588.so"],
+    srcs: ["proprietary/vendor/lib64/camera/com.qti.sensor.imx588.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -8579,7 +8165,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.eeprom.irs2381c_polar.so"],
+    srcs: ["proprietary/vendor/lib64/camera/com.qti.eeprom.irs2381c_polar.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -8592,7 +8178,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.sensor.imx586.so"],
+    srcs: ["proprietary/vendor/lib64/camera/com.qti.sensor.imx586.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -8605,7 +8191,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.sensor.s5k5e9yu05.so"],
+    srcs: ["proprietary/vendor/lib64/camera/com.qti.sensor.s5k5e9yu05.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -8618,7 +8204,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.sensor.max7366_ov9282.so"],
+    srcs: ["proprietary/vendor/lib64/camera/com.qti.sensor.max7366_ov9282.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -8631,7 +8217,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.sensor.imx476.so"],
+    srcs: ["proprietary/vendor/lib64/camera/com.qti.sensor.imx476.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -8644,7 +8230,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.sensor.s5k2l7.so"],
+    srcs: ["proprietary/vendor/lib64/camera/com.qti.sensor.s5k2l7.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -8657,7 +8243,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.sensor.imx563.so"],
+    srcs: ["proprietary/vendor/lib64/camera/com.qti.sensor.imx563.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -8670,7 +8256,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.sensor.imx686.so"],
+    srcs: ["proprietary/vendor/lib64/camera/com.qti.sensor.imx686.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -8683,7 +8269,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.sensor.imx766.so"],
+    srcs: ["proprietary/vendor/lib64/camera/com.qti.sensor.imx766.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -8696,7 +8282,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.sensor.s5k5e9yx04.so"],
+    srcs: ["proprietary/vendor/lib64/camera/com.qti.sensor.s5k5e9yx04.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -8709,7 +8295,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.sensor.s5k3m5.so"],
+    srcs: ["proprietary/vendor/lib64/camera/com.qti.sensor.s5k3m5.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -8722,7 +8308,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.sensor.imx576.so"],
+    srcs: ["proprietary/vendor/lib64/camera/com.qti.sensor.imx576.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -8735,7 +8321,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.sensor.s5kjd1sp.so"],
+    srcs: ["proprietary/vendor/lib64/camera/com.qti.sensor.s5kjd1sp.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -8748,7 +8334,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.sensor.ov64b40.so"],
+    srcs: ["proprietary/vendor/lib64/camera/com.qti.sensor.ov64b40.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -8761,7 +8347,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.sensor.imx688.so"],
+    srcs: ["proprietary/vendor/lib64/camera/com.qti.sensor.imx688.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -8774,7 +8360,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.sensor.imx519.so"],
+    srcs: ["proprietary/vendor/lib64/camera/com.qti.sensor.imx519.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -8787,7 +8373,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.sensor.imx363.so"],
+    srcs: ["proprietary/vendor/lib64/camera/com.qti.sensor.imx363.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -8800,7 +8386,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.ois.dw9784.so"],
+    srcs: ["proprietary/vendor/lib64/camera/com.qti.ois.dw9784.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -8813,7 +8399,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.sensor.max7366_6dof.so"],
+    srcs: ["proprietary/vendor/lib64/camera/com.qti.sensor.max7366_6dof.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -8826,7 +8412,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.sensor.s5k4h7.so"],
+    srcs: ["proprietary/vendor/lib64/camera/com.qti.sensor.s5k4h7.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -8839,7 +8425,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.sensor.imx376.so"],
+    srcs: ["proprietary/vendor/lib64/camera/com.qti.sensor.imx376.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -8852,7 +8438,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.sensor.ov7251.so"],
+    srcs: ["proprietary/vendor/lib64/camera/com.qti.sensor.ov7251.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -8865,7 +8451,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.sensor.ov13855.so"],
+    srcs: ["proprietary/vendor/lib64/camera/com.qti.sensor.ov13855.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -8878,7 +8464,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.eeprom.gt24p128c2csli_imx766.so"],
+    srcs: ["proprietary/vendor/lib64/camera/com.qti.eeprom.gt24p128c2csli_imx766.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -8891,7 +8477,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.sensor.imx362.so"],
+    srcs: ["proprietary/vendor/lib64/camera/com.qti.sensor.imx362.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -8904,7 +8490,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.eeprom.truly_cmb433.so"],
+    srcs: ["proprietary/vendor/lib64/camera/com.qti.eeprom.truly_cmb433.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -8917,7 +8503,7 @@ cc_prebuilt_library_shared {
     strip: {
         none: true
     },
-    srcs: ["proprietary/vendor/lib64/com.qti.ois.bu63169gwz.so"],
+    srcs: ["proprietary/vendor/lib64/camera/com.qti.ois.bu63169gwz.so"],
     shared_libs: [],
     compile_multilib: "64",
     prefer: true,
@@ -9055,19 +8641,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libvndfwk_detect_jni.qti",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/libvndfwk_detect_jni.qti.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
-
-cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.slmadapter@1.0",
     owner: "sony",
     strip: {
@@ -9184,3 +8757,1803 @@ cc_prebuilt_library_shared {
     soc_specific: true
 }
 
+
+//cc_prebuilt_library_shared {
+//    name: "android.hardware.bluetooth@1.0",
+//    owner: "sony",
+//    strip: {
+//        none: true,
+//    },
+//    target: {
+//        android_arm64: {
+//            srcs: ["proprietary/system/lib64/android.hardware.bluetooth@1.0.so"],
+//        },
+//    },
+//    shared_libs: [
+//        "libhidlbase",
+//        "liblog",
+//        "libutils",
+//        "libcutils",
+//    ],
+//    compile_multilib: "64",
+//    prefer: true,
+//}
+
+//cc_prebuilt_library_shared {
+//    name: "android.hardware.bluetooth@1.1",
+//    owner: "sony",
+//    strip: {
+//        none: true,
+//    },
+//    target: {
+//        android_arm64: {
+//            srcs: ["proprietary/system/lib64/android.hardware.bluetooth@1.1.so"],
+//        },
+//    },
+//    shared_libs: [
+//        "libhidlbase",
+//        "liblog",
+//        "libutils",
+//        "libcutils",
+//    ],
+//    compile_multilib: "64",
+//    prefer: true,
+//}
+
+cc_prebuilt_library_shared {
+    name: "android.hardware.bluetooth.audio@2.0",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/system/lib64/android.hardware.bluetooth.audio@2.0.so"],
+        },
+    },
+    shared_libs: [
+        "libhidlbase",
+        "liblog",
+        "libutils",
+        "libcutils",
+    ],
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "android.hardware.bluetooth.audio@2.1",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/system/lib64/android.hardware.bluetooth.audio@2.1.so"],
+        },
+    },
+    shared_libs: [
+        "libhidlbase",
+        "liblog",
+        "libutils",
+        "libcutils",
+    ],
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "android.system.wifi.keystore@1.0",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/system/lib64/android.system.wifi.keystore@1.0.so"],
+        },
+    },
+    shared_libs: [
+        "libhidlbase",
+        "liblog",
+        "libutils",
+        "libcutils",
+    ],
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "aconfig_mediacodec_flags_c_lib",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/system/lib64/aconfig_mediacodec_flags_c_lib.so"],
+        },
+    },
+    shared_libs: [
+        "libhidlbase",
+        "liblog",
+        "libutils",
+        "libcutils",
+    ],
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "android.hardware.broadcastradio@1.0",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/system/lib64/android.hardware.broadcastradio@1.0.so"],
+        },
+    },
+    shared_libs: [
+        "libhidlbase",
+        "liblog",
+        "libutils",
+        "libcutils",
+    ],
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "android.hardware.broadcastradio@1.1",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/system/lib64/android.hardware.broadcastradio@1.1.so"],
+        },
+    },
+    shared_libs: [
+        "libhidlbase",
+        "liblog",
+        "libutils",
+        "libcutils",
+    ],
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "android.hardware.drm@1.0",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/system/lib64/android.hardware.drm@1.0.so"],
+        },
+    },
+    shared_libs: [
+        "libhidlbase",
+        "liblog",
+        "libutils",
+        "libcutils",
+    ],
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "android.hardware.drm@1.1",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/system/lib64/android.hardware.drm@1.1.so"],
+        },
+    },
+    shared_libs: [
+        "libhidlbase",
+        "liblog",
+        "libutils",
+        "libcutils",
+    ],
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "android.hardware.drm@1.2",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/system/lib64/android.hardware.drm@1.2.so"],
+        },
+    },
+    shared_libs: [
+        "libhidlbase",
+        "liblog",
+        "libutils",
+        "libcutils",
+    ],
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "android.hardware.drm@1.3",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/system/lib64/android.hardware.drm@1.3.so"],
+        },
+    },
+    shared_libs: [
+        "libhidlbase",
+        "liblog",
+        "libutils",
+        "libcutils",
+    ],
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "android.hardware.drm@1.4",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/system/lib64/android.hardware.drm@1.4.so"],
+        },
+    },
+    shared_libs: [
+        "libhidlbase",
+        "liblog",
+        "libutils",
+        "libcutils",
+    ],
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "android.hardware.gnss@1.0",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/system/lib64/android.hardware.gnss@1.0.so"],
+        },
+    },
+    shared_libs: [
+        "libhidlbase",
+        "liblog",
+        "libutils",
+        "libcutils",
+    ],
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "android.hardware.gnss@1.1",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/system/lib64/android.hardware.gnss@1.1.so"],
+        },
+    },
+    shared_libs: [
+        "libhidlbase",
+        "liblog",
+        "libutils",
+        "libcutils",
+    ],
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "android.hardware.gnss@2.0",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/system/lib64/android.hardware.gnss@2.0.so"],
+        },
+    },
+    shared_libs: [
+        "libhidlbase",
+        "liblog",
+        "libutils",
+        "libcutils",
+    ],
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "android.hardware.gnss@2.1",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/system/lib64/android.hardware.gnss@2.1.so"],
+        },
+    },
+    shared_libs: [
+        "libhidlbase",
+        "liblog",
+        "libutils",
+        "libcutils",
+    ],
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "android.hardware.gnss.measurement_corrections@1.0",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/system/lib64/android.hardware.gnss.measurement_corrections@1.0.so"],
+        },
+    },
+    shared_libs: [
+        "libhidlbase",
+        "liblog",
+        "libutils",
+        "libcutils",
+    ],
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "android.hardware.gnss.measurement_corrections@1.1",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/system/lib64/android.hardware.gnss.measurement_corrections@1.1.so"],
+        },
+    },
+    shared_libs: [
+        "libhidlbase",
+        "liblog",
+        "libutils",
+        "libcutils",
+    ],
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "android.hardware.gnss-V3-cpp",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/system/lib64/android.hardware.gnss-V3-cpp.so"],
+        },
+    },
+    shared_libs: [
+        "libhidlbase",
+        "liblog",
+        "libutils",
+        "libcutils",
+    ],
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "android.hardware.gnss.visibility_control@1.0",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/system/lib64/android.hardware.gnss.visibility_control@1.0.so"],
+        },
+    },
+    shared_libs: [
+        "libhidlbase",
+        "liblog",
+        "libutils",
+        "libcutils",
+    ],
+    compile_multilib: "64",
+    prefer: true,
+}
+
+//cc_prebuilt_library_shared {
+//    name: "android.hardware.media@1.0",
+//    owner: "sony",
+//    strip: {
+//        none: true,
+//    },
+//    target: {
+//        android_arm64: {
+//            srcs: ["proprietary/vendor/system/lib64/android.hardware.media@1.0.so"],
+//        },
+//    },
+//    shared_libs: [
+//        "libhidlbase",
+//        "liblog",
+//        "libutils",
+//        "libcutils",
+//    ],
+//    compile_multilib: "64",
+//    prefer: true,
+//}
+
+//cc_prebuilt_library_shared {
+//    name: "android.hardware.media.bufferpool@2.0",
+//    owner: "sony",
+//    strip: {
+//        none: true,
+//    },
+//    target: {
+//        android_arm64: {
+//            srcs: ["proprietary/vendor/system/lib64/android.hardware.media.bufferpool@2.0.so"],
+//        },
+//    },
+//    shared_libs: [
+//        "libhidlbase",
+//        "liblog",
+//        "libutils",
+//        "libcutils",
+//    ],
+//    compile_multilib: "64",
+//    prefer: true,
+//}
+
+cc_prebuilt_library_shared {
+    name: "android.hardware.media.bufferpool2-V2-ndk",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/system/lib64/android.hardware.media.bufferpool2-V2-ndk.so"],
+        },
+    },
+    shared_libs: [
+        "libhidlbase",
+        "liblog",
+        "libutils",
+        "libcutils",
+    ],
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "android.hardware.media.c2-V1-ndk",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/system/lib64/android.hardware.media.c2-V1-ndk.so"],
+        },
+    },
+    shared_libs: [
+        "libhidlbase",
+        "liblog",
+        "libutils",
+        "libcutils",
+    ],
+    compile_multilib: "64",
+    prefer: true,
+}
+
+//cc_prebuilt_library_shared {
+//    name: "android.hardware.media.omx@1.0",
+//    owner: "sony",
+//    strip: {
+//        none: true,
+//    },
+//    target: {
+//        android_arm64: {
+//            srcs: ["proprietary/vendor/system/lib64/android.hardware.media.omx@1.0.so"],
+//        },
+//    },
+//    shared_libs: [
+//        "libhidlbase",
+//        "liblog",
+//        "libutils",
+//        "libcutils",
+//    ],
+//    compile_multilib: "64",
+//    prefer: true,
+//}
+
+
+cc_prebuilt_library_shared {
+    name: "android.hardware.radio@1.0",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    srcs: ["proprietary/vendor/system/lib64/android.hardware.radio@1.0.so"],
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "android.hardware.radio@1.1",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    srcs: ["proprietary/vendor/system/lib64/android.hardware.radio@1.1.so"],
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "android.hardware.radio@1.2",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    srcs: ["proprietary/vendor/system/lib64/android.hardware.radio@1.2.so"],
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "android.hardware.radio@1.3",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    srcs: ["proprietary/vendor/system/lib64/android.hardware.radio@1.3.so"],
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "android.hardware.radio@1.4",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    srcs: ["proprietary/vendor/system/lib64/android.hardware.radio@1.4.so"],
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "android.hardware.radio.config@1.0",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    srcs: ["proprietary/vendor/system/lib64/android.hardware.radio.config@1.0.so"],
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "android.hardware.radio.deprecated@1.0",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    srcs: ["proprietary/vendor/system/lib64/android.hardware.radio.deprecated@1.0.so"],
+    compile_multilib: "64",
+    prefer: true,
+}
+
+
+cc_prebuilt_library_shared {
+    name: "android.media.audio.common.types-V1-ndk",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/system/lib64/android.media.audio.common.types-V1-ndk.so"],
+        },
+    },
+    shared_libs: [
+        "libhidlbase",
+        "liblog",
+        "libutils",
+        "libcutils",
+    ],
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "android.media.audio.common.types-V2-cpp",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/system/lib64/android.media.audio.common.types-V2-cpp.so"],
+        },
+    },
+    shared_libs: [
+        "libhidlbase",
+        "liblog",
+        "libutils",
+        "libcutils",
+    ],
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "android.media.audio.common.types-V3-cpp",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/system/lib64/android.media.audio.common.types-V3-cpp.so"],
+        },
+    },
+    shared_libs: [
+        "libhidlbase",
+        "liblog",
+        "libutils",
+        "libcutils",
+    ],
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "android.media.audio.common.types-V3-ndk",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/system/lib64/android.media.audio.common.types-V3-ndk.so"],
+        },
+    },
+    shared_libs: [
+        "libhidlbase",
+        "liblog",
+        "libutils",
+        "libcutils",
+    ],
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "android.media.audiopolicy-aconfig-cc",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/system/lib64/android.media.audiopolicy-aconfig-cc.so"],
+        },
+    },
+    shared_libs: [
+        "libhidlbase",
+        "liblog",
+        "libutils",
+        "libcutils",
+    ],
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.android.media.aaudio-aconfig-cc",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/system/lib64/com.android.media.aaudio-aconfig-cc.so"],
+        },
+    },
+    shared_libs: [
+        "libhidlbase",
+        "liblog",
+        "libutils",
+        "libcutils",
+    ],
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.android.media.audio-aconfig-cc",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/system/lib64/com.android.media.audio-aconfig-cc.so"],
+        },
+    },
+    shared_libs: [
+        "libhidlbase",
+        "liblog",
+        "libutils",
+        "libcutils",
+    ],
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.android.media.audioclient-aconfig-cc",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/system/lib64/com.android.media.audioclient-aconfig-cc.so"],
+        },
+    },
+    shared_libs: [
+        "libhidlbase",
+        "liblog",
+        "libutils",
+        "libcutils",
+    ],
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.android.media.audioserver-aconfig-cc",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/system/lib64/com.android.media.audioserver-aconfig-cc.so"],
+        },
+    },
+    shared_libs: [
+        "libhidlbase",
+        "liblog",
+        "libutils",
+        "libcutils",
+    ],
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libbrillo-binder",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/system/lib64/libbrillo-binder.so"],
+        },
+    },
+    shared_libs: [
+        "libhidlbase",
+        "liblog",
+        "libutils",
+        "libcutils",
+    ],
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libbrillo",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/system/lib64/libbrillo.so"],
+        },
+    },
+    shared_libs: [
+        "libhidlbase",
+        "liblog",
+        "libutils",
+        "libcutils",
+    ],
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libbrillo-stream",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/system/lib64/libbrillo-stream.so"],
+        },
+    },
+    shared_libs: [
+        "libhidlbase",
+        "liblog",
+        "libutils",
+        "libcutils",
+    ],
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libdrmframeworkcommon",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/system/lib64/libdrmframeworkcommon.so"],
+        },
+    },
+    shared_libs: [
+        "libhidlbase",
+        "liblog",
+        "libutils",
+        "libcutils",
+    ],
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libdrmframework_jni",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/system/lib64/libdrmframework_jni.so"],
+        },
+    },
+    shared_libs: [
+        "libhidlbase",
+        "liblog",
+        "libutils",
+        "libcutils",
+    ],
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libdrmframework",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/system/lib64/libdrmframework.so"],
+        },
+    },
+    shared_libs: [
+        "libhidlbase",
+        "liblog",
+        "libutils",
+        "libcutils",
+    ],
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libdrm",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libdrm.so"],
+        },
+    },
+    shared_libs: [
+        "libhidlbase",
+        "liblog",
+        "libutils",
+        "libcutils",
+    ],
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmedia_codeclist",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/system/lib64/libmedia_codeclist.so"],
+        },
+    },
+    shared_libs: [
+        "libhidlbase",
+        "liblog",
+        "libutils",
+        "libcutils",
+    ],
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmediadrmmetrics_consumer",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/system/lib64/libmediadrmmetrics_consumer.so"],
+        },
+    },
+    shared_libs: [
+        "libhidlbase",
+        "liblog",
+        "libutils",
+        "libcutils",
+    ],
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmediadrmmetrics_full",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/system/lib64/libmediadrmmetrics_full.so"],
+        },
+    },
+    shared_libs: [
+        "libhidlbase",
+        "liblog",
+        "libutils",
+        "libcutils",
+    ],
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmediadrmmetrics_lite",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/system/lib64/libmediadrmmetrics_lite.so"],
+        },
+    },
+    shared_libs: [
+        "libhidlbase",
+        "liblog",
+        "libutils",
+        "libcutils",
+    ],
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmediadrm",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/system/lib64/libmediadrm.so"],
+        },
+    },
+    shared_libs: [
+        "libhidlbase",
+        "liblog",
+        "libutils",
+        "libcutils",
+    ],
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmediaextractorservice",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/system/lib64/libmediaextractorservice.so"],
+        },
+    },
+    shared_libs: [
+        "libhidlbase",
+        "liblog",
+        "libutils",
+        "libcutils",
+    ],
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmedia_helper",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/system/lib64/libmedia_helper.so"],
+        },
+    },
+    shared_libs: [
+        "libhidlbase",
+        "liblog",
+        "libutils",
+        "libcutils",
+    ],
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmedia_jni",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/system/lib64/libmedia_jni.so"],
+        },
+    },
+    shared_libs: [
+        "libhidlbase",
+        "liblog",
+        "libutils",
+        "libcutils",
+    ],
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmedia_jni_utils",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/system/lib64/libmedia_jni_utils.so"],
+        },
+    },
+    shared_libs: [
+        "libhidlbase",
+        "liblog",
+        "libutils",
+        "libcutils",
+    ],
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmediametricsservice",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/system/lib64/libmediametricsservice.so"],
+        },
+    },
+    shared_libs: [
+        "libhidlbase",
+        "liblog",
+        "libutils",
+        "libcutils",
+    ],
+    compile_multilib: "64",
+    prefer: true,
+}
+
+//cc_prebuilt_library_shared {
+//    name: "libmediametrics",
+//    owner: "sony",
+//    strip: {
+//        none: true,
+//    },
+//    target: {
+//        android_arm64: {
+//            srcs: ["proprietary/vendor/system/lib64/libmediametrics.so"],
+//        },
+//    },
+//    shared_libs: [
+//        "libhidlbase",
+//        "liblog",
+//        "libutils",
+//        "libcutils",
+//    ],
+//    compile_multilib: "64",
+//    prefer: true,
+//}
+
+// cc_prebuilt_library_shared {
+//     name: "libmediandk",
+//     owner: "sony",
+//     strip: {
+//         none: true,
+//     },
+//     target: {
+//         android_arm64: {
+//             srcs: ["proprietary/vendor/system/lib64/libmediandk.so"],
+//         },
+//     },
+//     shared_libs: [
+//         "libhidlbase",
+//         "liblog",
+//         "libutils",
+//         "libcutils",
+//     ],
+//     compile_multilib: "64",
+//     prefer: true,
+// }
+
+cc_prebuilt_library_shared {
+    name: "libmediandk_utils",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/system/lib64/libmediandk_utils.so"],
+        },
+    },
+    shared_libs: [
+        "libhidlbase",
+        "liblog",
+        "libutils",
+        "libcutils",
+    ],
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmedia_omx_client",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/system/lib64/libmedia_omx_client.so"],
+        },
+    },
+    shared_libs: [
+        "libhidlbase",
+        "liblog",
+        "libutils",
+        "libcutils",
+    ],
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmedia_omx",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/system/lib64/libmedia_omx.so"],
+        },
+    },
+    shared_libs: [
+        "libhidlbase",
+        "liblog",
+        "libutils",
+        "libcutils",
+    ],
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmediaplayerservice",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/system/lib64/libmediaplayerservice.so"],
+        },
+    },
+    shared_libs: [
+        "libhidlbase",
+        "liblog",
+        "libutils",
+        "libcutils",
+    ],
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmedia",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/system/lib64/libmedia.so"],
+        },
+    },
+    shared_libs: [
+        "libhidlbase",
+        "liblog",
+        "libutils",
+        "libcutils",
+    ],
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmediautils_delayed",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/system/lib64/libmediautils_delayed.so"],
+        },
+    },
+    shared_libs: [
+        "libhidlbase",
+        "liblog",
+        "libutils",
+        "libcutils",
+    ],
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmediautils",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/system/lib64/libmediautils.so"],
+        },
+    },
+    shared_libs: [
+        "libhidlbase",
+        "liblog",
+        "libutils",
+        "libcutils",
+    ],
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libradio_metadata",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/system/lib64/libradio_metadata.so"],
+        },
+    },
+    shared_libs: [
+        "libhidlbase",
+        "liblog",
+        "libutils",
+        "libcutils",
+    ],
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libservices.core-gnss",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/system/lib64/libservices.core-gnss.so"],
+        },
+    },
+    shared_libs: [
+        "libhidlbase",
+        "liblog",
+        "libutils",
+        "libcutils",
+    ],
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libstats_media_metrics",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/system/lib64/libstats_media_metrics.so"],
+        },
+    },
+    shared_libs: [
+        "libhidlbase",
+        "liblog",
+        "libutils",
+        "libcutils",
+    ],
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libwifi-system-iface",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/system/lib64/libwifi-system-iface.so"],
+        },
+    },
+    shared_libs: [
+        "libhidlbase",
+        "liblog",
+        "libutils",
+        "libcutils",
+    ],
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "mediametricsservice-aidl-cpp",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/system/lib64/mediametricsservice-aidl-cpp.so"],
+        },
+    },
+    shared_libs: [
+        "libhidlbase",
+        "liblog",
+        "libutils",
+        "libcutils",
+    ],
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "media_permission-aidl-cpp",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/system/lib64/media_permission-aidl-cpp.so"],
+        },
+    },
+    shared_libs: [
+        "libhidlbase",
+        "liblog",
+        "libutils",
+        "libcutils",
+    ],
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.qti.diaghal-V1-ndk",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/system/lib64/vendor.qti.diaghal-V1-ndk.so"],
+        },
+    },
+    shared_libs: [
+        "libhidlbase",
+        "liblog",
+        "libutils",
+        "libcutils",
+    ],
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.display.config-V12-ndk",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/system/lib64/vendor.qti.hardware.display.config-V12-ndk.so"],
+        },
+    },
+    shared_libs: [
+        "libhidlbase",
+        "liblog",
+        "libutils",
+        "libcutils",
+    ],
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.fm-V1-ndk",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/system/lib64/vendor.qti.hardware.fm-V1-ndk.so"],
+        },
+    },
+    shared_libs: [
+        "libhidlbase",
+        "liblog",
+        "libutils",
+        "libcutils",
+    ],
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.systemhelperaidl-V1-ndk",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/system/lib64/vendor.qti.hardware.systemhelperaidl-V1-ndk.so"],
+        },
+    },
+    shared_libs: [
+        "libhidlbase",
+        "liblog",
+        "libutils",
+        "libcutils",
+    ],
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.qti.MemHal-V1-ndk",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/system/lib64/vendor.qti.MemHal-V1-ndk.so"],
+        },
+    },
+    shared_libs: [
+        "libhidlbase",
+        "liblog",
+        "libutils",
+        "libcutils",
+    ],
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.perf@2.1",
+    owner: "sony",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.perf@2.1.so"],
+        },
+    },
+    vendor: true,
+    strip: {
+        none: true,
+    },
+}
+cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.perf@2.0",
+    owner: "sony",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.perf@2.0.so"],
+        },
+    },
+    vendor: true,
+    strip: {
+        none: true,
+    },
+}
+cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.capabilityconfigstore@1.0",
+    owner: "sony",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.capabilityconfigstore@1.0.so"],
+        },
+    },
+    vendor: true,
+    strip: {
+        none: true,
+    },
+}
+cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.systemhelper@1.0",
+    owner: "sony",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.systemhelper@1.0.so"],
+        },
+    },
+    vendor: true,
+    strip: {
+        none: true,
+    },
+}
+cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.bluetooth_audio@2.0",
+    owner: "sony",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.bluetooth_audio@2.0.so"],
+        },
+    },
+    vendor: true,
+    strip: {
+        none: true,
+    },
+}
+cc_prebuilt_library_shared {
+    name: "libqti_vndfwk_detect",
+    owner: "sony",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libqti_vndfwk_detect.so"],
+        },
+    },
+    vendor: true,
+    strip: {
+        none: true,
+    },
+}
+cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.bluetooth_audio@2.1",
+    owner: "sony",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.bluetooth_audio@2.1.so"],
+        },
+    },
+    vendor: true,
+    strip: {
+        none: true,
+    },
+}
+cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.camera.postproc@1.0",
+    owner: "sony",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.camera.postproc@1.0.so"],
+        },
+    },
+    vendor: true,
+    strip: {
+        none: true,
+    },
+}
+cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.servicetracker@1.0",
+    owner: "sony",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.servicetracker@1.0.so"],
+        },
+    },
+    vendor: true,
+    strip: {
+        none: true,
+    },
+}
+cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.btconfigstore@2.0",
+    owner: "sony",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.btconfigstore@2.0.so"],
+        },
+    },
+    vendor: true,
+    strip: {
+        none: true,
+    },
+}
+cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.servicetracker@1.1",
+    owner: "sony",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.servicetracker@1.1.so"],
+        },
+    },
+    vendor: true,
+    strip: {
+        none: true,
+    },
+}
+cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.perf@2.2",
+    owner: "sony",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.perf@2.2.so"],
+        },
+    },
+    vendor: true,
+    strip: {
+        none: true,
+    },
+}
+cc_prebuilt_library_shared {
+    name: "libmediautils_vendor",
+    owner: "sony",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libmediautils_vendor.so"],
+        },
+    },
+    vendor: true,
+    strip: {
+        none: true,
+    },
+}
+cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.perf@2.3",
+    owner: "sony",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.perf@2.3.so"],
+        },
+    },
+    vendor: true,
+    strip: {
+        none: true,
+    },
+}
+cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.btconfigstore@1.0",
+    owner: "sony",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.btconfigstore@1.0.so"],
+        },
+    },
+    vendor: true,
+    strip: {
+        none: true,
+    },
+}
+cc_prebuilt_library_shared {
+    name: "libvndfwk_detect_jni.qti",
+    owner: "sony",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libvndfwk_detect_jni.qti.so"],
+        },
+    },
+    vendor: true,
+    strip: {
+        none: true,
+    },
+}
