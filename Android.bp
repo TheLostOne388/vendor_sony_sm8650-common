@@ -66,18 +66,18 @@ soong_namespace {
 //    soc_specific: true,
 //}
 
-cc_prebuilt_library_shared {
-    name: "android.hardware.radio-V2-ndk",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/android.hardware.radio-V2-ndk.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
+//cc_prebuilt_library_shared {
+//    name: "android.hardware.radio-V2-ndk",
+//    owner: "sony",
+//    strip: {
+//        none: true
+//    },
+//    srcs: ["proprietary/vendor/lib64/android.hardware.radio-V2-ndk.so"],
+//    shared_libs: [],
+//    compile_multilib: "64",
+//    prefer: true,
+//    soc_specific: true
+//}
 
 cc_prebuilt_library_shared {
     name: "android.hardware.radio@1.0-impl",
@@ -245,18 +245,18 @@ cc_prebuilt_library_shared {
     soc_specific: true
 }
 
-cc_prebuilt_library_shared {
-    name: "vendor.somc.hardware.aidlwifidriver-V1-ndk",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/vendor.somc.hardware.aidlwifidriver-V1-ndk.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
+//cc_prebuilt_library_shared {
+//    name: "vendor.somc.hardware.aidlwifidriver-V1-ndk",
+//    owner: "sony",
+//    strip: {
+//        none: true
+//    },
+//    srcs: ["proprietary/vendor/lib64/vendor.somc.hardware.aidlwifidriver-V1-ndk.so"],
+//    shared_libs: [],
+//    compile_multilib: "64",
+//    prefer: true,
+//    soc_specific: true
+//}
 
 cc_prebuilt_library_shared {
     name: "com.qti.feature2.ml",
@@ -453,18 +453,18 @@ cc_prebuilt_library_shared {
     soc_specific: true
 }
 
-cc_prebuilt_library_shared {
-    name: "vendor.somc.hardware.wifi.idd-V1-ndk_platform",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/vendor.somc.hardware.wifi.idd-V1-ndk_platform.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
+//cc_prebuilt_library_shared {
+//    name: "vendor.somc.hardware.wifi.idd-V1-ndk_platform",
+//    owner: "sony",
+//    strip: {
+//        none: true
+//    },
+//    srcs: ["proprietary/vendor/lib64/vendor.somc.hardware.wifi.idd-V1-ndk_platform.so"],
+//    shared_libs: [],
+//    compile_multilib: "64",
+//    prefer: true,
+//    soc_specific: true
+//}
 
 cc_prebuilt_library_shared {
     name: "vendor.qti.ims.rcssip@1.2",
@@ -635,18 +635,18 @@ cc_prebuilt_library_shared {
     soc_specific: true
 }
 
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.camera.offlinecamera-V2-ndk",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.camera.offlinecamera-V2-ndk.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
+//cc_prebuilt_library_shared {
+//    name: "vendor.qti.hardware.camera.offlinecamera-V2-ndk",
+//    owner: "sony",
+//    strip: {
+//        none: true
+//    },
+//    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.camera.offlinecamera-V2-ndk.so"],
+//    shared_libs: [],
+//    compile_multilib: "64",
+//    prefer: true,
+//    soc_specific: true
+//}
 
 cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.display.config-V2-ndk",
@@ -1363,18 +1363,18 @@ cc_prebuilt_library_shared {
     soc_specific: true
 }
 
-cc_prebuilt_library_shared {
-    name: "android.media.audio.common.types-V2-ndk",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/android.media.audio.common.types-V2-ndk.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
+//cc_prebuilt_library_shared {
+//    name: "android.media.audio.common.types-V2-ndk",
+//    owner: "sony",
+//    strip: {
+//        none: true
+//    },
+//    srcs: ["proprietary/vendor/lib64/android.media.audio.common.types-V2-ndk.so"],
+//    shared_libs: [],
+//    compile_multilib: "64",
+//    prefer: true,
+//    soc_specific: true
+//}
 
 cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.trustedui-V1-ndk",
@@ -1506,18 +1506,18 @@ cc_prebuilt_library_shared {
     soc_specific: true
 }
 
-cc_prebuilt_library_shared {
-    name: "android.hardware.radio.voice-V2-ndk",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/android.hardware.radio.voice-V2-ndk.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
+//cc_prebuilt_library_shared {
+//    name: "android.hardware.radio.voice-V2-ndk",
+//    owner: "sony",
+//    strip: {
+//        none: true
+//    },
+//    srcs: ["proprietary/vendor/lib64/android.hardware.radio.voice-V2-ndk.so"],
+//    shared_libs: [],
+//    compile_multilib: "64",
+//    prefer: true,
+//    soc_specific: true
+//}
 
 cc_prebuilt_library_shared {
     name: "libsmomoconfig.qti",
@@ -1753,18 +1753,18 @@ cc_prebuilt_library_shared {
     soc_specific: true
 }
 
-cc_prebuilt_library_shared {
-    name: "android.hardware.radio.sap-V1-ndk",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/android.hardware.radio.sap-V1-ndk.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
+//cc_prebuilt_library_shared {
+//    name: "android.hardware.radio.sap-V1-ndk",
+//    owner: "sony",
+//    strip: {
+//        none: true
+//    },
+//    srcs: ["proprietary/vendor/lib64/android.hardware.radio.sap-V1-ndk.so"],
+//    shared_libs: [],
+//    compile_multilib: "64",
+//    prefer: true,
+//    soc_specific: true
+//}
 
 cc_prebuilt_library_shared {
     name: "libbinauralrenderer_wrapper.qti",
@@ -1844,18 +1844,18 @@ cc_prebuilt_library_shared {
     soc_specific: true
 }
 
-cc_prebuilt_library_shared {
-    name: "android.hardware.wifi.hostapd-V1-ndk",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/android.hardware.wifi.hostapd-V1-ndk.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
+//cc_prebuilt_library_shared {
+//    name: "android.hardware.wifi.hostapd-V1-ndk",
+//    owner: "sony",
+//    strip: {
+//        none: true
+//    },
+//    srcs: ["proprietary/vendor/lib64/android.hardware.wifi.hostapd-V1-ndk.so"],
+//    shared_libs: [],
+//    compile_multilib: "64",
+//    prefer: true,
+//    soc_specific: true
+//}
 
 cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.radio.uim@1.0",
@@ -2143,18 +2143,18 @@ cc_prebuilt_library_shared {
     soc_specific: true
 }
 
-cc_prebuilt_library_shared {
-    name: "android.hardware.bluetooth.audio-V3-ndk",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/system/lib64/android.hardware.bluetooth.audio-V3-ndk.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
+//cc_prebuilt_library_shared {
+//    name: "android.hardware.bluetooth.audio-V3-ndk",
+//    owner: "sony",
+//    strip: {
+//        none: true
+//    },
+//    srcs: ["proprietary/vendor/system/lib64/android.hardware.bluetooth.audio-V3-ndk.so"],
+//    shared_libs: [],
+//    compile_multilib: "64",
+//    prefer: true,
+//    soc_specific: true
+//}
 
 cc_prebuilt_library_shared {
     name: "vendor.qti.qvirt-V1-ndk",
@@ -2195,18 +2195,18 @@ cc_prebuilt_library_shared {
     soc_specific: true
 }
 
-cc_prebuilt_library_shared {
-    name: "vendor.somc.hardware.radio@1.0",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/vendor.somc.hardware.radio@1.0.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
+//cc_prebuilt_library_shared {
+//    name: "vendor.somc.hardware.radio@1.0",
+//    owner: "sony",
+//    strip: {
+//        none: true
+//    },
+//    srcs: ["proprietary/vendor/lib64/vendor.somc.hardware.radio@1.0.so"],
+//    shared_libs: [],
+//    compile_multilib: "64",
+//    prefer: true,
+//    soc_specific: true
+//}
 
 cc_prebuilt_library_shared {
     name: "libqcmaputils",
@@ -2663,18 +2663,18 @@ cc_prebuilt_library_shared {
     soc_specific: true
 }
 
-cc_prebuilt_library_shared {
-    name: "android.hardware.wifi.supplicant-V1-ndk",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/android.hardware.wifi.supplicant-V1-ndk.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
+//cc_prebuilt_library_shared {
+//    name: "android.hardware.wifi.supplicant-V1-ndk",
+//    owner: "sony",
+//    strip: {
+//        none: true
+//    },
+//    srcs: ["proprietary/vendor/lib64/android.hardware.wifi.supplicant-V1-ndk.so"],
+//    shared_libs: [],
+//    compile_multilib: "64",
+//    prefer: true,
+//    soc_specific: true
+//}
 
 cc_prebuilt_library_shared {
     name: "vendor.qti.ims.connectionaidlservice-V1-ndk",
@@ -2962,18 +2962,18 @@ cc_prebuilt_library_shared {
     soc_specific: true
 }
 
-cc_prebuilt_library_shared {
-    name: "vendor.somc.hardware.aidlradio-V1-ndk",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/vendor.somc.hardware.aidlradio-V1-ndk.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
+//cc_prebuilt_library_shared {
+//    name: "vendor.somc.hardware.aidlradio-V1-ndk",
+//    owner: "sony",
+//    strip: {
+//        none: true
+//    },
+//    srcs: ["proprietary/vendor/lib64/vendor.somc.hardware.aidlradio-V1-ndk.so"],
+//    shared_libs: [],
+//    compile_multilib: "64",
+//    prefer: true,
+//    soc_specific: true
+//}
 
 cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.data.cne.internal.server@1.3",
@@ -3222,18 +3222,18 @@ cc_prebuilt_library_shared {
 //   soc_specific: true
 //}
 
-cc_prebuilt_library_shared {
-    name: "android.hardware.drm-V1-ndk",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/system/lib64/android.hardware.drm-V1-ndk.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
+//cc_prebuilt_library_shared {
+//    name: "android.hardware.drm-V1-ndk",
+//    owner: "sony",
+//    strip: {
+//        none: true
+//    },
+//    srcs: ["proprietary/vendor/system/lib64/android.hardware.drm-V1-ndk.so"],
+//    shared_libs: [],
+//    compile_multilib: "64",
+//    prefer: true,
+//    soc_specific: true
+//}
 
 cc_prebuilt_library_shared {
     name: "libqcrilNrSocketModule",
@@ -3352,18 +3352,18 @@ cc_prebuilt_library_shared {
     soc_specific: true
 }
 
-cc_prebuilt_library_shared {
-    name: "android.hardware.wifi-V1-ndk",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/android.hardware.wifi-V1-ndk.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
+//cc_prebuilt_library_shared {
+//    name: "android.hardware.wifi-V1-ndk",
+//    owner: "sony",
+//    strip: {
+//        none: true
+//    },
+//    srcs: ["proprietary/vendor/lib64/android.hardware.wifi-V1-ndk.so"],
+//    shared_libs: [],
+//    compile_multilib: "64",
+//    prefer: true,
+//    soc_specific: true
+//}
 
 cc_prebuilt_library_shared {
     name: "libupdateprof.qti",
@@ -3482,18 +3482,18 @@ cc_prebuilt_library_shared {
 //    soc_specific: true
 //}
 
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.servicetrackeraidl-V1-ndk",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.servicetrackeraidl-V1-ndk.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
+//cc_prebuilt_library_shared {
+//    name: "vendor.qti.hardware.servicetrackeraidl-V1-ndk",
+//    owner: "sony",
+//    strip: {
+//        none: true
+//    },
+//    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.servicetrackeraidl-V1-ndk.so"],
+//    shared_libs: [],
+//    compile_multilib: "64",
+//    prefer: true,
+//    soc_specific: true
+//}
 
 cc_prebuilt_library_shared {
     name: "libadsp_default_listener",
@@ -3586,18 +3586,18 @@ cc_prebuilt_library_shared {
     soc_specific: true
 }
 
-cc_prebuilt_library_shared {
-    name: "libqcomfm_jni",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/libqcomfm_jni.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
+//cc_prebuilt_library_shared {
+//    name: "libqcomfm_jni",
+//    owner: "sony",
+//    strip: {
+//        none: true
+//    },
+//    srcs: ["proprietary/vendor/lib64/libqcomfm_jni.so"],
+//    shared_libs: [],
+//    compile_multilib: "64",
+//    prefer: true,
+//    soc_specific: true
+//}
 
 cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.radio.ims@1.2",
@@ -3612,18 +3612,18 @@ cc_prebuilt_library_shared {
     soc_specific: true
 }
 
-cc_prebuilt_library_shared {
-    name: "android.hardware.radio.config-V2-ndk",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/android.hardware.radio.config-V2-ndk.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
+//cc_prebuilt_library_shared {
+//    name: "android.hardware.radio.config-V2-ndk",
+//    owner: "sony",
+//    strip: {
+//        none: true
+//    },
+//    srcs: ["proprietary/vendor/lib64/android.hardware.radio.config-V2-ndk.so"],
+//    shared_libs: [],
+//    compile_multilib: "64",
+//    prefer: true,
+//    soc_specific: true
+//}
 
 cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.pal@1.0-impl",
@@ -3768,18 +3768,18 @@ cc_prebuilt_library_shared {
     soc_specific: true
 }
 
-cc_prebuilt_library_shared {
-    name: "android.hardware.radio.messaging-V2-ndk",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/android.hardware.radio.messaging-V2-ndk.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
+//cc_prebuilt_library_shared {
+//    name: "android.hardware.radio.messaging-V2-ndk",
+//    owner: "sony",
+//    strip: {
+//        none: true
+//    },
+//    srcs: ["proprietary/vendor/lib64/android.hardware.radio.messaging-V2-ndk.so"],
+//    shared_libs: [],
+//    compile_multilib: "64",
+//    prefer: true,
+//    soc_specific: true
+//}
 
 cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.embmsslaidl-V1-ndk",
@@ -3859,18 +3859,18 @@ cc_prebuilt_library_shared {
     soc_specific: true
 }
 
-cc_prebuilt_library_shared {
-    name: "libqti_vndfwk_detect_system",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/libqti_vndfwk_detect_system.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
+//cc_prebuilt_library_shared {
+//    name: "libqti_vndfwk_detect_system",
+//    owner: "sony",
+//    strip: {
+//        none: true
+//    },
+//    srcs: ["proprietary/vendor/lib64/libqti_vndfwk_detect_system.so"],
+//    shared_libs: [],
+//    compile_multilib: "64",
+//    prefer: true,
+//    soc_specific: true
+//}
 
 cc_prebuilt_library_shared {
     name: "com.qti.feature2.realtimeserializer",
@@ -4015,18 +4015,18 @@ cc_prebuilt_library_shared {
     soc_specific: true
 }
 
-cc_prebuilt_library_shared {
-    name: "libvndfwk_detect_jni.qti_system",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/libvndfwk_detect_jni.qti_system.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
+//cc_prebuilt_library_shared {
+//    name: "libvndfwk_detect_jni.qti_system",
+//    owner: "sony",
+//    strip: {
+//        none: true
+//    },
+//    srcs: ["proprietary/vendor/lib64/libvndfwk_detect_jni.qti_system.so"],
+//    shared_libs: [],
+//    compile_multilib: "64",
+//    prefer: true,
+//    soc_specific: true
+//}
 
 cc_prebuilt_library_shared {
     name: "libadreno_app_profiles",
@@ -4561,18 +4561,18 @@ cc_prebuilt_library_shared {
     soc_specific: true
 }
 
-cc_prebuilt_library_shared {
-    name: "android.hardware.radio-V1-ndk",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/android.hardware.radio-V1-ndk.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
+//cc_prebuilt_library_shared {
+//    name: "android.hardware.radio-V1-ndk",
+//    owner: "sony",
+//    strip: {
+//        none: true
+//    },
+//    srcs: ["proprietary/vendor/lib64/android.hardware.radio-V1-ndk.so"],
+//    shared_libs: [],
+//    compile_multilib: "64",
+//    prefer: true,
+//    soc_specific: true
+//}
 
 cc_prebuilt_library_shared {
     name: "libcomposerextn.qti",
@@ -4704,31 +4704,31 @@ cc_prebuilt_library_shared {
     soc_specific: true
 }
 
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.camera.offlinecamera-V1-ndk",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.camera.offlinecamera-V1-ndk.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
+//cc_prebuilt_library_shared {
+//    name: "vendor.qti.hardware.camera.offlinecamera-V1-ndk",
+//    owner: "sony",
+//    strip: {
+//        none: true
+//    },
+//    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.camera.offlinecamera-V1-ndk.so"],
+//    shared_libs: [],
+//    compile_multilib: "64",
+//    prefer: true,
+//    soc_specific: true
+//}
 
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.qspa-V1-ndk",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.qspa-V1-ndk.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
+//cc_prebuilt_library_shared {
+//    name: "vendor.qti.hardware.qspa-V1-ndk",
+//    owner: "sony",
+//    strip: {
+//        none: true
+//    },
+//    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.qspa-V1-ndk.so"],
+//    shared_libs: [],
+//    compile_multilib: "64",
+//    prefer: true,
+//    soc_specific: true
+//}
 
 cc_prebuilt_library_shared {
     name: "vendor.qti.ims.configaidlservice-V1-ndk",
@@ -4808,18 +4808,18 @@ cc_prebuilt_library_shared {
     soc_specific: true
 }
 
-cc_prebuilt_library_shared {
-    name: "android.hardware.radio.sim-V2-ndk",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/android.hardware.radio.sim-V2-ndk.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
+//cc_prebuilt_library_shared {
+//    name: "android.hardware.radio.sim-V2-ndk",
+//    owner: "sony",
+//    strip: {
+//        none: true
+//    },
+//    srcs: ["proprietary/vendor/lib64/android.hardware.radio.sim-V2-ndk.so"],
+//    shared_libs: [],
+//    compile_multilib: "64",
+//    prefer: true,
+//    soc_specific: true
+//}
 
 cc_prebuilt_library_shared {
     name: "libqcbor",
@@ -4886,18 +4886,18 @@ cc_prebuilt_library_shared {
     soc_specific: true
 }
 
-cc_prebuilt_library_shared {
-    name: "vendor.somc.hardware.wifi.supplicant-V1-ndk",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/vendor.somc.hardware.wifi.supplicant-V1-ndk.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
+//cc_prebuilt_library_shared {
+//    name: "vendor.somc.hardware.wifi.supplicant-V1-ndk",
+//    owner: "sony",
+//    strip: {
+//        none: true
+//    },
+//    srcs: ["proprietary/vendor/lib64/vendor.somc.hardware.wifi.supplicant-V1-ndk.so"],
+//    shared_libs: [],
+//    compile_multilib: "64",
+//    prefer: true,
+//    soc_specific: true
+//}
 
 cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.perf2-V1-ndk",
@@ -4990,18 +4990,18 @@ cc_prebuilt_library_shared {
     soc_specific: true
 }
 
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.bluetooth.audio-V1-ndk",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.bluetooth.audio-V1-ndk.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
+//cc_prebuilt_library_shared {
+//    name: "vendor.qti.hardware.bluetooth.audio-V1-ndk",
+//    owner: "sony",
+//    strip: {
+//        none: true
+//    },
+//    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.bluetooth.audio-V1-ndk.so"],
+//    shared_libs: [],
+//    compile_multilib: "64",
+//    prefer: true,
+//    soc_specific: true
+//}
 
 cc_prebuilt_library_shared {
     name: "vendor.qti.qccvndhal_aidl-halimpl",
@@ -5068,18 +5068,18 @@ cc_prebuilt_library_shared {
     soc_specific: true
 }
 
-cc_prebuilt_library_shared {
-    name: "libwifi-hal-qcom",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/libwifi-hal-qcom.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
+//cc_prebuilt_library_shared {
+//    name: "libwifi-hal-qcom",
+//    owner: "sony",
+//    strip: {
+//        none: true
+//    },
+//    srcs: ["proprietary/vendor/lib64/libwifi-hal-qcom.so"],
+//    shared_libs: [],
+//    compile_multilib: "64",
+//    prefer: true,
+//    soc_specific: true
+//}
 
 cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.radio.ims@1.8",
@@ -5172,18 +5172,19 @@ cc_prebuilt_library_shared {
     soc_specific: true
 }
 
-cc_prebuilt_library_shared {
-    name: "android.hardware.radio.modem-V2-ndk",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/android.hardware.radio.modem-V2-ndk.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
+//cc_prebuilt_library_shared {
+//    name: "android.hardware.radio.modem-V2-ndk",
+//    name: "android.hardware.radio.modem-V2-ndk",
+//    owner: "sony",
+//    strip: {
+//        none: true
+//    },
+//    srcs: ["proprietary/vendor/lib64/android.hardware.radio.modem-V2-ndk.so"],
+//    shared_libs: [],
+//    compile_multilib: "64",
+//    prefer: true,
+//    soc_specific: true
+//}
 
 cc_prebuilt_library_shared {
     name: "com.qti.feature2.generic",
@@ -5211,18 +5212,18 @@ cc_prebuilt_library_shared {
     soc_specific: true
 }
 
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.camera.aon-V1-ndk",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.camera.aon-V1-ndk.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
+//cc_prebuilt_library_shared {
+//    name: "vendor.qti.hardware.camera.aon-V1-ndk",
+//    owner: "sony",
+//    strip: {
+//        none: true
+//    },
+//    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.camera.aon-V1-ndk.so"],
+//    shared_libs: [],
+//    compile_multilib: "64",
+//    prefer: true,
+//    soc_specific: true
+//}
 
 cc_prebuilt_library_shared {
     name: "qtiPeripheralMgr",
@@ -6352,31 +6353,31 @@ cc_prebuilt_library_shared {
     soc_specific: true
 }
 
-cc_prebuilt_library_shared {
-    name: "android.hardware.radio.network-V2-ndk",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/android.hardware.radio.network-V2-ndk.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
+//cc_prebuilt_library_shared {
+//    name: "android.hardware.radio.network-V2-ndk",
+//    owner: "sony",
+//    strip: {
+//        none: true
+//    },
+//    srcs: ["proprietary/vendor/lib64/android.hardware.radio.network-V2-ndk.so"],
+//    shared_libs: [],
+//    compile_multilib: "64",
+//    prefer: true,
+//    soc_specific: true
+//}
 
-cc_prebuilt_library_shared {
-    name: "android.hardware.media.bufferpool2-V1-ndk",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/android.hardware.media.bufferpool2-V1-ndk.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
+//cc_prebuilt_library_shared {
+//    name: "android.hardware.media.bufferpool2-V1-ndk",
+//    owner: "sony",
+//    strip: {
+//        none: true
+//    },
+//  srcs: ["proprietary/vendor/lib64/android.hardware.media.bufferpool2-V1-ndk.so"],
+//    shared_libs: [],
+//    compile_multilib: "64",
+//    prefer: true,
+//    soc_specific: true
+//}
 
 cc_prebuilt_library_shared {
     name: "vendor.qti.qesdhal@1.0",
@@ -6872,18 +6873,19 @@ cc_prebuilt_library_shared {
     soc_specific: true
 }
 
-cc_prebuilt_library_shared {
-    name: "android.hardware.gnss-V3-ndk",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/system/lib64/android.hardware.gnss-V3-ndk.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
+//cc_prebuilt_library_shared {
+//    name: "android.hardware.gnss-V3-ndk",
+//    name: "android.hardware.gnss-V3-ndk",
+//    owner: "sony",
+//    strip: {
+//        none: true
+//    },
+//    srcs: ["proprietary/system/lib64/android.hardware.gnss-V3-ndk.so"],
+//    shared_libs: [],
+//    compile_multilib: "64",
+//    prefer: true,
+//    soc_specific: true
+//}
 
 cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.radio.lpa@1.0",
@@ -6989,18 +6991,18 @@ cc_prebuilt_library_shared {
     soc_specific: true
 }
 
-cc_prebuilt_library_shared {
-    name: "android.hardware.wifi.supplicant-V2-ndk",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/android.hardware.wifi.supplicant-V2-ndk.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
+//cc_prebuilt_library_shared {
+//    name: "android.hardware.wifi.supplicant-V2-ndk",
+//    owner: "sony",
+//    strip: {
+//        none: true
+//    },
+//    srcs: ["proprietary/vendor/lib64/android.hardware.wifi.supplicant-V2-ndk.so"],
+//    shared_libs: [],
+//    compile_multilib: "64",
+//    prefer: true,
+//    soc_specific: true
+//}
 
 cc_prebuilt_library_shared {
     name: "libqcc_file_agent",
@@ -7015,18 +7017,18 @@ cc_prebuilt_library_shared {
     soc_specific: true
 }
 
-cc_prebuilt_library_shared {
-    name: "android.hardware.radio.data-V2-ndk",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/android.hardware.radio.data-V2-ndk.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
+//cc_prebuilt_library_shared {
+//    name: "android.hardware.radio.data-V2-ndk",
+//    owner: "sony",
+//    strip: {
+//        none: true
+//    },
+//    srcs: ["proprietary/vendor/lib64/android.hardware.radio.data-V2-ndk.so"],
+//    shared_libs: [],
+//    compile_multilib: "64",
+//    prefer: true,
+//    soc_specific: true
+//}
 
 cc_prebuilt_library_shared {
     name: "vendor.qti.gnss-service",
@@ -8744,18 +8746,18 @@ cc_prebuilt_library_shared {
     soc_specific: true
 }
 
-cc_prebuilt_library_shared {
-    name: "libwifi-hal-ctrl",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/libwifi-hal-ctrl.so"],
-    shared_libs: [],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
+//cc_prebuilt_library_shared {
+//    name: "libwifi-hal-ctrl",
+//    owner: "sony",
+//    strip: {
+//        none: true
+//    },
+//    srcs: ["proprietary/vendor/lib64/libwifi-hal-ctrl.so"],
+//    shared_libs: [],
+//    compile_multilib: "64",
+//    prefer: true,
+//    soc_specific: true
+//}
 
 
 //cc_prebuilt_library_shared {
@@ -9157,26 +9159,26 @@ cc_prebuilt_library_shared {
     prefer: true,
 }
 
-cc_prebuilt_library_shared {
-    name: "android.hardware.gnss-V3-cpp",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: ["proprietary/vendor/system/lib64/android.hardware.gnss-V3-cpp.so"],
-        },
-    },
-    shared_libs: [
-        "libhidlbase",
-        "liblog",
-        "libutils",
-        "libcutils",
-    ],
-    compile_multilib: "64",
-    prefer: true,
-}
+//cc_prebuilt_library_shared {
+//    name: "android.hardware.gnss-V3-cpp",
+//    owner: "sony",
+//    strip: {
+//        none: true,
+//    },
+//    target: {
+//        android_arm64: {
+//            srcs: ["proprietary/vendor/system/lib64/android.hardware.gnss-V3-cpp.so"],
+//        },
+//    },
+//    shared_libs: [
+//        "libhidlbase",
+//        "liblog",
+//        "libutils",
+//        "libcutils",
+//    ],
+//    compile_multilib: "64",
+//    prefer: true,
+//}
 
 cc_prebuilt_library_shared {
     name: "android.hardware.gnss.visibility_control@1.0",
@@ -9241,47 +9243,47 @@ cc_prebuilt_library_shared {
 //    prefer: true,
 //}
 
-cc_prebuilt_library_shared {
-    name: "android.hardware.media.bufferpool2-V2-ndk",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: ["proprietary/vendor/system/lib64/android.hardware.media.bufferpool2-V2-ndk.so"],
-        },
-    },
-    shared_libs: [
-        "libhidlbase",
-        "liblog",
-        "libutils",
-        "libcutils",
-    ],
-    compile_multilib: "64",
-    prefer: true,
-}
+//cc_prebuilt_library_shared {
+//    name: "android.hardware.media.bufferpool2-V2-ndk",
+//    owner: "sony",
+//    strip: {
+//        none: true,
+//    },
+//    target: {
+//        android_arm64: {
+//            srcs: ["proprietary/vendor/system/lib64/android.hardware.media.bufferpool2-V2-ndk.so"],
+//        },
+//    },
+//    shared_libs: [
+//        "libhidlbase",
+//        "liblog",
+//        "libutils",
+//        "libcutils",
+//    ],
+//    compile_multilib: "64",
+//    prefer: true,
+//}
 
-cc_prebuilt_library_shared {
-    name: "android.hardware.media.c2-V1-ndk",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: ["proprietary/vendor/system/lib64/android.hardware.media.c2-V1-ndk.so"],
-        },
-    },
-    shared_libs: [
-        "libhidlbase",
-        "liblog",
-        "libutils",
-        "libcutils",
-    ],
-    compile_multilib: "64",
-    prefer: true,
-}
+//cc_prebuilt_library_shared {
+//    name: "android.hardware.media.c2-V1-ndk",
+//    owner: "sony",
+//    strip: {
+//        none: true,
+//    },
+//    target: {
+//        android_arm64: {
+//            srcs: ["proprietary/vendor/system/lib64/android.hardware.media.c2-V1-ndk.so"],
+//        },
+//    },
+//    shared_libs: [
+//        "libhidlbase",
+//        "liblog",
+//        "libutils",
+//        "libcutils",
+//    ],
+//    compile_multilib: "64",
+//    prefer: true,
+//}
 
 //cc_prebuilt_library_shared {
 //    name: "android.hardware.media.omx@1.0",
@@ -9383,89 +9385,89 @@ cc_prebuilt_library_shared {
 }
 
 
-cc_prebuilt_library_shared {
-    name: "android.media.audio.common.types-V1-ndk",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: ["proprietary/vendor/system/lib64/android.media.audio.common.types-V1-ndk.so"],
-        },
-    },
-    shared_libs: [
-        "libhidlbase",
-        "liblog",
-        "libutils",
-        "libcutils",
-    ],
-    compile_multilib: "64",
-    prefer: true,
-}
+//cc_prebuilt_library_shared {
+//    name: "android.media.audio.common.types-V1-ndk",
+//    owner: "sony",
+//    strip: {
+//        none: true,
+//    },
+//    target: {
+//        android_arm64: {
+//            srcs: ["proprietary/vendor/system/lib64/android.media.audio.common.types-V1-ndk.so"],
+//        },
+//    },
+//    shared_libs: [
+//        "libhidlbase",
+//        "liblog",
+//        "libutils",
+//        "libcutils",
+//    ],
+//    compile_multilib: "64",
+//    prefer: true,
+//}
 
-cc_prebuilt_library_shared {
-    name: "android.media.audio.common.types-V2-cpp",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: ["proprietary/vendor/system/lib64/android.media.audio.common.types-V2-cpp.so"],
-        },
-    },
-    shared_libs: [
-        "libhidlbase",
-        "liblog",
-        "libutils",
-        "libcutils",
-    ],
-    compile_multilib: "64",
-    prefer: true,
-}
+//cc_prebuilt_library_shared {
+//    name: "android.media.audio.common.types-V2-cpp",
+//    owner: "sony",
+//    strip: {
+//        none: true,
+//    },
+//    target: {
+//        android_arm64: {
+//            srcs: ["proprietary/vendor/system/lib64/android.media.audio.common.types-V2-cpp.so"],
+//        },
+//    },
+//    shared_libs: [
+//        "libhidlbase",
+//        "liblog",
+//        "libutils",
+//        "libcutils",
+//    ],
+//    compile_multilib: "64",
+//    prefer: true,
+//}
 
-cc_prebuilt_library_shared {
-    name: "android.media.audio.common.types-V3-cpp",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: ["proprietary/vendor/system/lib64/android.media.audio.common.types-V3-cpp.so"],
-        },
-    },
-    shared_libs: [
-        "libhidlbase",
-        "liblog",
-        "libutils",
-        "libcutils",
-    ],
-    compile_multilib: "64",
-    prefer: true,
-}
+//cc_prebuilt_library_shared {
+//    name: "android.media.audio.common.types-V3-cpp",
+//    owner: "sony",
+//    strip: {
+//        none: true,
+//    },
+//    target: {
+//        android_arm64: {
+//            srcs: ["proprietary/vendor/system/lib64/android.media.audio.common.types-V3-cpp.so"],
+//        },
+//    },
+//    shared_libs: [
+//        "libhidlbase",
+//        "liblog",
+//        "libutils",
+//        "libcutils",
+//    ],
+//    compile_multilib: "64",
+//    prefer: true,
+//}
 
-cc_prebuilt_library_shared {
-    name: "android.media.audio.common.types-V3-ndk",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: ["proprietary/vendor/system/lib64/android.media.audio.common.types-V3-ndk.so"],
-        },
-    },
-    shared_libs: [
-        "libhidlbase",
-        "liblog",
-        "libutils",
-        "libcutils",
-    ],
-    compile_multilib: "64",
-    prefer: true,
-}
+//cc_prebuilt_library_shared {
+//    name: "android.media.audio.common.types-V3-ndk",
+//    owner: "sony",
+//    strip: {
+//        none: true,
+//    },
+//    target: {
+//        android_arm64: {
+//            srcs: ["proprietary/vendor/system/lib64/android.media.audio.common.types-V3-ndk.so"],
+//        },
+//    },
+//    shared_libs: [
+//        "libhidlbase",
+//        "liblog",
+//        "libutils",
+//        "libcutils",
+//    ],
+//    compile_multilib: "64",
+//    prefer: true,
+//}
 
 cc_prebuilt_library_shared {
     name: "android.media.audiopolicy-aconfig-cc",
@@ -10202,47 +10204,47 @@ cc_prebuilt_library_shared {
     prefer: true,
 }
 
-cc_prebuilt_library_shared {
-    name: "mediametricsservice-aidl-cpp",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: ["proprietary/vendor/system/lib64/mediametricsservice-aidl-cpp.so"],
-        },
-    },
-    shared_libs: [
-        "libhidlbase",
-        "liblog",
-        "libutils",
-        "libcutils",
-    ],
-    compile_multilib: "64",
-    prefer: true,
-}
+//cc_prebuilt_library_shared {
+//    name: "mediametricsservice-aidl-cpp",
+//    owner: "sony",
+//    strip: {
+//        none: true,
+//    },
+//    target: {
+//        android_arm64: {
+//            srcs: ["proprietary/vendor/system/lib64/mediametricsservice-aidl-cpp.so"],
+//        },
+//    },
+//    shared_libs: [
+//        "libhidlbase",
+//        "liblog",
+//        "libutils",
+//        "libcutils",
+//    ],
+//    compile_multilib: "64",
+//    prefer: true,
+//}
 
-cc_prebuilt_library_shared {
-    name: "media_permission-aidl-cpp",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: ["proprietary/vendor/system/lib64/media_permission-aidl-cpp.so"],
-        },
-    },
-    shared_libs: [
-        "libhidlbase",
-        "liblog",
-        "libutils",
-        "libcutils",
-    ],
-    compile_multilib: "64",
-    prefer: true,
-}
+//cc_prebuilt_library_shared {
+//    name: "media_permission-aidl-cpp",
+//    owner: "sony",
+//    strip: {
+//        none: true,
+//    },
+//    target: {
+//        android_arm64: {
+//            srcs: ["proprietary/vendor/system/lib64/media_permission-aidl-cpp.so"],
+//        },
+//    },
+//    shared_libs: [
+//        "libhidlbase",
+//        "liblog",
+//        "libutils",
+//        "libcutils",
+//    ],
+//    compile_multilib: "64",
+//    prefer: true,
+//}
 
 cc_prebuilt_library_shared {
     name: "vendor.qti.diaghal-V1-ndk",
@@ -10307,26 +10309,26 @@ cc_prebuilt_library_shared {
     prefer: true,
 }
 
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.systemhelperaidl-V1-ndk",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: ["proprietary/vendor/system/lib64/vendor.qti.hardware.systemhelperaidl-V1-ndk.so"],
-        },
-    },
-    shared_libs: [
-        "libhidlbase",
-        "liblog",
-        "libutils",
-        "libcutils",
-    ],
-    compile_multilib: "64",
-    prefer: true,
-}
+//cc_prebuilt_library_shared {
+//    name: "vendor.qti.hardware.systemhelperaidl-V1-ndk",
+//    owner: "sony",
+//    strip: {
+//        none: true,
+//    },
+//    target: {
+//        android_arm64: {
+//            srcs: ["proprietary/vendor/system/lib64/vendor.qti.hardware.systemhelperaidl-V1-ndk.so"],
+//        },
+//    },
+//    shared_libs: [
+//        "libhidlbase",
+//        "liblog",
+//        "libutils",
+//        "libcutils",
+//    ],
+//    compile_multilib: "64",
+//    prefer: true,
+//}
 
 cc_prebuilt_library_shared {
     name: "vendor.qti.MemHal-V1-ndk",
