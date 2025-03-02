@@ -8255,13 +8255,18 @@ cc_prebuilt_library_shared {
         },
     },
     shared_libs: [
-        "libhidlbase",
-        "liblog",
-        "libutils",
-        "libcutils",
+        "libbinder_ndk",
+        "android.hardware.common-V2-ndk",
+        "libc++",
+        "libc",
+        "libm",
+        "libdl",
     ],
     compile_multilib: "64",
     prefer: true,
+    vendor: true,
+    system_ext_specific: false,
+    proprietary: true,
 }
 
 cc_prebuilt_library_shared {
@@ -21961,3 +21966,24 @@ cc_prebuilt_library_shared {
     prefer: true,
     soc_specific: true,
 }
+
+// cc_prebuilt_library_shared {
+//     name: "librmnetctl",
+//     owner: "sony",
+//     strip: {
+//         none: true,
+//     },
+//     target: {
+//         android_arm64: {
+//             srcs: ["proprietary/vendor/lib64/librmnetctl.so"],
+//         },
+//     },
+//     shared_libs: [
+//         "libc++",
+//         "libc",
+//         "libm",
+//         "libdl",
+//     ],
+//     vendor: true,
+//     prefer: true,
+// }
