@@ -1,0 +1,13 @@
+<compatibility-matrix version="1.0" type="framework">
+    <!-- For deprecated HALs that your device still needs -->
+    <hal format="hidl" optional="true">
+        <name>android.frameworks.sensorservice</name>
+        <version>1.0</version>
+        <interface>
+            <name>ISensorManager</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    
+    <!-- Add any other deprecated HALs your device requires -->
+</compatibility-matrix>
