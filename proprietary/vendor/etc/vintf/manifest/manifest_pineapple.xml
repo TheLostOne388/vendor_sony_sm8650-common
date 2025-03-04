@@ -8,6 +8,7 @@
         device/somc/asahi/config/wlan/vendor.somc.hardware.aidlwifidriver.manifest.xml
 -->
 <manifest version="7.0" type="device" target-level="8">
+    <!-- Audio HALs -->
     <hal format="hidl">
         <name>android.hardware.audio</name>
         <transport>hwbinder</transport>
@@ -18,23 +19,56 @@
         <transport>hwbinder</transport>
         <fqname>@7.0::IEffectsFactory/default</fqname>
     </hal>
+
+    <!-- Bluetooth HAL -->
     <hal format="hidl">
         <name>android.hardware.bluetooth</name>
         <transport>hwbinder</transport>
         <fqname>@1.1::IBluetoothHci/default</fqname>
     </hal>
+
+    <!-- Updated AIDL HALs -->
     <hal format="aidl">
         <name>android.hardware.gatekeeper</name>
-        <fqname>IGatekeeper/default</fqname>
+        <interface>
+            <name>IGatekeeper</name>
+            <instance>default</instance>
+        </interface>
     </hal>
     <hal format="aidl">
         <name>android.hardware.nfc</name>
-        <fqname>INfc/default</fqname>
+        <interface>
+            <name>INfc</name>
+            <instance>default</instance>
+        </interface>
     </hal>
     <hal format="aidl">
         <name>android.hardware.secure_element</name>
-        <fqname>ISecureElement/eSE1</fqname>
+        <interface>
+            <name>ISecureElement</name>
+            <instance>eSE1</instance>
+            <instance>SIM1</instance>
+            <instance>SIM2</instance>
+        </interface>
     </hal>
+    <!-- Add missing AIDL HALs from deprecated list -->
+    <hal format="aidl">
+        <name>android.hardware.camera.provider</name>
+        <interface>
+            <name>ICameraProvider</name>
+            <instance>legacy/1</instance>
+        </interface>
+    </hal>
+    <hal format="aidl">
+        <name>android.hardware.sensors</name>
+        <version>2</version>
+        <interface>
+            <name>ISensors</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+
+    <!-- Qualcomm HALs -->
     <hal format="hidl">
         <name>com.qualcomm.qti.dpm.api</name>
         <transport>hwbinder</transport>
@@ -50,6 +84,8 @@
         <transport>hwbinder</transport>
         <fqname>@2.3::IUceService/com.qualcomm.qti.uceservice</fqname>
     </hal>
+
+    <!-- Vendor-Specific AIDL HALs -->
     <hal format="aidl">
         <name>vendor.hardware.biometrics.fingerprintRbs</name>
         <fqname>IFingerprintRbs/Rbs</fqname>
@@ -58,6 +94,33 @@
         <name>vendor.nxp.nxpnfc_aidl</name>
         <fqname>INxpNfc/default</fqname>
     </hal>
+    <hal format="aidl">
+        <name>vendor.qti.hardware.spu</name>
+        <version>2</version>
+        <fqname>ISPUManager/default</fqname>
+    </hal>
+    <hal format="aidl">
+        <name>vendor.semc.hardware.spc</name>
+        <fqname>ISpc/default</fqname>
+    </hal>
+    <hal format="aidl">
+        <name>vendor.somc.hardware.aidlifaa</name>
+        <fqname>IIFAAManagerService/default</fqname>
+    </hal>
+    <hal format="aidl">
+        <name>vendor.somc.hardware.aidlwifidriver</name>
+        <fqname>ISomcWifiDriver/default</fqname>
+    </hal>
+    <hal format="aidl">
+        <name>vendor.somc.hardware.security.aidlsecd</name>
+        <fqname>IDeviceSecurity/default</fqname>
+    </hal>
+    <hal format="aidl">
+        <name>vendor.somc.hardware.wifi.idd</name>
+        <fqname>ISomcWifiIdd/default</fqname>
+    </hal>
+
+    <!-- Vendor-Specific HIDL HALs -->
     <hal format="hidl">
         <name>vendor.qti.hardware.bluetooth_audio</name>
         <transport>hwbinder</transport>
@@ -104,11 +167,6 @@
         <fqname>@1.0::ISecureProcessor/qti-tee</fqname>
         <fqname>@1.0::ISecureProcessor/qti-tvm</fqname>
     </hal>
-    <hal format="aidl">
-        <name>vendor.qti.hardware.spu</name>
-        <version>2</version>
-        <fqname>ISPUManager/default</fqname>
-    </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.wifi.wifilearner</name>
         <transport>hwbinder</transport>
@@ -144,26 +202,8 @@
         <transport>hwbinder</transport>
         <fqname>@1.1::IMmwavedirection/default</fqname>
     </hal>
-    <hal format="aidl">
-        <name>vendor.semc.hardware.spc</name>
-        <fqname>ISpc/default</fqname>
-    </hal>
-    <hal format="aidl">
-        <name>vendor.somc.hardware.aidlifaa</name>
-        <fqname>IIFAAManagerService/default</fqname>
-    </hal>
-    <hal format="aidl">
-        <name>vendor.somc.hardware.aidlwifidriver</name>
-        <fqname>ISomcWifiDriver/default</fqname>
-    </hal>
-    <hal format="aidl">
-        <name>vendor.somc.hardware.security.aidlsecd</name>
-        <fqname>IDeviceSecurity/default</fqname>
-    </hal>
-    <hal format="aidl">
-        <name>vendor.somc.hardware.wifi.idd</name>
-        <fqname>ISomcWifiIdd/default</fqname>
-    </hal>
+
+    <!-- SEPolicy -->
     <sepolicy>
         <version>34.0</version>
     </sepolicy>
