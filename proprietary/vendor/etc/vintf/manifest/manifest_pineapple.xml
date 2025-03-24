@@ -180,11 +180,6 @@
         <fqname>@1.1::ISPUManager/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.qti.spu</name>
-        <transport>hwbinder</transport>
-        <fqname>@2.0::ISPUManager/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>vendor.semc.hardware.charger</name>
         <transport>hwbinder</transport>
         <fqname>@1.2::ICharger/default</fqname>
