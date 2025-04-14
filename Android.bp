@@ -3,11 +3,14 @@
 
 soong_namespace {
     imports: [
-        "hardware/qcom-caf/sm8550/display",
+        "hardware/qcom-caf/sm8650/display",
         "vendor/sony/pdx245",
         "hardware/qcom-caf/wlan",
-        "hardware/qcom-caf/sm8550/audio/agm/ipc/HwBinders/interfaces/AGMIPC/1.0",
-        "hardware/qcom-caf/sm8550/audio/pal/ipc/HwBinders/interfaces/pal/1.0",  // Add this line
+        "hardware/qcom-caf/sm8650/audio/agm/ipc/HwBinders/interfaces/AGMIPC/1.0",
+        "hardware/qcom-caf/sm8650/audio/pal/ipc/HwBinders/interfaces/pal/1.0",
+        "hardware/qcom-caf/sm8650/display/gralloc",
+        "hardware/qcom-caf/sm8650/display/composer_test_service",
+        "vendor/qcom/opensource/commonsys-intf/display/aidl/config",
     ],
 }
 
@@ -484,22 +487,22 @@ cc_prebuilt_library_shared {
 //     soc_specific: true
 // }
 
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.display.config-V2-ndk",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.display.config-V2-ndk.so"],
-    shared_libs: [
-        "android.hardware.common-V2-ndk",
-        "libbinder_ndk",
-        "libc++",
-    ],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
+// cc_prebuilt_library_shared {
+//     name: "vendor.qti.hardware.display.config-V2-ndk",
+//     owner: "sony",
+//     strip: {
+//         none: true
+//     },
+//     srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.display.config-V2-ndk.so"],
+//     shared_libs: [
+//         "android.hardware.common-V2-ndk",
+//         "libbinder_ndk",
+//         "libc++",
+//     ],
+//     compile_multilib: "64",
+//     prefer: true,
+//     soc_specific: true
+// }
 
 cc_prebuilt_library_shared {
     name: "com.qti.feature2.statsregeneration",
@@ -1394,22 +1397,22 @@ cc_prebuilt_library_shared {
     soc_specific: true,
 }
 
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.display.config-V9-ndk",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.display.config-V9-ndk.so"],
-    shared_libs: [
-        "libbinder_ndk",
-        "android.hardware.common-V2-ndk",
-        "libc++",
-    ],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
+// cc_prebuilt_library_shared {
+//     name: "vendor.qti.hardware.display.config-V9-ndk",
+//     owner: "sony",
+//     strip: {
+//         none: true,
+//     },
+//     srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.display.config-V9-ndk.so"],
+//     shared_libs: [
+//         "libbinder_ndk",
+//         "android.hardware.common-V2-ndk",
+//         "libc++",
+//     ],
+//     compile_multilib: "64",
+//     prefer: true,
+//     soc_specific: true,
+// }
 
 cc_prebuilt_library_shared {
     name: "libqcrilNrFramework",
@@ -1809,27 +1812,27 @@ cc_prebuilt_library_shared {
     soc_specific: true
 }
 
-cc_prebuilt_library_shared {
-    name: "libdisplayconfig.system.qti",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/libdisplayconfig.system.qti.so"],
-    shared_libs: [
-        "libc",
-        "libc++",
-        "libdl",
-        "libhidlbase",
-        "liblog",
-        "libm",
-        "libutils",
-        "vendor.display.config@2.0"
-    ],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
+// cc_prebuilt_library_shared {
+//     name: "libdisplayconfig.system.qti",
+//     owner: "sony",
+//     strip: {
+//         none: true
+//     },
+//     srcs: ["proprietary/vendor/lib64/libdisplayconfig.system.qti.so"],
+//     shared_libs: [
+//         "libc",
+//         "libc++",
+//         "libdl",
+//         "libhidlbase",
+//         "liblog",
+//         "libm",
+//         "libutils",
+//         "vendor.display.config@2.0"
+//     ],
+//     compile_multilib: "64",
+//     prefer: true,
+//     soc_specific: true
+// }
 
 cc_prebuilt_library_shared {
     name: "vendor.qti.data.factory@2.1",
@@ -2058,22 +2061,22 @@ cc_prebuilt_library_shared {
     soc_specific: true
 }
 
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.display.config-V7-ndk",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.display.config-V7-ndk.so"],
-    shared_libs: [
-        "libbinder_ndk",
-        "android.hardware.common-V2-ndk",
-        "libc++",
-    ],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
+// cc_prebuilt_library_shared {
+//     name: "vendor.qti.hardware.display.config-V7-ndk",
+//     owner: "sony",
+//     strip: {
+//         none: true,
+//     },
+//     srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.display.config-V7-ndk.so"],
+//     shared_libs: [
+//         "libbinder_ndk",
+//         "android.hardware.common-V2-ndk",
+//         "libc++",
+//     ],
+//     compile_multilib: "64",
+//     prefer: true,
+//     soc_specific: true,
+// }
 
 cc_prebuilt_library_shared {
     name: "vendor.qti.data.mwqem@1.0",
@@ -2421,36 +2424,36 @@ cc_prebuilt_library_shared {
     soc_specific: true,
 }
 
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.pal@1.0-impl",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.pal@1.0-impl.so"],
-    shared_libs: [
-        "android.hidl.allocator@1.0",
-        "android.hidl.memory@1.0",
-        "libar-pal",
-        "libbase",
-        "libc++",
-        "libcutils",
-        "libfmq",
-        "libhardware",
-        "libhidlbase",
-        "libhidlmemory",
-        "libhidltransport",
-        "liblog",
-        "libutils",
- //       "vendor.qti.hardware.pal@1.0",
-    ],
-    vendor: true,
-    allow_undefined_symbols: true,
-    check_elf_files: false,
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
+// cc_prebuilt_library_shared {
+//     name: "vendor.qti.hardware.pal@1.0-impl",
+//     owner: "sony",
+//     strip: {
+//         none: true,
+//     },
+//     srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.pal@1.0-impl.so"],
+//     shared_libs: [
+//         "android.hidl.allocator@1.0",
+//         "android.hidl.memory@1.0",
+//         "libar-pal",
+//         "libbase",
+//         "libc++",
+//         "libcutils",
+//         "libfmq",
+//         "libhardware",
+//         "libhidlbase",
+//         "libhidlmemory",
+//         "libhidltransport",
+//         "liblog",
+//         "libutils",
+//  //       "vendor.qti.hardware.pal@1.0",
+//     ],
+//     vendor: true,
+//     allow_undefined_symbols: true,
+//     check_elf_files: false,
+//     compile_multilib: "64",
+//     prefer: true,
+//     soc_specific: true,
+// }
 
 cc_prebuilt_library_shared {
     name: "com.quicinc.cne.api@1.0",
@@ -3436,22 +3439,22 @@ cc_prebuilt_library_shared {
     soc_specific: true,
 }
 
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.display.config-V6-ndk",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.display.config-V6-ndk.so"],
-    shared_libs: [
-        "libbinder_ndk",
-        "android.hardware.common-V2-ndk",
-        "libc++",
-    ],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
+// cc_prebuilt_library_shared {
+//     name: "vendor.qti.hardware.display.config-V6-ndk",
+//     owner: "sony",
+//     strip: {
+//         none: true,
+//     },
+//     srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.display.config-V6-ndk.so"],
+//     shared_libs: [
+//         "libbinder_ndk",
+//         "android.hardware.common-V2-ndk",
+//         "libc++",
+//     ],
+//     compile_multilib: "64",
+//     prefer: true,
+//     soc_specific: true,
+// }
 
 cc_prebuilt_library_shared {
     name: "vendor.qti.qccsyshal_aidl-halimpl",
@@ -4834,22 +4837,22 @@ cc_prebuilt_library_shared {
 //     ],
 // }
 
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.display.config-V11-ndk",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.display.config-V11-ndk.so"],
-    shared_libs: [
-        "libbinder_ndk",
-        "android.hardware.common-V2-ndk",
-        "libc++",
-    ],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
+// cc_prebuilt_library_shared {
+//     name: "vendor.qti.hardware.display.config-V11-ndk",
+//     owner: "sony",
+//     strip: {
+//         none: true,
+//     },
+//     srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.display.config-V11-ndk.so"],
+//     shared_libs: [
+//         "libbinder_ndk",
+//         "android.hardware.common-V2-ndk",
+//         "libc++",
+//     ],
+//     compile_multilib: "64",
+//     prefer: true,
+//     soc_specific: true,
+// }
 
 cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.data.dynamicdds@1.0",
@@ -5087,22 +5090,22 @@ cc_prebuilt_library_shared {
     soc_specific: true
 }
 
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.display.config-V10-ndk",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.display.config-V10-ndk.so"],
-    shared_libs: [
-        "libbinder_ndk",
-        "android.hardware.common-V2-ndk",
-        "libc++",
-    ],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
+// cc_prebuilt_library_shared {
+//     name: "vendor.qti.hardware.display.config-V10-ndk",
+//     owner: "sony",
+//     strip: {
+//         none: true,
+//     },
+//     srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.display.config-V10-ndk.so"],
+//     shared_libs: [
+//         "libbinder_ndk",
+//         "android.hardware.common-V2-ndk",
+//         "libc++",
+//     ],
+//     compile_multilib: "64",
+//     prefer: true,
+//     soc_specific: true,
+// }
 
 cc_prebuilt_library_shared {
     name: "com.quicinc.cne.constants@2.0",
@@ -8243,31 +8246,31 @@ cc_prebuilt_library_shared {
     prefer: true,
 }
 
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.display.config-V12-ndk",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: ["proprietary/vendor/system/lib64/vendor.qti.hardware.display.config-V12-ndk.so"],
-        },
-    },
-    shared_libs: [
-        "libbinder_ndk",
-        "android.hardware.common-V2-ndk",
-        "libc++",
-        "libc",
-        "libm",
-        "libdl",
-    ],
-    compile_multilib: "64",
-    prefer: true,
-    vendor: true,
-    system_ext_specific: false,
-    proprietary: true,
-}
+// cc_prebuilt_library_shared {
+//     name: "vendor.qti.hardware.display.config-V12-ndk",
+//     owner: "sony",
+//     strip: {
+//         none: true,
+//     },
+//     target: {
+//         android_arm64: {
+//             srcs: ["proprietary/vendor/system/lib64/vendor.qti.hardware.display.config-V12-ndk.so"],
+//         },
+//     },
+//     shared_libs: [
+//         "libbinder_ndk",
+//         "android.hardware.common-V2-ndk",
+//         "libc++",
+//         "libc",
+//         "libm",
+//         "libdl",
+//     ],
+//     compile_multilib: "64",
+//     prefer: true,
+//     vendor: true,
+//     system_ext_specific: false,
+//     proprietary: true,
+// }
 
 cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.fm-V1-ndk",
@@ -10433,25 +10436,25 @@ cc_prebuilt_library_shared {
     soc_specific: true
 }
 
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.display.config-V8-ndk",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.display.config-V8-ndk.so"],
-    shared_libs: [
-        "android.hardware.common-V2-ndk",
-        "libbinder_ndk",
-        "libc",
-        "libc++",
-        "libdl",
-        "libm"
-    ],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
+// cc_prebuilt_library_shared {
+//     name: "vendor.qti.hardware.display.config-V8-ndk",
+//     owner: "sony",
+//     strip: {
+//         none: true
+//     },
+//     srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.display.config-V8-ndk.so"],
+//     shared_libs: [
+//         "android.hardware.common-V2-ndk",
+//         "libbinder_ndk",
+//         "libc",
+//         "libc++",
+//         "libdl",
+//         "libm"
+//     ],
+//     compile_multilib: "64",
+//     prefer: true,
+//     soc_specific: true
+// }
 
 cc_prebuilt_library_shared {
     name: "libfastcvadsp",
@@ -10844,25 +10847,25 @@ cc_prebuilt_library_shared {
     soc_specific: true
 }
 
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.display.config-V1-ndk",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.display.config-V1-ndk.so"],
-    shared_libs: [
-        "android.hardware.common-V2-ndk",
-        "libbinder_ndk",
-        "libc",
-        "libc++",
-        "libdl",
-        "libm"
-    ],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
+// cc_prebuilt_library_shared {
+//     name: "vendor.qti.hardware.display.config-V1-ndk",
+//     owner: "sony",
+//     strip: {
+//         none: true
+//     },
+//     srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.display.config-V1-ndk.so"],
+//     shared_libs: [
+//         "android.hardware.common-V2-ndk",
+//         "libbinder_ndk",
+//         "libc",
+//         "libc++",
+//         "libdl",
+//         "libm"
+//     ],
+//     compile_multilib: "64",
+//     prefer: true,
+//     soc_specific: true
+// }
 
 cc_prebuilt_library_shared {
     name: "libril",
@@ -10912,25 +10915,25 @@ cc_prebuilt_library_shared {
     soc_specific: true
 }
 
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.display.config-V5-ndk",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.display.config-V5-ndk.so"],
-    shared_libs: [
-        "android.hardware.common-V2-ndk",
-        "libbinder_ndk",
-        "libc",
-        "libc++",
-        "libdl",
-        "libm"
-    ],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
+// cc_prebuilt_library_shared {
+//     name: "vendor.qti.hardware.display.config-V5-ndk",
+//     owner: "sony",
+//     strip: {
+//         none: true
+//     },
+//     srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.display.config-V5-ndk.so"],
+//     shared_libs: [
+//         "android.hardware.common-V2-ndk",
+//         "libbinder_ndk",
+//         "libc",
+//         "libc++",
+//         "libdl",
+//         "libm"
+//     ],
+//     compile_multilib: "64",
+//     prefer: true,
+//     soc_specific: true
+// }
 
 cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.embmsslaidl-V2-ndk",
@@ -11164,24 +11167,24 @@ cc_prebuilt_library_shared {
     }
 }
 
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.display.postproc-V1-ndk",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.display.postproc-V1-ndk.so"],
-    shared_libs: [
-        "libbinder_ndk",
-        "libc",
-        "libc++",
-        "libdl",
-        "libm"
-    ],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
+// cc_prebuilt_library_shared {
+//     name: "vendor.qti.hardware.display.postproc-V1-ndk",
+//     owner: "sony",
+//     strip: {
+//         none: true
+//     },
+//     srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.display.postproc-V1-ndk.so"],
+//     shared_libs: [
+//         "libbinder_ndk",
+//         "libc",
+//         "libc++",
+//         "libdl",
+//         "libm"
+//     ],
+//     compile_multilib: "64",
+//     prefer: true,
+//     soc_specific: true
+// }
 
 cc_prebuilt_library_shared {
     name: "libqspm-mem-utils-vendor",
@@ -11255,25 +11258,25 @@ cc_prebuilt_library_shared {
     soc_specific: true
 }
 
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.display.config-V4-ndk",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.display.config-V4-ndk.so"],
-    shared_libs: [
-        "android.hardware.common-V2-ndk",
-        "libbinder_ndk",
-        "libc",
-        "libc++",
-        "libdl",
-        "libm"
-    ],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
+// cc_prebuilt_library_shared {
+//     name: "vendor.qti.hardware.display.config-V4-ndk",
+//     owner: "sony",
+//     strip: {
+//         none: true
+//     },
+//     srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.display.config-V4-ndk.so"],
+//     shared_libs: [
+//         "android.hardware.common-V2-ndk",
+//         "libbinder_ndk",
+//         "libc",
+//         "libc++",
+//         "libdl",
+//         "libm"
+//     ],
+//     compile_multilib: "64",
+//     prefer: true,
+//     soc_specific: true
+// }
 
 cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.qccsyshal@1.2-halimpl",
@@ -11647,24 +11650,24 @@ cc_prebuilt_library_shared {
     soc_specific: true
 }
 
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.display.color-V1-ndk",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.display.color-V1-ndk.so"],
-    shared_libs: [
-        "libbinder_ndk",
-        "libc",
-        "libc++",
-        "libdl",
-        "libm"
-    ],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
+// cc_prebuilt_library_shared {
+//     name: "vendor.qti.hardware.display.color-V1-ndk",
+//     owner: "sony",
+//     strip: {
+//         none: true
+//     },
+//     srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.display.color-V1-ndk.so"],
+//     shared_libs: [
+//         "libbinder_ndk",
+//         "libc",
+//         "libc++",
+//         "libdl",
+//         "libm"
+//     ],
+//     compile_multilib: "64",
+//     prefer: true,
+//     soc_specific: true
+// }
 
 cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.qseecom@1.0",
@@ -11762,64 +11765,64 @@ cc_prebuilt_library_shared {
     soc_specific: true
 }
 
-cc_prebuilt_library_shared {
-    name: "libqcomvisualizer",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/libqcomvisualizer.so"],
-    shared_libs: [
-        "libc",
-        "libc++",
-        "libcutils",
-        "libdl",
-        "liblog",
-        "libm"
-    ],
-    required: [
-        "libar-pal"
-    ],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-    allow_undefined_symbols: true
-}
+// cc_prebuilt_library_shared {
+//     name: "libqcomvisualizer",
+//     owner: "sony",
+//     strip: {
+//         none: true
+//     },
+//     srcs: ["proprietary/vendor/lib64/libqcomvisualizer.so"],
+//     shared_libs: [
+//         "libc",
+//         "libc++",
+//         "libcutils",
+//         "libdl",
+//         "liblog",
+//         "libm"
+//     ],
+//     required: [
+//         "libar-pal"
+//     ],
+//     compile_multilib: "64",
+//     prefer: true,
+//     soc_specific: true,
+//     check_elf_files: false,
+// }
 
-cc_prebuilt_library_shared {
-    name: "libar-pal",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/libar-pal.so"],
-    shared_libs: [
-        "libPeripheralStateUtils",
-        "libagmclient",
-        "libar-gsl",
-        "libarmemlog",
-        "libaudioroute",
-        "libaudiosnpewrapper",
-        "libaudioutils",
-        "libc++",
-        "libcutils",
-        "libeffects",
-        "libexpat",
-        "libhidlbase",
-        "liblog",
-        "liblx-osal",
-        "libmiscta",
-        "libsonydseehxwrapper",
-        "libtinyalsa",
-        "libtinycompress",
-        "libutilscallstack",
-        "libvui_intf",
-    ],
-    vendor: true,
-    allow_undefined_symbols: true,
-    compile_multilib: "64",
-    prefer: true,
-}
+// cc_prebuilt_library_shared {
+//     name: "libar-pal",
+//     owner: "sony",
+//     strip: {
+//         none: true
+//     },
+//     srcs: ["proprietary/vendor/lib64/libar-pal.so"],
+//     shared_libs: [
+//         "libPeripheralStateUtils",
+//         "libagmclient",
+//         "libar-gsl",
+//         "libarmemlog",
+//         "libaudioroute",
+//         "libaudiosnpewrapper",
+//         "libaudioutils",
+//         "libc++",
+//         "libcutils",
+//         "libeffects",
+//         "libexpat",
+//         "libhidlbase",
+//         "liblog",
+//         "liblx-osal",
+//         "libmiscta",
+//         "libsonydseehxwrapper",
+//         "libtinyalsa",
+//         "libtinycompress",
+//         "libutilscallstack",
+//         "libvui_intf",
+//     ],
+//     vendor: true,
+//     allow_undefined_symbols: true,
+//     compile_multilib: "64",
+//     prefer: true,
+// }
 
 cc_prebuilt_library_shared {
     name: "libbinauralrenderer_wrapper.qti",
@@ -11996,6 +11999,7 @@ cc_prebuilt_library_shared {
     ],
     compile_multilib: "64",
     prefer: true,
+    check_elf_files: false,
     soc_specific: true
 }
 
@@ -12251,25 +12255,25 @@ cc_prebuilt_library_shared {
     soc_specific: true
 }
 
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.display.config-V3-ndk",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.display.config-V3-ndk.so"],
-    shared_libs: [
-        "android.hardware.common-V2-ndk",
-        "libbinder_ndk",
-        "libc",
-        "libc++",
-        "libdl",
-        "libm"
-    ],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
+// cc_prebuilt_library_shared {
+//     name: "vendor.qti.hardware.display.config-V3-ndk",
+//     owner: "sony",
+//     strip: {
+//         none: true
+//     },
+//     srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.display.config-V3-ndk.so"],
+//     shared_libs: [
+//         "android.hardware.common-V2-ndk",
+//         "libbinder_ndk",
+//         "libc",
+//         "libc++",
+//         "libdl",
+//         "libm"
+//     ],
+//     compile_multilib: "64",
+//     prefer: true,
+//     soc_specific: true
+// }
 
 cc_prebuilt_library_shared {
     name: "vendor.qti.spu@1.1",
@@ -13124,46 +13128,47 @@ cc_prebuilt_library_shared {
     soc_specific: true
 }
 
-cc_prebuilt_library_shared {
-    name: "libqcomvoiceprocessing",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/soundfx/libqcomvoiceprocessing.so"],
-    shared_libs: [
-        "libc",
-        "libc++",
-        "libcutils",
-        "libdl",
-        "liblog",
-        "libm"
-    ],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
+// cc_prebuilt_library_shared {
+//     name: "libqcomvoiceprocessing",
+//     owner: "sony",
+//     strip: {
+//         none: true
+//     },
+//     srcs: ["proprietary/vendor/lib64/soundfx/libqcomvoiceprocessing.so"],
+//     shared_libs: [
+//         "libc",
+//         "libc++",
+//         "libcutils",
+//         "libdl",
+//         "liblog",
+//         "libm"
+//     ],
+//     compile_multilib: "64",
+//     prefer: true,
+//     soc_specific: true
+// }
 
-cc_prebuilt_library_shared {
-    name: "libqcompostprocbundle",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/soundfx/libqcompostprocbundle.so"],
-    shared_libs: [
-        "libar-pal",
-        "libc",
-        "libc++",
-        "libcutils",
-        "libdl",
-        "liblog",
-        "libm"
-    ],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
+// cc_prebuilt_library_shared {
+//     name: "libqcompostprocbundle",
+//     owner: "sony",
+//     strip: {
+//         none: true
+//     },
+//     srcs: ["proprietary/vendor/lib64/soundfx/libqcompostprocbundle.so"],
+//     shared_libs: [
+//         "libar-pal",
+//         "libc",
+//         "libc++",
+//         "libcutils",
+//         "libdl",
+//         "liblog",
+//         "libm"
+//     ],
+//     compile_multilib: "64",
+//     prefer: true,
+//     check_elf_files: false,
+//     soc_specific: true
+// }
 
 cc_prebuilt_library_shared {
     name: "vendor.qti.ims.connectionaidlservice-V1-ndk",
@@ -14802,25 +14807,25 @@ cc_prebuilt_library_shared {
     soc_specific: true
 }
 
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.display.composer3-V1-ndk",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.display.composer3-V1-ndk.so"],
-    shared_libs: [
-        "android.hardware.graphics.composer3-V2-ndk",
-        "libbinder_ndk",
-        "libc",
-        "libc++",
-        "libdl",
-        "libm"
-    ],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
+// cc_prebuilt_library_shared {
+//     name: "vendor.qti.hardware.display.composer3-V1-ndk",
+//     owner: "sony",
+//     strip: {
+//         none: true
+//     },
+//     srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.display.composer3-V1-ndk.so"],
+//     shared_libs: [
+//         "android.hardware.graphics.composer3-V2-ndk",
+//         "libbinder_ndk",
+//         "libc",
+//         "libc++",
+//         "libdl",
+//         "libm"
+//     ],
+//     compile_multilib: "64",
+//     prefer: true,
+//     soc_specific: true
+// }
 
 cc_prebuilt_library_shared {
     name: "vendor.qti.ims.configservice@1.1",
@@ -15009,30 +15014,30 @@ cc_prebuilt_library_shared {
     soc_specific: true
 }
 
-cc_prebuilt_library_shared {
-    name: "libgralloc.system.qti",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/libgralloc.system.qti.so"],
-    shared_libs: [
-        "android.hardware.graphics.mapper@4.0",
-        "libc",
-        "libc++",
-        "libcutils",
-        "libdl",
-        "libgralloctypes",
-        "libhardware",
-        "libhidlbase",
-        "liblog",
-        "libm",
-        "libutils"
-    ],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
+// cc_prebuilt_library_shared {
+//     name: "libgralloc.system.qti",
+//     owner: "sony",
+//     strip: {
+//         none: true
+//     },
+//     srcs: ["proprietary/vendor/lib64/libgralloc.system.qti.so"],
+//     shared_libs: [
+//         "android.hardware.graphics.mapper@4.0",
+//         "libc",
+//         "libc++",
+//         "libcutils",
+//         "libdl",
+//         "libgralloctypes",
+//         "libhardware",
+//         "libhidlbase",
+//         "liblog",
+//         "libm",
+//         "libutils"
+//     ],
+//     compile_multilib: "64",
+//     prefer: true,
+//     soc_specific: true
+// }
 
 cc_prebuilt_library_shared {
     name: "libGPMTEEC_system.qti",
@@ -19859,32 +19864,32 @@ cc_prebuilt_library_shared {
     relative_install_path: "vendor-qti-hardware-radio-qcrilhook"
 }
 
-cc_prebuilt_library_shared {
-    name: "libagmclient",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/libagmclient.so"],
-    shared_libs: [
-        "libbase",
-        "libc++", 
-        "libc",
-        "libcutils",
-        "libdl",
-        "libhardware",
-        "libhidlbase",
-        "liblog",
-        "libm",
-        "libutils",
-        "vendor.qti.hardware.AGMIPC@1.0",
-    ],
-    vendor: true,
-    check_elf_files: false,
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
+// cc_prebuilt_library_shared {
+//     name: "libagmclient",
+//     owner: "sony",
+//     strip: {
+//         none: true
+//     },
+//     srcs: ["proprietary/vendor/lib64/libagmclient.so"],
+//     shared_libs: [
+//         "libbase",
+//         "libc++", 
+//         "libc",
+//         "libcutils",
+//         "libdl",
+//         "libhardware",
+//         "libhidlbase",
+//         "liblog",
+//         "libm",
+//         "libutils",
+//         "vendor.qti.hardware.AGMIPC@1.0",
+//     ],
+//     vendor: true,
+//     check_elf_files: false,
+//     compile_multilib: "64",
+//     prefer: true,
+//     soc_specific: true,
+// }
 
 cc_prebuilt_library_shared {
     name: "libagm",
@@ -20230,33 +20235,33 @@ cc_prebuilt_library_shared {
     soc_specific: true
 }
 
-cc_prebuilt_library_shared {
-    name: "libpalclient",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/libpalclient.so"],
-    shared_libs: [
-        "libbase",
-        "libc++",
-        "libc",
-        "libcutils",
-        "libdl",
-        "libfmq",
-        "libhardware",
-        "libhidlbase",
-        "libhidlmemory",
-        "libhidltransport",
-        "liblog",
-        "libm",
-        "libutils"
-    ],
-    allow_undefined_symbols: true,  // For HIDL allocator and PAL hardware
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
+// cc_prebuilt_library_shared {
+//     name: "libpalclient",
+//     owner: "sony",
+//     strip: {
+//         none: true
+//     },
+//     srcs: ["proprietary/vendor/lib64/libpalclient.so"],
+//     shared_libs: [
+//         "libbase",
+//         "libc++",
+//         "libc",
+//         "libcutils",
+//         "libdl",
+//         "libfmq",
+//         "libhardware",
+//         "libhidlbase",
+//         "libhidlmemory",
+//         "libhidltransport",
+//         "liblog",
+//         "libm",
+//         "libutils"
+//     ],
+//     allow_undefined_symbols: true,  // For HIDL allocator and PAL hardware
+//     compile_multilib: "64",
+//     prefer: true,
+//     soc_specific: true
+// }
 
 cc_prebuilt_library_shared {
     name: "libfastcvdsp_stub",
@@ -20422,68 +20427,68 @@ android_app_import {
 }
 
 // Bluetooth Libraries
-cc_prebuilt_library_shared {
-    name: "lib_bt_bundle",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: ["proprietary/vendor/lib64/lib_bt_bundle.so"],
-        },
-    },
-    shared_libs: [
-        "libcutils",
-        "liblog",
-        "libc++",
-    ],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
+// cc_prebuilt_library_shared {
+//     name: "lib_bt_bundle",
+//     owner: "sony",
+//     strip: {
+//         none: true,
+//     },
+//     target: {
+//         android_arm64: {
+//             srcs: ["proprietary/vendor/lib64/lib_bt_bundle.so"],
+//         },
+//     },
+//     shared_libs: [
+//         "libcutils",
+//         "liblog",
+//         "libc++",
+//     ],
+//     compile_multilib: "64",
+//     prefer: true,
+//     soc_specific: true,
+// }
 
-cc_prebuilt_library_shared {
-    name: "lib_bt_aptx",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: ["proprietary/vendor/lib64/lib_bt_aptx.so"],
-        },
-    },
-    shared_libs: [
-        "libcutils",
-        "liblog",
-        "libc++",
-    ],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
+// cc_prebuilt_library_shared {
+//     name: "lib_bt_aptx",
+//     owner: "sony",
+//     strip: {
+//         none: true,
+//     },
+//     target: {
+//         android_arm64: {
+//             srcs: ["proprietary/vendor/lib64/lib_bt_aptx.so"],
+//         },
+//     },
+//     shared_libs: [
+//         "libcutils",
+//         "liblog",
+//         "libc++",
+//     ],
+//     compile_multilib: "64",
+//     prefer: true,
+//     soc_specific: true,
+// }
 
-cc_prebuilt_library_shared {
-    name: "lib_bt_ble",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: ["proprietary/vendor/lib64/lib_bt_ble.so"],
-        },
-    },
-    shared_libs: [
-        "libcutils",
-        "liblog",
-        "libc++",
-    ],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
+// cc_prebuilt_library_shared {
+//     name: "lib_bt_ble",
+//     owner: "sony",
+//     strip: {
+//         none: true,
+//     },
+//     target: {
+//         android_arm64: {
+//             srcs: ["proprietary/vendor/lib64/lib_bt_ble.so"],
+//         },
+//     },
+//     shared_libs: [
+//         "libcutils",
+//         "liblog",
+//         "libc++",
+//     ],
+//     compile_multilib: "64",
+//     prefer: true,
+//     soc_specific: true,
+// }
 
 // Audio Effect Libraries
 cc_prebuilt_library_shared {
@@ -20875,29 +20880,30 @@ cc_prebuilt_library_shared {
     relative_install_path: "soundfx",
 }
 
-cc_prebuilt_library_shared {
-    name: "libvolumelistener",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: ["proprietary/vendor/lib64/soundfx/libvolumelistener.so"],
-        },
-    },
-    shared_libs: [
-        "libcutils",
-        "liblog",
-        "libar-pal",
-        "libaudioutils",
-        "libc++",
-    ],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-    relative_install_path: "soundfx",
-}
+// cc_prebuilt_library_shared {
+//     name: "libvolumelistener",
+//     owner: "sony",
+//     strip: {
+//         none: true,
+//     },
+//     target: {
+//         android_arm64: {
+//             srcs: ["proprietary/vendor/lib64/soundfx/libvolumelistener.so"],
+//         },
+//     },
+//     shared_libs: [
+//         "libcutils",
+//         "liblog",
+//         "libar-pal",
+//         "libaudioutils",
+//         "libc++",
+//     ],
+//     compile_multilib: "64",
+//     prefer: true,
+//     soc_specific: true,
+//     check_elf_files: false,
+//     relative_install_path: "soundfx",
+// }
 
 cc_prebuilt_library_shared {
     name: "libznrwrapper",
