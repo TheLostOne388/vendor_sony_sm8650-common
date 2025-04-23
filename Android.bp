@@ -6,8 +6,8 @@ soong_namespace {
         "hardware/qcom-caf/sm8650/display",
         "vendor/sony/pdx245",
         "hardware/qcom-caf/wlan",
-        "hardware/qcom-caf/sm8650/audio/agm/ipc/HwBinders/interfaces/AGMIPC/1.0",
-        "hardware/qcom-caf/sm8650/audio/pal/ipc/HwBinders/interfaces/pal/1.0",
+//        "hardware/qcom-caf/sm8650/audio/agm/ipc/HwBinders/interfaces/AGMIPC/1.0",
+//        "hardware/qcom-caf/sm8650/audio/pal/ipc/HwBinders/interfaces/pal/1.0",
         "hardware/qcom-caf/sm8650/display/gralloc",
         "hardware/qcom-caf/sm8650/display/composer_test_service",
         "vendor/qcom/opensource/commonsys-intf/display/aidl/config",
@@ -2445,7 +2445,7 @@ cc_prebuilt_library_shared {
 //         "libhidltransport",
 //         "liblog",
 //         "libutils",
-//  //       "vendor.qti.hardware.pal@1.0",
+// //       "vendor.qti.hardware.pal@1.0",
 //     ],
 //     vendor: true,
 //     allow_undefined_symbols: true,
@@ -11789,40 +11789,39 @@ cc_prebuilt_library_shared {
 //     check_elf_files: false,
 // }
 
-// cc_prebuilt_library_shared {
-//     name: "libar-pal",
-//     owner: "sony",
-//     strip: {
-//         none: true
-//     },
-//     srcs: ["proprietary/vendor/lib64/libar-pal.so"],
-//     shared_libs: [
-//         "libPeripheralStateUtils",
-//         "libagmclient",
-//         "libar-gsl",
-//         "libarmemlog",
-//         "libaudioroute",
-//         "libaudiosnpewrapper",
-//         "libaudioutils",
-//         "libc++",
-//         "libcutils",
-//         "libeffects",
-//         "libexpat",
-//         "libhidlbase",
-//         "liblog",
-//         "liblx-osal",
-//         "libmiscta",
-//         "libsonydseehxwrapper",
-//         "libtinyalsa",
-//         "libtinycompress",
-//         "libutilscallstack",
-//         "libvui_intf",
-//     ],
-//     vendor: true,
-//     allow_undefined_symbols: true,
-//     compile_multilib: "64",
-//     prefer: true,
-// }
+cc_prebuilt_library_shared {
+    name: "libar-pal",
+    owner: "sony",
+    strip: {
+        none: true
+    },
+    srcs: ["proprietary/vendor/lib64/libar-pal.so"],
+    shared_libs: [
+        "libPeripheralStateUtils",
+        "libar-gsl",
+        "libarmemlog",
+        "libaudioroute",
+        "libaudiosnpewrapper",
+        "libaudioutils",
+        "libc++",
+        "libcutils",
+        "libeffects",
+        "libexpat",
+        "libhidlbase",
+        "liblog",
+        "liblx-osal",
+        "libmiscta",
+        "libsonydseehxwrapper",
+        "libtinyalsa",
+        "libtinycompress",
+        "libutilscallstack",
+        "libvui_intf",
+    ],
+    vendor: true,
+    check_elf_files: false,
+    compile_multilib: "64",
+    prefer: true,
+}
 
 cc_prebuilt_library_shared {
     name: "libbinauralrenderer_wrapper.qti",
@@ -21993,3 +21992,31 @@ cc_prebuilt_library_shared {
 //     vendor: true,
 //     prefer: true,
 // }
+
+// Prebuilt definition for vendor.semc.hardware.mmwavedirection@1.1 implementation
+cc_prebuilt_library_shared {
+    name: "vendor.semc.hardware.mmwavedirection@1.1-impl-semc",
+    stem: "vendor.semc.hardware.mmwavedirection@1.1.so",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            // Path relative to this Android.bp file
+            srcs: ["proprietary/vendor/lib64/vendor.semc.hardware.mmwavedirection@1.1.so"],
+        },
+    },
+    proprietary: true,
+    compile_multilib: "64",
+    check_elf_files: false,
+    shared_libs: [ // Check dependencies 
+        "libhidlbase",
+        "libutils",
+        "libcutils",
+        "libc++",
+        "liblog",
+        // Add vendor.semc.hardware.mmwavedirection@1.0 if needed
+    ],
+    soc_specific: true,
+}

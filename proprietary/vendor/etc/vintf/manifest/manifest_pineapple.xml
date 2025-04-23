@@ -7,7 +7,7 @@
         device/somc/asahi/config/wlan/vendor.somc.hardware.wifi.idd.manifest.xml
         device/somc/asahi/config/wlan/vendor.somc.hardware.aidlwifidriver.manifest.xml
 -->
-<manifest version="7.0" type="device" target-level="8" sepolicy-version="202404">
+<manifest version="7.0" type="device" target-level="8">
     <!-- Audio HALs -->
     <hal format="hidl">
         <name>android.hardware.audio</name>
@@ -192,6 +192,6 @@
 
     <!-- SEPolicy -->
     <sepolicy>
-        <version>202404</version>
+        <version>34.0</version>
     </sepolicy>
 </manifest>
