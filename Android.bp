@@ -909,29 +909,6 @@ shared_libs: [
 //    soc_specific: true
 //}
 
-// cc_prebuilt_library_shared {
-//     name: "vendor.somc.hardware.radio@1.0",
-//     owner: "sony",
-//     strip: {
-//         none: true
-//     },
-//     srcs: ["proprietary/vendor/lib64/vendor.somc.hardware.radio@1.0.so"],
-//     shared_libs: [
-//         "android.hardware.radio@1.0",
-//         "libc++",
-//         "libc",
-//         "libcutils",
-//         "libdl",
-//         "libhidlbase",
-//         "liblog",
-//         "libm",
-//         "libutils",
-//     ],
-//     compile_multilib: "64",
-//     prefer: true,
-//     soc_specific: true
-// }
-
 cc_prebuilt_library_shared {
     name: "prebuilt_vendor.qti.hardware.display.allocator@4.0",
     owner: "sony",
@@ -1191,29 +1168,6 @@ cc_prebuilt_library_shared {
     shared_libs: [
         "libbinder_ndk",
         "android.hardware.common-V2-ndk",
-        "libc++",
-    ],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.ims.factory@1.1",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.ims.factory@1.1.so"],
-    shared_libs: [
-        "vendor.qti.ims.callcapability@1.0",
-        "vendor.qti.ims.factory@1.0",
-        "vendor.qti.ims.rcsconfig@2.0",
-        "vendor.qti.ims.rcsconfig@2.1",
-        "libhidlbase",
-        "liblog",
-        "libutils",
-        "libcutils",
         "libc++",
     ],
     compile_multilib: "64",
@@ -1666,8 +1620,6 @@ cc_prebuilt_library_shared {
     },
     srcs: ["proprietary/vendor/lib64/com.qualcomm.qti.uceservice@2.2.so"],
     shared_libs: [
-        "com.qualcomm.qti.uceservice@2.0",
-        "com.qualcomm.qti.uceservice@2.1",
         "libc",
         "libc++",
         "libcutils",
@@ -1676,6 +1628,10 @@ cc_prebuilt_library_shared {
         "liblog",
         "libm",
         "libutils"
+    ],
+    header_libs: [
+        "com.qualcomm.qti.uceservice@2.0_headers",
+        "com.qualcomm.qti.uceservice@2.1_headers"
     ],
     compile_multilib: "64",
     prefer: true,
@@ -2124,36 +2080,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.AGMIPC@1.0-impl",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.AGMIPC@1.0-impl.so"],
-    shared_libs: [
-        "libhidlbase",
-        "libutils",
-        "liblog",
-        "libcutils",
-        "libhardware",
-        "libbase",
-        "libar-gsl",
-        "vendor.qti.hardware.AGMIPC@1.0",
-        "libutilscallstack",
-        "libagm",
-        "libc++",
-        "libc",
-        "libm",
-        "libdl",
-    ],
-    vendor: true,
-    check_elf_files: false,
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.data.connectionaidl-V1-ndk",
     owner: "sony",
     strip: {
@@ -2332,25 +2258,6 @@ cc_prebuilt_library_shared {
     shared_libs: [
         "libbinder_ndk",
         "android.hardware.common-V2-ndk",
-        "libc++",
-    ],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.cacert@1.0",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.cacert@1.0.so"],
-    shared_libs: [
-        "libhidlbase",
-        "liblog",
-        "libutils",
-        "libcutils",
         "libc++",
     ],
     compile_multilib: "64",
@@ -2713,25 +2620,6 @@ cc_prebuilt_library_shared {
     srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.embmsslaidl-V1-ndk.so"],
     shared_libs: [
         "libbinder_ndk",
-        "libc++",
-    ],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.fm@1.0",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.fm@1.0.so"],
-    shared_libs: [
-        "libhidlbase",
-        "liblog",
-        "libutils",
-        "libcutils",
         "libc++",
     ],
     compile_multilib: "64",
@@ -3320,25 +3208,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "com.qualcomm.qti.dpm.api@1.0",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    srcs: ["proprietary/vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so"],
-    shared_libs: [
-        "libhidlbase",
-        "liblog",
-        "libutils",
-        "libcutils",
-        "libc++",
-    ],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "lib-imsdcservice",
     owner: "sony",
     strip: {
@@ -3410,28 +3279,6 @@ cc_prebuilt_library_shared {
     srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.dpmaidlservice-V1-ndk.so"],
     shared_libs: [
         "libbinder_ndk",
-        "libc++",
-    ],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "com.qualcomm.qti.uceservice@2.3",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    srcs: ["proprietary/vendor/lib64/com.qualcomm.qti.uceservice@2.3.so"],
-    shared_libs: [
-        "com.qualcomm.qti.uceservice@2.0",
-        "com.qualcomm.qti.uceservice@2.1",
-        "com.qualcomm.qti.uceservice@2.2",
-        "libhidlbase",
-        "liblog",
-        "libutils",
-        "libcutils",
         "libc++",
     ],
     compile_multilib: "64",
@@ -3945,23 +3792,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.spu-V2-ndk",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.spu-V2-ndk.so"],
-    shared_libs: [
-        "libbinder_ndk",
-        "android.hardware.common-V2-ndk",
-        "libc++",
-    ],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.iop@1.0",
     owner: "sony",
     strip: {
@@ -3975,37 +3805,6 @@ cc_prebuilt_library_shared {
         "libcutils",
         "libc++",
     ],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.ListenSoundModel@1.0-impl",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.ListenSoundModel@1.0-impl.so"],
-    shared_libs: [
-        "android.hidl.allocator@1.0",
-        "android.hidl.memory@1.0",
-        "libbase",
-        "libc++",
-        "libc",
-        "libcutils",
-        "libdl",
-        "libhardware",
-        "libhidlbase",
-        "libhidlmemory",
-        "libhidltransport",
-        "liblistensoundmodel2vendor",
-        "liblog",
-        "libm",
-        "libutils",
-        "vendor.qti.hardware.ListenSoundModel@1.0"
-    ],
-    vendor: true,
     compile_multilib: "64",
     prefer: true,
     soc_specific: true,
@@ -5127,27 +4926,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "com.qualcomm.qti.imscmservice@2.2",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    srcs: ["proprietary/vendor/lib64/com.qualcomm.qti.imscmservice@2.2.so"],
-    shared_libs: [
-        "com.qualcomm.qti.imscmservice@2.0",
-        "com.qualcomm.qti.imscmservice@2.1",
-        "libhidlbase",
-        "liblog",
-        "libutils",
-        "libcutils",
-        "libc++",
-    ],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.radio.lpa@1.1",
     owner: "sony",
     strip: {
@@ -5652,26 +5430,6 @@ cc_prebuilt_library_shared {
         "vendor.qti.hardware.radio.ims@1.1",
         "vendor.qti.hardware.radio.ims@1.2",
         "vendor.qti.hardware.radio.ims@1.3",
-        "libhidlbase",
-        "liblog",
-        "libutils",
-        "libcutils",
-        "libc++",
-    ],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.factory@1.1",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.factory@1.1.so"],
-    shared_libs: [
-        "vendor.qti.hardware.factory@1.0",
         "libhidlbase",
         "liblog",
         "libutils",
@@ -9587,30 +9345,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.ims.factory@1.0",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.ims.factory@1.0.so"],
-    shared_libs: [
-        "libc",
-        "libc++",
-        "libcutils",
-        "libdl",
-        "libhidlbase",
-        "liblog",
-        "libm",
-        "libutils",
-        "vendor.qti.ims.callcapability@1.0",
-        "vendor.qti.ims.rcsconfig@2.0"
-    ],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
-
-cc_prebuilt_library_shared {
     name: "qcrilNr_aidl_IRadioNetwork",
     owner: "sony",
     strip: {
@@ -10116,29 +9850,6 @@ cc_prebuilt_library_shared {
         "libm",
         "libqcbor",
         "libutils"
-    ],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.secureprocessor.device@1.0",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.secureprocessor.device@1.0.so"],
-    shared_libs: [
-        "libc",
-        "libc++",
-        "libcutils",
-        "libdl",
-        "libhidlbase",
-        "liblog",
-        "libm",
-        "libutils",
-        "vendor.qti.hardware.secureprocessor.common@1.0"
     ],
     compile_multilib: "64",
     prefer: true,
@@ -11868,28 +11579,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.ims.callinfo@1.0",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.ims.callinfo@1.0.so"],
-    shared_libs: [
-        "libc",
-        "libc++",
-        "libcutils",
-        "libdl",
-        "libhidlbase",
-        "liblog",
-        "libm",
-        "libutils"
-    ],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
-
-cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.data.flow@1.0",
     owner: "sony",
     strip: {
@@ -12018,29 +11707,6 @@ cc_prebuilt_library_shared {
         "liblog",
         "libm",
         "libutils"
-    ],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.bluetooth_sar@1.1",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so"],
-    shared_libs: [
-        "libc",
-        "libc++",
-        "libcutils",
-        "libdl",
-        "libhidlbase",
-        "liblog",
-        "libm",
-        "libutils",
-        "vendor.qti.hardware.bluetooth_sar@1.0"
     ],
     compile_multilib: "64",
     prefer: true,
@@ -12273,29 +11939,6 @@ cc_prebuilt_library_shared {
 //     prefer: true,
 //     soc_specific: true
 // }
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.spu@1.1",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.spu@1.1.so"],
-    shared_libs: [
-        "libc",
-        "libc++",
-        "libcutils",
-        "libdl",
-        "libhidlbase",
-        "liblog",
-        "libm",
-        "libutils",
-        "vendor.qti.spu@1.0"
-    ],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
 
 cc_prebuilt_library_shared {
     name: "libqc2audio_swaudiocodec",
@@ -13749,34 +13392,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.fm@1.0-impl",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.fm@1.0-impl.so"],
-    shared_libs: [
-        "libbase",
-        "libc++",
-        "libc",
-        "libcutils",
-        "libdl",
-        "libhidlbase",
-        "liblog",
-        "libm",
-        "libqmi_cci",
-        "libqmiservices",
-        "libqmi",
-        "libutils",
-        "vendor.qti.hardware.fm@1.0"
-    ],
-    allow_undefined_symbols: true,  // For android.hardware.bluetooth@1.0-impl-qti
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
-
-cc_prebuilt_library_shared {
     name: "camera.qcom.sm8650",
     owner: "sony",
     strip: {
@@ -13818,32 +13433,6 @@ cc_prebuilt_library_shared {
         "vendor.qti.hardware.display.allocator@4.0",
         "vendor.qti.hardware.display.mapper@4.0",
         "vendor.qti.hardware.display.mapperextensions@1.1"
-    ],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.bluetooth_sar@1.1-impl",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so"],
-    shared_libs: [
-        "android.hardware.bluetooth@1.0-impl-qti",
-        "libbase",
-        "libc",
-        "libc++",
-        "libcutils",
-        "libdl",
-        "libhidlbase",
-        "liblog",
-        "libm",
-        "libutils",
-        "vendor.qti.hardware.bluetooth_sar@1.0",
-        "vendor.qti.hardware.bluetooth_sar@1.1"
     ],
     compile_multilib: "64",
     prefer: true,
@@ -14253,28 +13842,6 @@ cc_prebuilt_library_shared {
         "vendor.qti.hardware.display.allocator@4.0",
         "vendor.qti.hardware.display.mapper@4.0",
         "vendor.qti.hardware.display.mapperextensions@1.1"
-    ],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.spu@1.0",
-    owner: "sony",
-    strip: {
-        none: true
-    },
-    srcs: ["proprietary/vendor/lib64/vendor.qti.spu@1.0.so"],
-    shared_libs: [
-        "libc",
-        "libc++",
-        "libcutils",
-        "libdl",
-        "libhidlbase",
-        "liblog",
-        "libm",
-        "libutils"
     ],
     compile_multilib: "64",
     prefer: true,
@@ -21993,30 +21560,451 @@ cc_prebuilt_library_shared {
 //     prefer: true,
 // }
 
-// Prebuilt definition for vendor.semc.hardware.mmwavedirection@1.1 implementation
-cc_prebuilt_library_shared {
-    name: "vendor.semc.hardware.mmwavedirection@1.1-impl-semc",
-    stem: "vendor.semc.hardware.mmwavedirection@1.1.so",
+ cc_prebuilt_library_shared {
+     name: "com.qualcomm.qti.imscmservice@2.2-impl",
+     owner: "sony",
+     strip: {
+         none: true,
+     },
+     srcs: ["proprietary/vendor/lib64/com.qualcomm.qti.imscmservice@2.2.so"],
+     header_libs: ["com.qualcomm.qti.imscmservice@2.2_headers"],
+     shared_libs: [
+         "com.qualcomm.qti.imscmservice@2.0",
+         "com.qualcomm.qti.imscmservice@2.1",
+         "libhidlbase",
+         "liblog",
+         "libutils",
+         "libcutils",
+         "libc++",
+     ],
+     compile_multilib: "64",
+     prefer: true,
+     soc_specific: true,
+     provides: ["com.qualcomm.qti.imscmservice@2.2"],
+ }
+
+ cc_prebuilt_library_shared {
+     name: "com.qualcomm.qti.uceservice@2.3-impl",
+     owner: "sony",
+     strip: {
+         none: true,
+     },
+     srcs: ["proprietary/vendor/lib64/com.qualcomm.qti.uceservice@2.3.so"],
+     header_libs: ["com.qualcomm.qti.uceservice@2.3_headers"],
+     shared_libs: [
+         "com.qualcomm.qti.uceservice@2.0",
+         "com.qualcomm.qti.uceservice@2.1",
+         "com.qualcomm.qti.uceservice@2.2",
+         "libhidlbase",
+         "liblog",
+         "libutils",
+         "libcutils",
+         "libc++",
+     ],
+     compile_multilib: "64",
+     prefer: true,
+     soc_specific: true,
+     provides: ["com.qualcomm.qti.uceservice@2.3"],
+ }
+
+  cc_prebuilt_library_shared {
+     name: "com.qualcomm.qti.dpm.api@1.0-impl",
+     owner: "sony",
+     strip: {
+         none: true,
+     },
+     srcs: ["proprietary/vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so"],
+     header_libs: ["com.qualcomm.qti.dpm.api@1.0_headers"],
+     shared_libs: [
+         "libhidlbase",
+         "liblog",
+         "libutils",
+         "libcutils",
+         "libc++",
+     ],
+     compile_multilib: "64",
+     prefer: true,
+     soc_specific: true,
+     provides: ["com.qualcomm.qti.dpm.api@1.0"],
+ }
+
+  cc_prebuilt_library_shared {
+     name: "vendor.qti.hardware.AGMIPC@1.0-impl",
+     owner: "sony",
+     strip: {
+         none: true
+     },
+     srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.AGMIPC@1.0-impl.so"],
+     shared_libs: [
+         "libhidlbase",
+         "libutils",
+         "liblog",
+         "libcutils",
+         "libhardware",
+         "libbase",
+         "libar-gsl",
+         "vendor.qti.hardware.AGMIPC@1.0",
+         "libutilscallstack",
+         "libagm",
+         "libc++",
+         "libc",
+         "libm",
+         "libdl",
+     ],
+     vendor: true,
+     check_elf_files: false,
+     compile_multilib: "64",
+     prefer: true,
+     soc_specific: true,
+     provides: ["vendor.qti.hardware.AGMIPC@1.0"],
+ }
+
+  cc_prebuilt_library_shared {
+     name: "vendor.qti.hardware.bluetooth_sar@1.1-impl",
+     owner: "sony",
+     strip: {
+         none: true
+     },
+     srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so"],
+     header_libs: ["vendor.qti.hardware.bluetooth_sar@1.1_headers"],
+     shared_libs: [
+         "android.hardware.bluetooth@1.0-impl-qti",
+         "libbase",
+         "libc",
+         "libc++",
+         "libcutils",
+         "libdl",
+         "libhidlbase",
+         "liblog",
+         "libm",
+         "libutils",
+         "vendor.qti.hardware.bluetooth_sar@1.0",
+         "vendor.qti.hardware.bluetooth_sar@1.1"
+     ],
+     compile_multilib: "64",
+     prefer: true,
+     soc_specific: true,
+     provides: ["vendor.qti.hardware.bluetooth_sar@1.1"],
+ }
+
+  cc_prebuilt_library_shared {
+     name: "vendor.qti.hardware.cacert@1.0-impl",
+     owner: "sony",
+     strip: {
+         none: true,
+     },
+     srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.cacert@1.0.so"],
+     header_libs: ["vendor.qti.hardware.cacert@1.0_headers"],
+     shared_libs: [
+         "libhidlbase",
+         "liblog",
+         "libutils",
+         "libcutils",
+         "libc++",
+     ],
+     compile_multilib: "64",
+     prefer: true,
+     soc_specific: true,
+     provides: ["vendor.qti.hardware.cacert@1.0"],
+ }
+
+  cc_prebuilt_library_shared {
+     name: "vendor.qti.hardware.factory@1.1-impl",
+     owner: "sony",
+     strip: {
+         none: true,
+     },
+     srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.factory@1.1.so"],
+     header_libs: ["vendor.qti.hardware.factory@1.1_headers"],
+     shared_libs: [
+         "vendor.qti.hardware.factory@1.0",
+         "libhidlbase",
+         "liblog",
+         "libutils",
+         "libcutils",
+         "libc++",
+     ],
+     compile_multilib: "64",
+     prefer: true,
+     soc_specific: true,
+     provides: ["vendor.qti.hardware.factory@1.1"],
+ }
+
+ cc_prebuilt_library_shared {
+     name: "vendor.qti.hardware.fm@1.0-impl",
+     owner: "sony",
+     strip: {
+         none: true
+     },
+     srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.fm@1.0-impl.so"],
+     header_libs: ["vendor.qti.hardware.fm@1.0_headers"],
+     shared_libs: [
+         "libbase",
+         "libc++",
+         "libc",
+         "libcutils",
+         "libdl",
+         "libhidlbase",
+         "liblog",
+         "libm",
+         "libqmi_cci",
+         "libqmiservices",
+         "libqmi",
+         "libutils",
+         "vendor.qti.hardware.fm@1.0"
+     ],
+     allow_undefined_symbols: true, // For android.hardware.bluetooth@1.0-impl-qti
+     compile_multilib: "64",
+     prefer: true,
+     soc_specific: true,
+     provides: ["vendor.qti.hardware.fm@1.0"],
+ }
+
+  cc_prebuilt_library_shared {
+     name: "vendor.qti.hardware.ListenSoundModel@1.0-impl",
+     owner: "sony",
+     strip: {
+         none: true
+     },
+     srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.ListenSoundModel@1.0-impl.so"],
+     shared_libs: [
+         "android.hidl.allocator@1.0",
+         "android.hidl.memory@1.0",
+         "libbase",
+         "libc++",
+         "libc",
+         "libcutils",
+         "libdl",
+         "libhardware",
+         "libhidlbase",
+         "libhidlmemory",
+         "libhidltransport",
+         "liblistensoundmodel2vendor",
+         "liblog",
+         "libm",
+         "libutils",
+         "vendor.qti.hardware.ListenSoundModel@1.0"
+     ],
+     vendor: true,
+     compile_multilib: "64",
+     prefer: true,
+     soc_specific: true,
+     provides: ["vendor.qti.hardware.ListenSoundModel@1.0"],
+ }
+
+  cc_prebuilt_library_shared {
+     name: "vendor.qti.hardware.secureprocessor.device@1.0-impl", // Added -impl suffix
+     owner: "sony",
+     strip: {
+         none: true
+     },
+     srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.secureprocessor.device@1.0.so"],
+     header_libs: ["vendor.qti.hardware.secureprocessor.device@1.0_headers"],
+     shared_libs: [
+         "libc",
+         "libc++",
+         "libcutils",
+         "libdl",
+         "libhidlbase",
+         "liblog",
+         "libm",
+         "libutils",
+         "vendor.qti.hardware.secureprocessor.common@1.0"
+     ],
+     compile_multilib: "64",
+     prefer: true,
+     soc_specific: true,
+     provides: ["vendor.qti.hardware.secureprocessor.device@1.0"],
+ }
+
+ cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.wifi.wifilearner@1.0-impl",
     owner: "sony",
     strip: {
         none: true,
     },
-    target: {
-        android_arm64: {
-            // Path relative to this Android.bp file
-            srcs: ["proprietary/vendor/lib64/vendor.semc.hardware.mmwavedirection@1.1.so"],
-        },
-    },
-    proprietary: true,
-    compile_multilib: "64",
-    check_elf_files: false,
-    shared_libs: [ // Check dependencies 
+    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.wifi.wifilearner@1.0.so"],
+    header_libs: ["vendor.qti.hardware.wifi.wifilearner@1.0_headers"],
+    shared_libs: [
         "libhidlbase",
+        "liblog",
         "libutils",
         "libcutils",
         "libc++",
-        "liblog",
-        // Add vendor.semc.hardware.mmwavedirection@1.0 if needed
+        "libc",
+        "libm",
+        "libdl",
     ],
+    compile_multilib: "64",
+    check_elf_files: true,
+    prefer: true,
     soc_specific: true,
+    provides: ["vendor.qti.hardware.wifi.wifilearner@1.0"],
 }
+
+ cc_prebuilt_library_shared {
+     name: "vendor.qti.ims.callinfo@1.0-impl",
+     owner: "sony",
+     strip: {
+         none: true
+     },
+     srcs: ["proprietary/vendor/lib64/vendor.qti.ims.callinfo@1.0.so"],
+     header_libs: ["vendor.qti.ims.callinfo@1.0_headers"],
+     shared_libs: [
+         "libc",
+         "libc++",
+         "libcutils",
+         "libdl",
+         "libhidlbase",
+         "liblog",
+         "libm",
+         "libutils"
+     ],
+     compile_multilib: "64",
+     prefer: true,
+     soc_specific: true,
+     provides: ["vendor.qti.ims.callinfo@1.0"],
+ }
+
+  cc_prebuilt_library_shared {
+     name: "vendor.qti.ims.factory@1.0-impl",
+     owner: "sony",
+     strip: {
+         none: true
+     },
+     srcs: ["proprietary/vendor/lib64/vendor.qti.ims.factory@1.0.so"],
+     header_libs: ["vendor.qti.ims.factory@1.0_headers"],
+     shared_libs: [
+         "libc",
+         "libc++",
+         "libcutils",
+         "libdl",
+         "libhidlbase",
+         "liblog",
+         "libm",
+         "libutils",
+         "vendor.qti.ims.callcapability@1.0",
+         "vendor.qti.ims.rcsconfig@2.0"
+     ],
+     compile_multilib: "64",
+     prefer: true,
+     soc_specific: true,
+     provides: ["vendor.qti.ims.factory@1.0"],
+ }
+
+  cc_prebuilt_library_shared {
+     name: "vendor.qti.ims.factory@1.1-impl",
+     owner: "sony",
+     strip: {
+         none: true,
+     },
+     srcs: ["proprietary/vendor/lib64/vendor.qti.ims.factory@1.1.so"],
+     header_libs: ["vendor.qti.ims.factory@1.1_headers"],
+     shared_libs: [
+         "vendor.qti.ims.callcapability@1.0",
+         "vendor.qti.ims.factory@1.0",
+         "vendor.qti.ims.rcsconfig@2.0",
+         "vendor.qti.ims.rcsconfig@2.1",
+         "libhidlbase",
+         "liblog",
+         "libutils",
+         "libcutils",
+         "libc++",
+     ],
+     compile_multilib: "64",
+     prefer: true,
+     soc_specific: true,
+     provides: ["vendor.qti.ims.factory@1.1"],
+ }
+
+  cc_prebuilt_library_shared {
+     name: "vendor.qti.spu@1.0-impl",
+     owner: "sony",
+     strip: {
+         none: true
+     },
+     srcs: ["proprietary/vendor/lib64/vendor.qti.spu@1.0.so"],
+     header_libs: ["vendor.qti.spu@1.0_headers"],
+     shared_libs: [
+         "libc",
+         "libc++",
+         "libcutils",
+         "libdl",
+         "libhidlbase",
+         "liblog",
+         "libm",
+         "libutils"
+     ],
+     compile_multilib: "64",
+     prefer: true,
+     soc_specific: true,
+     provides: ["vendor.qti.spu@1.0"],
+ }
+
+  cc_prebuilt_library_shared {
+     name: "vendor.qti.spu@1.1",
+     owner: "sony",
+     strip: {
+         none: true
+     },
+     srcs: ["proprietary/vendor/lib64/vendor.qti.spu@1.1.so"],
+     shared_libs: [
+         "libc",
+         "libc++",
+         "libcutils",
+         "libdl",
+         "libhidlbase",
+         "liblog",
+         "libm",
+         "libutils",
+         "vendor.qti.spu@1.0"
+     ],
+     compile_multilib: "64",
+     prefer: true,
+     soc_specific: true,
+     provides: ["vendor.qti.spu@1.1"],
+ }
+
+ // Prebuilt definition for vendor.semc.hardware.mmwavedirection@1.1 implementation
+ cc_prebuilt_library_shared {
+     name: "vendor.semc.hardware.mmwavedirection@1.1-impl",
+     owner: "sony",
+     strip: {
+         none: true,
+     },
+     srcs: ["proprietary/vendor/lib64/vendor.semc.hardware.mmwavedirection@1.1.so"],
+     header_libs: ["vendor.semc.hardware.mmwavedirection@1.1_headers"],
+     shared_libs: [
+         "libhidlbase",
+         "libutils",
+         "libcutils",
+         "libc++",
+         "liblog",
+         // Add vendor.semc.hardware.mmwavedirection@1.0 if needed
+     ],
+     compile_multilib: "64",
+     check_elf_files: true,
+     prefer: true,
+     soc_specific: true,
+     provides: ["vendor.semc.hardware.mmwavedirection@1.1"],
+ }
+
+  cc_prebuilt_library_shared {
+     name: "vendor.qti.hardware.spu-V2-ndk",
+     owner: "sony",
+     strip: {
+         none: true,
+     },
+     srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.spu-V2-ndk.so"],
+-    header_libs: ["vendor.qti.hardware.spu-V2-ndk_headers"], // Header libs for AIDL are usually implicitly handled or named differently if needed. Check if this custom header lib exists.
+     // header_libs: ["vendor.qti.hardware.spu-V2-ndk_headers"], // Header libs for AIDL are often implicit. Remove if causing issues.
+     shared_libs: [
+         "libbinder_ndk",
+         "android.hardware.common-V2-ndk",
+         "libc++",
+     ],
+     compile_multilib: "64",
+     prefer: true,
+     soc_specific: true,
+     provides: ["vendor.qti.hardware.spu/default"], // For AIDL, often need to specify the instance name as well. 'default' is common.
+ }
