@@ -21792,7 +21792,7 @@ cc_prebuilt_library_shared {
          "liblog",
          "libm",
          "libutils",
-         "qti.hardware.ListenSoundModel@1.0", // Corrected name
+         "vendor.qti.hardware.ListenSoundModel@1.0",
      ],
      vendor: true,
      compile_multilib: "64",
