@@ -100,19 +100,6 @@
         <fqname>@1.0::ISecureProcessor/qti-tee</fqname>
         <fqname>@1.0::ISecureProcessor/qti-tvm</fqname>
     </hal>
-    <hal format="aidl">
-        <name>vendor.qti.hardware.spu</name>
-        <version>2</version>
-        <fqname>ISPUManager/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.qti.hardware.trustedui</name>
-        <transport>hwbinder</transport>
-        <fqname>@1.1::ITrustedInput/default</fqname>
-        <fqname>@1.1::ITrustedInput/qtee-vm</fqname>
-        <fqname>@1.2::ITrustedUI/default</fqname>
-        <fqname>@1.2::ITrustedUI/qtee-vm</fqname>
-    </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.wifi.wifilearner</name>
         <transport>hwbinder</transport>
@@ -137,6 +124,9 @@
         <name>vendor.qti.spu</name>
         <transport>hwbinder</transport>
         <fqname>@2.0::ISPUManager/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.qti.hardware.trustedui</name>
     </hal>
     <sepolicy>
         <version>34.0</version>

@@ -79,17 +79,18 @@
 
     <!-- Vendor-Specific AIDL HALs -->
     <hal format="aidl">
-        <name>vendor.hardware.biometrics.fingerprintRbs</name>
-        <fqname>IFingerprintRbs/Rbs</fqname>
-    </hal>
-    <hal format="aidl">
         <name>vendor.nxp.nxpnfc_aidl</name>
         <fqname>INxpNfc/default</fqname>
     </hal>
+    <!-- Comment out incorrect vendor FingerprintRbs declaration -->
+    <!--
+    <hal format="aidl">
+        <name>vendor.hardware.biometrics.fingerprintRbs</name>
+        <fqname>IFingerprintRbs/Rbs</fqname>
+    </hal>
+    -->
     <hal format="aidl">
         <name>vendor.qti.hardware.spu</name>
-        <version>2</version>
-        <fqname>ISPUManager/default</fqname>
     </hal>
     <hal format="aidl">
         <name>vendor.semc.hardware.spc</name>
@@ -158,11 +159,6 @@
         <transport>hwbinder</transport>
         <fqname>@1.0::ISecureProcessor/qti-tee</fqname>
         <fqname>@1.0::ISecureProcessor/qti-tvm</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.qti.hardware.wifi.wifilearner</name>
-        <transport>hwbinder</transport>
-        <fqname>@1.0::IWifiStats/wifiStats</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.ims.callinfo</name>
