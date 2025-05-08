@@ -91,6 +91,10 @@
     -->
     <hal format="aidl">
         <name>vendor.qti.hardware.spu</name>
+        <interface>
+            <name>ISPUManager</name>
+            <instance>default</instance>
+        </interface>
     </hal>
     <hal format="aidl">
         <name>vendor.semc.hardware.spc</name>

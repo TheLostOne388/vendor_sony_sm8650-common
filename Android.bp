@@ -21533,7 +21533,6 @@ cc_prebuilt_library_shared {
      soc_specific: true,
  }
 
-// com.qualcomm.qti.uceservice@2.3 prebuilt implementation
 cc_prebuilt_library_shared {
     name: "com.qualcomm.qti.uceservice@2.3",
     owner: "sony",
