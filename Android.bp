@@ -6,12 +6,20 @@ soong_namespace {
         "hardware/qcom-caf/sm8650/display",
         "vendor/sony/pdx245",
         "hardware/qcom-caf/wlan",
-//        "hardware/qcom-caf/sm8650/audio/agm/ipc/HwBinders/interfaces/AGMIPC/1.0",
-//        "hardware/qcom-caf/sm8650/audio/pal/ipc/HwBinders/interfaces/pal/1.0",
+        //       "hardware/qcom-caf/sm8650/audio/agm/ipc/HwBinders/interfaces/AGMIPC/1.0",
+        //       "hardware/qcom-caf/sm8650/audio/pal/ipc/HwBinders/interfaces/pal/1.0",
         "hardware/qcom-caf/sm8650/display/gralloc",
         "hardware/qcom-caf/sm8650/display/composer_test_service",
         "vendor/qcom/opensource/commonsys-intf/display/aidl/config",
     ],
+}
+
+soong_config_module_type {
+    name: "qcom_hal_prebuilt",
+    module_type: "cc_prebuilt_library_shared",
+    config_namespace: "sony_qcom",
+    bool_variables: ["use_vendor_prebuilts"],
+    properties: ["enabled"],
 }
 
 soong_config_bool_variable {
@@ -3105,21 +3113,21 @@ cc_prebuilt_library_shared {
     soc_specific: true,
 }
 
-cc_prebuilt_library_shared {
-    name: "qti-audio-types-aidl-V1-ndk",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    srcs: ["proprietary/vendor/lib64/qti-audio-types-aidl-V1-ndk.so"],
-    shared_libs: [
-        "libbinder_ndk",
-        "libc++",
-    ],
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
+// cc_prebuilt_library_shared {
+//     name: "qti-audio-types-aidl-V1-ndk",
+//     owner: "sony",
+//     strip: {
+//         none: true,
+//     },
+//     srcs: ["proprietary/vendor/lib64/qti-audio-types-aidl-V1-ndk.so"],
+//     shared_libs: [
+//         "libbinder_ndk",
+//         "libc++",
+//     ],
+//     compile_multilib: "64",
+//     prefer: true,
+//     soc_specific: true,
+// }
 
 cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.radio.qtiradio@2.6",
@@ -10515,7 +10523,8 @@ cc_prebuilt_library_shared {
     ],
     compile_multilib: "64",
     prefer: true,
-    soc_specific: true
+    soc_specific: true,
+    overrides: ["libsdedrm"],
 }
 
 cc_prebuilt_library_shared {
@@ -13425,7 +13434,7 @@ cc_prebuilt_library_shared {
     ],
     compile_multilib: "64",
     prefer: true,
-    soc_specific: true
+    soc_specific: true,
 }
 
 cc_prebuilt_library_shared {
@@ -19443,10 +19452,12 @@ cc_prebuilt_library_shared {
         "liblx-osal",
         "libtinyalsa",
     ],
+    overrides: ["libagm"],
     vendor: true,
     allow_undefined_symbols: true,
     compile_multilib: "64",
     prefer: true,
+    enabled: false,
 }
 
 cc_prebuilt_library_shared {
@@ -21894,6 +21905,9 @@ cc_prebuilt_library_shared {
     check_elf_files: false,
     compile_multilib: "64",
     soc_specific: true,
+    prefer: true,
+    enabled: false,
+
 }
 
 cc_prebuilt_library_shared {
@@ -21910,10 +21924,14 @@ cc_prebuilt_library_shared {
         "libcutils",
         "libc++",
     ],
-    compile_multilib: "64",
-    overrides: ["vendor.qti.hardware.AGMIPC@1.0"],
-    soc_specific: true,
+     vendor: true,
+     compile_multilib: "64",
+     prefer: true,
+     soc_specific: true,
+     enabled: false,
 }
+
+
 
 cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.fm@1.0-impl",
