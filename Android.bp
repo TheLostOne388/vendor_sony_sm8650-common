@@ -14,6 +14,22 @@ soong_namespace {
     ],
 }
 
+// java_sdk_library {
+//     name: "wear-sdk",
+//     sdk_version: "system_server_current",
+//     srcs: ["stubs/Dummy.java"],
+// }
+
+// java_library {
+//     name: "com.android.extensions.xr",
+//     sdk_version: "core_platform",
+//     system_modules: "none",
+//     srcs: [],
+//     apex_available: [
+//         "*"
+//     ],
+// }
+
 soong_config_module_type {
     name: "qcom_hal_prebuilt",
     module_type: "cc_prebuilt_library_shared",
@@ -290,33 +306,33 @@ cc_prebuilt_library_shared {
     soc_specific: true
 }
 
-// cc_prebuilt_library_shared {
-//     name: "libbluetooth_audio_session",
-//     owner: "sony",
-//     strip: {
-//         none: true
-//     },
-//     srcs: ["proprietary/vendor/lib64/libbluetooth_audio_session.so"],
-//     shared_libs: [
-//         "android.hardware.audio.common@5.0",
-//         "android.hardware.bluetooth.audio@2.0",
-//         "android.hardware.bluetooth.audio@2.1",
-//         "libbase",
-//         "libbluetooth_audio_session_aidl",
-//         "libc",
-//         "libc++",
-//         "libcutils",
-//         "libdl",
-//         "libfmq",
-//         "libhidlbase",
-//         "liblog",
-//         "libm",
-//         "libutils"
-//     ],
-//     compile_multilib: "64",
-//     prefer: true,
-//     soc_specific: true
-// }
+cc_prebuilt_library_shared {
+    name: "libbluetooth_audio_session",
+    owner: "sony",
+    strip: {
+        none: true
+    },
+    srcs: ["proprietary/vendor/lib64/libbluetooth_audio_session.so"],
+    shared_libs: [
+        "android.hardware.audio.common@5.0",
+        "android.hardware.bluetooth.audio@2.0",
+        "android.hardware.bluetooth.audio@2.1",
+        "libbase",
+        "libbluetooth_audio_session_aidl",
+        "libc",
+        "libc++",
+        "libcutils",
+        "libdl",
+        "libfmq",
+        "libhidlbase",
+        "liblog",
+        "libm",
+        "libutils"
+    ],
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true
+}
 
 // cc_prebuilt_library_shared {
 //     name: "vendor.somc.hardware.aidlwifidriver-V1-ndk",
@@ -895,27 +911,27 @@ shared_libs: [
     soc_specific: true
 }
 
-//cc_prebuilt_library_shared {
-//    name: "android.hardware.bluetooth.audio-V3-ndk",
-//    owner: "sony",
-//    strip: {
-//        none: true
-//    },
-//    srcs: ["proprietary/vendor/system/lib64/android.hardware.bluetooth.audio-V3-ndk.so"],
-//    shared_libs: [
-//        "android.hardware.audio.common-V2-ndk",
-//        "android.hardware.common.fmq-V1-ndk",
-//        "android.hardware.common-V2-ndk",
-//        "libbinder_ndk",
-//        "libc++",
-//        "libc",
-//        "libdl",
-//        "libm",
-//    ],
-//    compile_multilib: "64",
-//    prefer: true,
+cc_prebuilt_library_shared {
+    name: "android.hardware.bluetooth.audio-V3-ndk",
+    owner: "sony",
+    strip: {
+        none: true
+    },
+    srcs: ["proprietary/vendor/system/lib64/android.hardware.bluetooth.audio-V3-ndk.so"],
+    shared_libs: [
+        "android.hardware.audio.common-V2-ndk",
+        "android.hardware.common.fmq-V1-ndk",
+        "android.hardware.common-V2-ndk",
+        "libbinder_ndk",
+        "libc++",
+        "libc",
+        "libdl",
+        "libm",
+    ],
+    compile_multilib: "64",
+    prefer: true,
 //    soc_specific: true
-//}
+}
 
 cc_prebuilt_library_shared {
     name: "prebuilt_vendor.qti.hardware.display.allocator@4.0",
@@ -1065,34 +1081,34 @@ cc_prebuilt_library_shared {
 //     soc_specific: true
 // }
 
-// cc_prebuilt_library_shared {
-//     name: "prebuilt_libbluetooth_audio_session_aidl",
-//     owner: "sony",
-//     strip: {
-//         none: true,
-//     },
-//     srcs: ["proprietary/vendor/lib64/libbluetooth_audio_session_aidl.so"],
-//     vendor: true,  // Add vendor:true
-//     shared_libs: [
-//         "android.hardware.bluetooth.audio@2.0",
-//         "android.hardware.bluetooth.audio@2.1",
-//         "android.hardware.bluetooth.audio-V3-ndk",
-//         "libbase",
-//         "libbinder_ndk",
-//         "libc++",
-//         "libc",
-//         "libcutils",
-//         "libdl",
-//         "libfmq",
-//         "libhidlbase",
-//         "liblog",
-//         "libm",
-//         "libxml2",
-//     ],
-//     compile_multilib: "64",
-//     prefer: true,
-//     soc_specific: true,
-// }
+cc_prebuilt_library_shared {
+    name: "prebuilt_libbluetooth_audio_session_aidl",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    srcs: ["proprietary/vendor/lib64/libbluetooth_audio_session_aidl.so"],
+    vendor: true,  // Add vendor:true
+    shared_libs: [
+        "android.hardware.bluetooth.audio@2.0",
+        "android.hardware.bluetooth.audio@2.1",
+        "android.hardware.bluetooth.audio-V3-ndk",
+        "libbase",
+        "libbinder_ndk",
+        "libc++",
+        "libc",
+        "libcutils",
+        "libdl",
+        "libfmq",
+        "libhidlbase",
+        "liblog",
+        "libm",
+        "libxml2",
+    ],
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
 
 cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.camera.postproc@1.0-service-impl",
@@ -1396,24 +1412,25 @@ cc_prebuilt_library_shared {
     soc_specific: true
 }
 
-// cc_prebuilt_library_shared {
-//     name: "libdrmclearkeyplugin",
-//     owner: "sony",
-//     strip: {
-//         none: true
-//     },
-//     srcs: ["proprietary/vendor/lib64/mediadrm/libdrmclearkeyplugin.so"],
-//     shared_libs: [
-//         "libc++",
-//         "libcrypto",
-//         "liblog",
-// //        "libstagefright_foundation",
-//         "libutils",
-//     ],
-//     compile_multilib: "64",
-//     prefer: true,
-//     soc_specific: true
-// }
+cc_prebuilt_library_shared {
+    name: "libdrmclearkeyplugin",
+    owner: "sony",
+    strip: {
+        none: true
+    },
+    srcs: ["proprietary/vendor/lib64/mediadrm/libdrmclearkeyplugin.so"],
+    shared_libs: [
+        "libc++",
+        "libcrypto",
+        "liblog",
+        // "libstagefright_foundation",  // Causes vendor/system boundary issues
+        "libutils",
+    ],
+    compile_multilib: "64",
+    prefer: true,
+    check_elf_files: false,  // Bypass ELF dependency checking for vendor prebuilt
+    soc_specific: true
+}
 
 cc_prebuilt_library_shared {
     name: "lib-imsqimf",
@@ -1698,25 +1715,25 @@ cc_prebuilt_library_shared {
     soc_specific: true
 }
 
-//cc_prebuilt_library_shared {
-//    name: "android.hardware.drm-V1-ndk",
-//    owner: "sony",
-//    strip: {
-//        none: true
-//    },
-//    srcs: ["proprietary/vendor/system/lib64/android.hardware.drm-V1-ndk.so"],
-//    shared_libs: [
-//        "android.hardware.common-V2-ndk",
-//        "libbinder_ndk",
-//        "libc",
-//        "libc++",
-//        "libdl",
-//        "libm"
-//    ],
-//    compile_multilib: "64",
-//    prefer: true,
-//   soc_specific: true
-//}
+// cc_prebuilt_library_shared {
+//     name: "android.hardware.drm-V1-ndk",
+//     owner: "sony",
+//     strip: {
+//         none: true
+//     },
+// //    srcs: ["proprietary/vendor/system/lib64/android.hardware.drm-V1-ndk.so"],
+//     shared_libs: [
+//         "android.hardware.common-V2-ndk",
+//         "libbinder_ndk",
+//         "libc",
+//         "libc++",
+//         "libdl",
+//         "libm"
+//     ],
+//     compile_multilib: "64",
+//     prefer: true
+// //    soc_specific: true
+// }
 
 cc_prebuilt_library_shared {
     name: "libqcrilNrSocketModule",
@@ -2212,30 +2229,30 @@ cc_prebuilt_library_shared {
     soc_specific: true,
 }
 
-// cc_prebuilt_library_shared {
-//     name: "libwifi-hal",
-//     owner: "sony",
-//     strip: {
-//         none: true
-//     },
-//     srcs: ["proprietary/vendor/lib64/libwifi-hal.so"],
-//     shared_libs: [
-//         "libbase",
-//         "libcld80211",
-//         "libcrypto",
-//         "libc++",
-//         "libc",
-//         "libcutils",
-//         "libdl",
-//         "liblog",
-//         "libm",
-//         "libnl",
-//         "libutils",
-//     ],
-//     compile_multilib: "64",
-//     prefer: true,
-//     soc_specific: true
-// }
+cc_prebuilt_library_shared {
+    name: "libwifi-hal",
+    owner: "sony",
+    strip: {
+        none: true
+    },
+    srcs: ["proprietary/vendor/lib64/libwifi-hal.so"],
+    shared_libs: [
+        "libbase",
+        "libcld80211",
+        "libcrypto",
+        "libc++",
+        "libc",
+        "libcutils",
+        "libdl",
+        "liblog",
+        "libm",
+        "libnl",
+        "libutils",
+    ],
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true
+}
 
 cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.radio.am@1.0",
@@ -2339,36 +2356,36 @@ cc_prebuilt_library_shared {
     soc_specific: true,
 }
 
-// cc_prebuilt_library_shared {
-//     name: "vendor.qti.hardware.pal@1.0-impl",
-//     owner: "sony",
-//     strip: {
-//         none: true,
-//     },
-//     srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.pal@1.0-impl.so"],
-//     shared_libs: [
-//         "android.hidl.allocator@1.0",
-//         "android.hidl.memory@1.0",
-//         "libar-pal",
-//         "libbase",
-//         "libc++",
-//         "libcutils",
-//         "libfmq",
-//         "libhardware",
-//         "libhidlbase",
-//         "libhidlmemory",
-//         "libhidltransport",
-//         "liblog",
-//         "libutils",
-// //       "vendor.qti.hardware.pal@1.0",
-//     ],
-//     vendor: true,
-//     allow_undefined_symbols: true,
-//     check_elf_files: false,
-//     compile_multilib: "64",
-//     prefer: true,
-//     soc_specific: true,
-// }
+cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.pal@1.0-impl",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.pal@1.0-impl.so"],
+    shared_libs: [
+        "android.hidl.allocator@1.0",
+        "android.hidl.memory@1.0",
+        "libar-pal",
+        "libbase",
+        "libc++",
+        "libcutils",
+        "libfmq",
+        "libhardware",
+        "libhidlbase",
+        "libhidlmemory",
+        "libhidltransport",
+        "liblog",
+        "libutils",
+//       "vendor.qti.hardware.pal@1.0",
+    ],
+    vendor: true,
+    allow_undefined_symbols: true,
+    check_elf_files: false,
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
 
 cc_prebuilt_library_shared {
     name: "com.quicinc.cne.api@1.0",
@@ -3975,18 +3992,17 @@ cc_prebuilt_library_shared {
     soc_specific: true
 }
 
-// cc_prebuilt_library_shared {
-//     name: "vendor.qti.hardware.bluetooth.audio-V1-ndk",
-//     owner: "sony",
-//     strip: {
-//         none: true
-//     },
-//     srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.bluetooth.audio-V1-ndk.so"],
-//     shared_libs: [],
-//     compile_multilib: "64",
-//     prefer: true,
-//     soc_specific: true
-// }
+cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.bluetooth.audio-V1-ndk",
+    owner: "sony",
+    strip: {
+        none: true
+    },
+    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.bluetooth.audio-V1-ndk.so"],
+    shared_libs: ["libbinder_ndk", "libc++"],
+    compile_multilib: "64",
+    prefer: true,
+}
 
 // cc_prebuilt_library_shared {
 //     name: "libwifi-hal-qcom",
@@ -6584,6 +6600,8 @@ cc_prebuilt_library_shared {
 //     prefer: true,
 // }
 
+///////////////////////// DRM /////////////////////////
+
 // cc_prebuilt_library_shared {
 //     name: "android.hardware.drm@1.0",
 //     owner: "sony",
@@ -6601,6 +6619,8 @@ cc_prebuilt_library_shared {
 //         "libutils", 
 //         "libcutils",
 //     ],
+//     header_libs: ["android.hardware.drm@1.0_headers"],
+//     export_header_lib_headers: ["android.hardware.drm@1.0_headers"],
 //     compile_multilib: "64",
 //     prefer: true,
 // }
@@ -6617,13 +6637,15 @@ cc_prebuilt_library_shared {
 //         },
 //     },
 //     shared_libs: [
-//         "android.hardware.drm@1.0",  // Add dependency
+//         "android.hardware.drm@1.0",
 //         "libhidlbase",
 //         "liblog",
 //         "libutils",
 //         "libcutils",
 //         "libc++",
 //     ],
+//     header_libs: ["android.hardware.drm@1.1_headers"],
+//     export_header_lib_headers: ["android.hardware.drm@1.1_headers"],
 //     compile_multilib: "64",
 //     prefer: true,
 // }
@@ -6648,6 +6670,8 @@ cc_prebuilt_library_shared {
 //         "libcutils",
 //         "libc++",
 //     ],
+//     header_libs: ["android.hardware.drm@1.2_headers"],
+//     export_header_lib_headers: ["android.hardware.drm@1.2_headers"],
 //     compile_multilib: "64",
 //     prefer: true,
 // }
@@ -6673,6 +6697,8 @@ cc_prebuilt_library_shared {
 //         "libcutils",
 //         "libc++",
 //     ],
+//     header_libs: ["android.hardware.drm@1.3_headers"],
+//     export_header_lib_headers: ["android.hardware.drm@1.3_headers"],
 //     compile_multilib: "64",
 //     prefer: true,
 // }
@@ -6699,9 +6725,14 @@ cc_prebuilt_library_shared {
 //         "libcutils",
 //         "libc++",
 //     ],
+//     header_libs: ["android.hardware.drm@1.4_headers"],
+//     export_header_lib_headers: ["android.hardware.drm@1.4_headers"],
 //     compile_multilib: "64",
 //     prefer: true,
 // }
+
+///////////////////////// End DRM /////////////////////////
+
 
 // cc_prebuilt_library_shared {
 //     name: "android.hardware.gnss@1.0",
@@ -19457,7 +19488,6 @@ cc_prebuilt_library_shared {
     allow_undefined_symbols: true,
     compile_multilib: "64",
     prefer: true,
-    enabled: false,
 }
 
 cc_prebuilt_library_shared {
@@ -21446,33 +21476,28 @@ cc_prebuilt_library_shared {
     relative_install_path: "hw",
 }
 
-// cc_prebuilt_library_shared {
-//     name: "vendor.qti.hardware.pal@1.0",
-//     stem: "vendor.qti.hardware.pal@1.0",
-//     owner: "sony",
-//     strip: {
-//         none: true,
-//     },
-//     srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.pal@1.0.so"],
-//     shared_libs: [
-//         "libhidlbase",
-//         "liblog",
-//         "libutils",
-//         "libcutils",
-//         "libc++",
-//     ],
-//     compile_multilib: "64",
-//     prefer: true,
-//     soc_specific: true,
-//     vendor: true,
-//     check_elf_files: false,
-//     proprietary: true,
-//     overrides: ["vendor.qti.hardware.pal@1.0"],
-//     defaults: ["hidl_defaults"],
-//     relative_install_path: "vendor",  // Add this
-//     init_rc: [],  // Add this to prevent system init
-//     vintf_fragments: [],  // Add this to prevent system manifest entries
-// }
+cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.pal@1.0",
+    owner: "sony",
+    strip: {
+        none: true,
+    },
+    srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.pal@1.0.so"],
+    shared_libs: [
+        "libhidlbase",
+        "liblog",
+        "libutils",
+        "libcutils",
+        "libc++",
+    ],
+    compile_multilib: "64",
+    prefer: true,
+    check_elf_files: false,
+//   proprietary: true,
+    defaults: ["hidl_defaults"],
+    init_rc: [],
+    vintf_fragment_modules: [],
+}
 
 cc_prebuilt_library_shared {
     name: "liblistensoundmodel2vendor",

@@ -1,0 +1,8 @@
+cc_prebuilt_library_static {
+    name: "libdrm_ndk_prebuilt_static",
+    srcs: ["proprietary/vendor/system/lib64/android.hardware.drm-V1-ndk.so"],
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+} 
