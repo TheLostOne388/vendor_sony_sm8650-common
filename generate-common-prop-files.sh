@@ -9,6 +9,8 @@ TEMP_FILE="/tmp/common_prop_files_tmp.txt"
 cat > "${OUTPUT_FILE}" << EOL
 # Proprietary files for sm8650-common - from XQ-EC72_Customized HK_69.1.A.2.78
 
+# If you want to ship with honeycomb, this is the flag to set
+
 EOL
 
 # Function to check if a file is platform-specific (not device-specific)
