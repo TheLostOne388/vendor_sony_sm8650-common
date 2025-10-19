@@ -1,0 +1,45 @@
+{
+  "peripheral": {
+    "accel": {
+      "type": "1",
+      "bus": "3",
+      "address": "0",
+      "speed": "9600"
+    },
+    "gyro": {
+      "type": "1",
+      "bus": "3",
+      "address": "0",
+      "speed": "9600"
+    },
+    "als": {
+      "type": "0",
+      "bus": "2",
+      "address": "0x48",
+      "speed": "400"
+    },
+    "prox": {
+      "type": "0",
+      "bus": "2",
+      "address": "0x48",
+      "speed": "400"
+    }
+  },
+  "device_param": {
+    "als": {
+      "delay": "300",
+      "alsctrl": "0x24",
+      "agctrl": "0x00"
+    },
+    "prox": {
+      "delay": "300",
+      "psctrl": "0x34",
+      "ledctrl": "0x1c",
+      "thdh": "0x0000",
+      "thdl": "0x0000",
+      "pspdctrl": "0x03",
+      "agctrl": "0x00",
+      "wait": "0x0b"
+    }
+  }
+}

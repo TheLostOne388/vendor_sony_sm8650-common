@@ -1,0 +1,9 @@
+# Copyright 2021, 2023 Sony Corporation.
+# All rights, including trade secret rights, reserved.
+
+# start ifaa service
+service vendor.semc.hardware.aidlifaa /vendor/bin/hw/vendor.semc.hardware.aidlifaa-service
+    interface aidl vendor.semc.hardware.aidlifaa.IIFAAManagerService/default
+    class hal
+    user system
+    group system

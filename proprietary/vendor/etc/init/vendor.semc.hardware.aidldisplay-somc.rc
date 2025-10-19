@@ -1,0 +1,7 @@
+service vendor.semc.hardware.aidldisplay /vendor/bin/hw/vendor.semc.hardware.aidldisplay-service.somc
+    interface aidl vendor.semc.hardware.aidldisplay.IFramerateController/default
+    interface aidl vendor.semc.hardware.aidldisplay.IDisplay/default
+    class hal
+    user system
+    group system readproc
+

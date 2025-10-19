@@ -1,0 +1,12 @@
+# Copyright 2023 Sony Corporation
+
+on init
+    start fels_daemon
+
+on post-fs
+    mkdir /mnt/vendor/persist/fels 0755 system system
+
+service fels_daemon /vendor/bin/fels_daemon
+    user system
+    group system
+    disabled

@@ -1,0 +1,4 @@
+service vendor.semc.hardware.aidlthermal /vendor/bin/hw/vendor.semc.hardware.aidlthermal-service
+    class hal
+    user root
+    group system readproc oem_2907

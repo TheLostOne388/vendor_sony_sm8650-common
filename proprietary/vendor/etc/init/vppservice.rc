@@ -1,0 +1,18 @@
+ # Copyright (c) 2019-2020, 2023 Qualcomm Technologies, Inc.
+ # All Rights Reserved.
+ # Confidential and Proprietary - Qualcomm Technologies, Inc.
+
+service vendor.vppservice /vendor/bin/vppservice
+    class hal
+    user media
+    group camera system
+
+    # AIDL interface
+    interface aidl vendor.qti.hardware.vpp.IVppService/default
+    interface aidl vendor.somc.hardware.videoeffect.IAidlSwiqi/default
+
+    # don't auto restart
+    oneshot
+
+    # start only when requested (uncomment below to disable service at boot)
+    disabled

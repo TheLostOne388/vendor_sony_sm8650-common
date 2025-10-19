@@ -1,0 +1,3 @@
+on boot
+    rm /data/vendor/audio/GpuKernelRepo.pb
+    rm /data/vendor/audio/gpukernelcache.qti.aisw
